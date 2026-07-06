@@ -90,12 +90,14 @@ body{
 
     padding:0 8%;
 
+    flex-wrap: wrap;
+    gap: 40px;
+
 }
 
 .hero-content{
-
-    max-width:600px;
-
+    flex:1;
+    min-width:300px;
 }
 
 .hero-content h1{
@@ -131,9 +133,9 @@ body{
 }
 
 .hero-image img{
-    width: 350px;
-    height: 350px;
-
+    width:100%;
+    max-width:380px;
+    /*aspect-ratio:1/1;*/
     object-fit: cover;
 
     border-radius: 50%;
@@ -192,6 +194,50 @@ body{
 .btn-secondary:hover{
 
     background:#38bdf8;
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding:40px 5%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
 
 }
 
