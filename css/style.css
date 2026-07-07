@@ -493,3 +493,31 @@ body {
     animation:glowFloat 8s ease-in-out infinite;
 }
 
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.hero-content,
+.hero-image{
+
+    animation:fadeUp .8s ease-out;
+}
+
+
+
