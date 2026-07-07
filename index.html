@@ -47,7 +47,7 @@
         <div class="hero-content">
           <span class="hero-tag"> 👋 Welcome To My Portfolio </span>
 
-          <h1>Hi, I'm <br><span>Rao Awais</span></h1>
+          <h1>Hi, I'm <br /><span>Rao Awais</span></h1>
 
           <h2>
             <span id="typing-text"></span>
@@ -62,21 +62,31 @@
           <div class="hero-buttons">
             <a href="contact.html" class="btn-primary"> Hire Me </a>
 
-            <a href="projects.html" class="btn-secondary">
-              View Projects
-            </a>
+            <a href="projects.html" class="btn-secondary"> View Projects </a>
           </div>
 
           <div class="social-icons">
-            <a href="#" title="GitHub">
+            <a
+              href="https://github.com/rao-awais-18"
+              title="Visit My GitHub"
+              target="_blank"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
 
-            <a href="#" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/ali-awais-cs"
+              title="Visit My LinkedIn"
+              target="_blank"
+            >
               <i class="fa-brands fa-linkedin"></i>
             </a>
 
-            <a href="#" title="Email">
+            <a
+              href="mailto:raoawais.dev@gmail.com"
+              title="Write an Email"
+              target="_blank"
+            >
               <i class="fa-solid fa-envelope"></i>
             </a>
           </div>
@@ -344,47 +354,114 @@
     </section>
 
     <!-- CTA section -->
-     <section class="cta">
-
-    <div class="container">
-
-        <h2>
-
-            Let's Build Something Amazing Together
-
-        </h2>
+    <section class="cta">
+      <div class="container">
+        <h2>Let's Build Something Amazing Together</h2>
 
         <p>
-
-            Looking for a responsive website,
-            modern web application or Flutter app?
-            Let's discuss your next project.
-
+          Looking for a responsive website, modern web application or Flutter
+          app? Let's discuss your next project.
         </p>
 
         <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">
+            <i class="fa-solid fa-paper-plane"></i>
 
-            <a href="contact.html" class="btn-primary">
+            Hire Me
+          </a>
 
-                <i class="fa-solid fa-paper-plane"></i>
+          <a href="resume/resume.pdf" class="btn-secondary" download>
+            <i class="fa-solid fa-file-arrow-down"></i>
 
-                Hire Me
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
 
-            </a>
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3>Rao Awais</h3>
 
-            <a href="resume/resume.pdf" class="btn-secondary" download>
+            <p>
+              Building responsive websites, modern web applications, Flutter
+              apps and AI-powered solutions with clean code, great performance
+              and user-focused design.
+            </p>
+          </div>
 
-                <i class="fa-solid fa-file-arrow-down"></i>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
 
-                Download Resume
+            <ul>
+              <li><a href="index.html">Home</a></li>
 
-            </a>
+              <li><a href="about.html">About</a></li>
 
+              <li><a href="projects.html">Projects</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Get In Touch</h3>
+
+            <div class="footer-social">
+              <a
+                href="https://github.com/rao-awais-18"
+                target="_blank"
+                aria-label="GitHub"
+                title="Visit My GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/ali-awais-cs"
+                aria-label="LinkedIn"
+                title="Visit My LinkedIn"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a
+                href="mailto:raoawais.dev@gmail.com"
+                aria-label="Email"
+                title="Write an Email"
+                target="_blank"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+
+            <div class="footer-contact-info">
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+                raoawais.dev@gmail.com
+              </p>
+
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Pakistan
+              </p>
+            </div>
+          </div>
         </div>
 
-    </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Rao Awais. All Rights Reserved.</p>
 
-</section>
+          <button id="backToTop">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
