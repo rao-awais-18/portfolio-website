@@ -396,5 +396,81 @@ body{
 
 }
 
+.image-circle{
 
+    width:410px;
+
+    height:410px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #38bdf8,
+        #2563eb
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.image-circle img{
+
+    width:390px;
+
+    height:390px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #0f172a;
+
+}
+
+.image-circle{
+
+    box-shadow:
+
+    0 0 25px rgba(56,189,248,.5),
+
+    0 0 60px rgba(56,189,248,.25);
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.image-circle{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+.image-circle:hover{
+    animation-play-state: paused;
+}
 
