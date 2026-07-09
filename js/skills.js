@@ -1,45 +1,43 @@
 const skills = [
+  {
+    id: 1,
 
-{
-id:1,
+    name: "HTML5",
 
-name:"HTML5",
+    icon: "fa-brands fa-html5",
 
-icon:"fa-brands fa-html5",
+    description: "Semantic and accessible web structure.",
 
-description:"Semantic and accessible web structure."
+    showOnHome: true,
+  },
 
-},
+  {
+    id: 2,
 
-{
+    name: "CSS3",
 
-id:2,
+    icon: "fa-brands fa-css3-alt",
 
-name:"CSS3",
+    description: "Modern responsive styling.",
+    showOnHome: true,
+  },
 
-icon:"fa-brands fa-css3-alt",
+  {
+    id: 3,
 
-description:"Modern responsive styling."
+    name: "Bootstrap",
 
-},
+    icon: "fa-brands fa-bootstrap",
 
-{
+    description: "Responsive UI framework.",
+    showOnHome: true,
+  },
 
-id:3,
-
-name:"Bootstrap",
-
-icon:"fa-brands fa-bootstrap",
-
-description:"Responsive UI framework."
-
-},
-
-{
+  {
     id: 4,
     name: "Flutter",
     icon: "fa-brands fa-flutter",
-    description: "Cross-platform mobile app development."
-}
-
+    description: "Cross-platform mobile app development.",
+    showOnHome: true,
+  },
 ];

@@ -73,6 +73,8 @@ const skillsGrid = document.getElementById("skills-grid"); // to modify an html 
 dynamic skill cards logic
 -----------------------------------------------*/
 skills.forEach(function (skill) {
+
+    if (!skill.showOnHome) return; // temporary check⚠️
   const card = `
     
         <div class="skill-card">
