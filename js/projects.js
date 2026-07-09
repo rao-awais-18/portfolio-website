@@ -21,165 +21,182 @@
 // ======================================================
 
 const projects = [
+  {
+    id: 1,
 
-    {
-        id: 1,
+    slug: "personal-portfolio", // Future SEO URL
 
-        slug: "personal-portfolio", // Future SEO URL
+    title: "Personal Portfolio",
 
-        title: "Personal Portfolio",
+    category: "Frontend Development",
 
-        category: "Frontend Development",
+    shortDescription:
+      "Modern responsive portfolio website with dynamic project and skill management.",
 
-        shortDescription:
-            "Modern responsive portfolio website with dynamic project and skill management.",
+    detailedDescription:
+      "A professional portfolio website built with HTML, CSS and JavaScript. The project follows reusable components, dynamic rendering, responsive layouts and clean architecture.",
 
-        detailedDescription:
-            "A professional portfolio website built with HTML, CSS and JavaScript. The project follows reusable components, dynamic rendering, responsive layouts and clean architecture.",
+    thumbnail: "images/projects/project1/placeholder.png",
 
-        thumbnail: "images/projects/project1/placeholder.png",
+    screenshots: [
+      "images/projects/project1/p1-img1.jpg",
+      "images/projects/project1/p1-img1.jpg",
+      "images/projects/project1/p1-img2.jpg",
+    ],
 
-        screenshots: [
-            "images/projects/project1/p1-img1.jpg",
-            "images/projects/project1/p1-img1.jpg",
-            "images/projects/project1/p1-img2.jpg"
-        ],
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Font Awesome"],
 
-        technologies: [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Bootstrap",
-            "Font Awesome"
-        ],
+    features: [
+      "Fully Responsive Layout",
+      "Dynamic Project Rendering",
+      "Dynamic Skills Rendering",
+      "Animated Hero Section",
+      "Glassmorphism UI",
+      "Project Detail Page",
+    ],
 
-        features: [
-            "Fully Responsive Layout",
-            "Dynamic Project Rendering",
-            "Dynamic Skills Rendering",
-            "Animated Hero Section",
-            "Glassmorphism UI",
-            "Project Detail Page"
-        ],
+    github: "#",
 
-        github: "#",
+    liveDemo: "#",
 
-        liveDemo: "#",
+    badges: ["Featured", "In Progress"],
 
-        badges: [
-            "Featured",
-            "In Progress"
-        ],
+    showOnHome: true,
 
-        showOnHome: true,
+    year: 2026,
 
-        year: 2026
-    },
+    duration: "3 Weeks",
 
-    {
-        id: 2,
+    status: "In Progress",
 
-        slug: "ngo-management-system",
+    role: "Frontend Developer",
 
-        title: "NGO Management System",
+    client: "Personal Project", // company, owner name
 
-        category: "Full Stack Development",
+    version: "1.0",
 
-        shortDescription:
-            "Complete NGO management system with member registration and donation tracking.",
+    lastUpdated: "July 2026",
 
-        detailedDescription:
-            "A complete management system for NGOs including member management, donations, reports, authentication and dashboard.",
+    platform: "Web",
+  },
 
-        thumbnail: "images/projects/project1/placeholder.png",
+  {
+    id: 2,
 
-        screenshots: [
-            "images/projects/project2/p2i-img1.png",
-            "images/projects/project2/p2i-img2.png",
-            "images/projects/project2/p2i-img3.png"
-        ],
+    slug: "ngo-management-system",
 
-        technologies: [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "PHP",
-            "MySQL",
-            "Bootstrap"
-        ],
+    title: "NGO Management System",
 
-        features: [
-            "Secure Login",
-            "Admin Dashboard",
-            "Donation Management",
-            "Member Management",
-            "Reports",
-            "Responsive Design"
-        ],
+    category: "Full Stack Development",
 
-        github: "#",
+    shortDescription:
+      "Complete NGO management system with member registration and donation tracking.",
 
-        liveDemo: "#",
+    detailedDescription:
+      "A complete management system for NGOs including member management, donations, reports, authentication and dashboard.",
 
-        badges: [
-            "Featured"
-        ],
+    thumbnail: "images/projects/project1/placeholder.png",
 
-        showOnHome: true,
+    screenshots: [
+      "images/projects/project2/p2i-img1.png",
+      "images/projects/project2/p2i-img2.png",
+      "images/projects/project2/p2i-img3.png",
+    ],
 
-        year: 2026
-    },
+    technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
 
-    {
-        id: 3,
+    features: [
+      "Secure Login",
+      "Admin Dashboard",
+      "Donation Management",
+      "Member Management",
+      "Reports",
+      "Responsive Design",
+    ],
 
-        slug: "task-manager-app",
+    github: "#",
 
-        title: "Task Manager App",
+    liveDemo: "#",
 
-        category: "JavaScript Application",
+    badges: ["Featured"],
 
-        shortDescription:
-            "Task management application with local storage and productivity features.",
+    showOnHome: true,
 
-        detailedDescription:
-            "A JavaScript-based task manager allowing users to organize daily work using categories, priorities, deadlines and local storage.",
+    year: 2026,
 
-        thumbnail: "images/projects/project1/placeholder.png",
+    duration: "3 Weeks",
 
-        screenshots: [
-            "images/projects/project3/p3-img1.png",
-            "images/projects/project3/p3-img1.png",
-            "images/projects/project3/p3-img1.png"
-        ],
+    status: "In Progress",
 
-        technologies: [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "Local Storage"
-        ],
+    role: "Frontend Developer",
 
-        features: [
-            "CRUD Operations",
-            "Task Categories",
-            "Priority Levels",
-            "Local Storage",
-            "Search Tasks",
-            "Responsive UI"
-        ],
+    client: "Personal Project", // company, owner name
 
-        github: "#",
+    version: "1.0",
 
-        liveDemo: "#",
+    lastUpdated: "July 2026",
 
-        badges: [
-            "Coming Soon"
-        ],
+    platform: "Web",
+  },
 
-        showOnHome: false,
+  {
+    id: 3,
 
-        year: 2025
-    }
+    slug: "task-manager-app",
 
+    title: "Task Manager App",
+
+    category: "JavaScript Application",
+
+    shortDescription:
+      "Task management application with local storage and productivity features.",
+
+    detailedDescription:
+      "A JavaScript-based task manager allowing users to organize daily work using categories, priorities, deadlines and local storage.",
+
+    thumbnail: "images/projects/project1/placeholder.png",
+
+    screenshots: [
+      "images/projects/project3/p3-img1.png",
+      "images/projects/project3/p3-img1.png",
+      "images/projects/project3/p3-img1.png",
+    ],
+
+    technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage"],
+
+    features: [
+      "CRUD Operations",
+      "Task Categories",
+      "Priority Levels",
+      "Local Storage",
+      "Search Tasks",
+      "Responsive UI",
+    ],
+
+    github: "#",
+
+    liveDemo: "#",
+
+    badges: ["Coming Soon"],
+
+    showOnHome: false,
+
+    year: 2025,
+
+    duration: "3 Weeks",
+
+    status: "In Progress",
+
+    role: "Frontend Developer",
+
+    client: "Personal Project", // company, owner name
+
+    version: "1.0",
+
+    lastUpdated: "July 2026",
+
+    platform: "Web"
+  },
+
+  // more objects here! 
 ];
