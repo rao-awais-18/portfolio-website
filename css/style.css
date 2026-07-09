@@ -571,6 +571,10 @@ html {
   overflow: hidden;
 }
 
+.skill-card:hover{
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+}
+
 .skill-card p{
 
     color:var(--muted);
