@@ -55,29 +55,25 @@ function typeEffect() {
 typeEffect();
 
 // latest date fetch
-document.getElementById("year").textContent =
-new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 const backToTop = document.getElementById("backToTop");
 
 backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
 
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
+    behavior: "smooth",
+  });
 });
 
-const skillsGrid = document.getElementById("skills-grid");  // to modify an html struture we have accessed that html element in this skillsGrid variable
+const skillsGrid = document.getElementById("skills-grid"); // to modify an html struture we have accessed that html element in this skillsGrid variable
 
-// dynamic skill cards logic
+/*----------------------------------------------
+dynamic skill cards logic
+-----------------------------------------------*/
 skills.forEach(function (skill) {
-
-    const card = `
+  const card = `
     
         <div class="skill-card">
 
@@ -103,22 +99,20 @@ skills.forEach(function (skill) {
 
     `;
 
-    skillsGrid.innerHTML += card;
-
+  skillsGrid.innerHTML += card;
 });
 
-// for dyamic projets cards
-const projectsGrid =
-document.getElementById("projects-grid");
+/* ----------------------------------------------
+for dyamic projet cards 
+-------------------------------------------------*/
+const projectsGrid = document.getElementById("projects-grid");
 
 //dynamic badges
 function createBadges(badges) {
+  let badgesHTML = "";
 
-    let badgesHTML = "";
-
-    badges.forEach(badge => {
-
-        badgesHTML += `
+  badges.forEach((badge) => {
+    badgesHTML += `
         
             <span class="project-status">
 
@@ -127,48 +121,39 @@ function createBadges(badges) {
             </span>
 
         `;
+  });
 
-    });
-
-    return badgesHTML;
-
+  return badgesHTML;
 }
 
-// helper function for tec bages
+// helper function for tech bages
 function createTechnologyBadges(technologies) {
+  let techHTML = "";
 
-    let techHTML = "";
+  const maxVisible = 4;
 
-    const maxVisible = 4;
-
-    technologies.slice(0, maxVisible).forEach(tech => {
-
-        techHTML += `
+  technologies.slice(0, maxVisible).forEach((tech) => {
+    techHTML += `
             <span>${tech}</span>
         `;
+  });
 
-    });
+  const remaining = technologies.length - maxVisible;
 
-    const remaining = technologies.length - maxVisible;
-
-    if (remaining > 0) {
-
-        techHTML += `
+  if (remaining > 0) {
+    techHTML += `
             <span>+${remaining}</span>
         `;
+  }
 
-    }
-
-    return techHTML;
-
+  return techHTML;
 }
 
 // project cards creation
 function createProjectCard(project) {
+  return `
 
-    return `
-
-        <div class="project-card">
+        <div class="project-card" data-id="${project.id}">
 
             <div class="project-image">
 
@@ -240,20 +225,42 @@ function createProjectCard(project) {
         </div>
 
     `;
-
 }
 
-function renderProjects(){
-    let cards = "";
+function renderProjects() {
+  let cards = "";
 
-    projects.forEach(project=>{
+  projects.forEach((project) => {
+    cards += createProjectCard(project);
+  });
 
-        cards += createProjectCard(project);
-
-    });
-
-    projectsGrid.innerHTML = cards;
-
+  projectsGrid.innerHTML = cards;
 }
 
 renderProjects();
+
+// fuction to make whole project card clickable, click event
+function enableProjectCardClick() {
+  const projectCards = document.querySelectorAll(".project-card");
+
+  projectCards.forEach((card) => {
+  card.addEventListener("click", (event) => {
+
+    const clickedLink = event.target.closest("a");
+
+    if (clickedLink) {
+
+        return;
+
+    }
+    const projectId = card.dataset.id;
+
+window.location.href = `project-details.html?id=${projectId}`;
+
+});
+  });
+}
+
+/*------------------------ function calls --------------*/
+renderProjects();
+enableProjectCardClick();

@@ -640,7 +640,7 @@ html {
 }
 
 
-/* projects section */
+/*------------------------ projects section ----------------------------*/
 .projects-preview {
   padding: 100px 0;
 }
@@ -707,6 +707,9 @@ html {
   display: flex;
 
   flex-direction: column;
+}
+.project-card {
+    cursor: pointer;
 }
 
 .project-card img {
