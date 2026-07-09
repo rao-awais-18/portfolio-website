@@ -1,3 +1,4 @@
+// typing animation eefect
 const words = [
   "Full Stack Developer",
 
@@ -68,5 +69,40 @@ backToTop.addEventListener("click", () => {
         behavior:"smooth"
 
     });
+
+});
+
+const skillsGrid = document.getElementById("skills-grid");  // to modify an html struture we have accessed that html element in this skillsGrid variable
+
+// dynamic cards logic
+skills.forEach(function (skill) {
+
+    const card = `
+    
+        <div class="skill-card">
+
+            <div class="skill-content">
+
+                <i class="${skill.icon}"></i>
+
+                <h3>${skill.name}</h3>
+
+                <p>${skill.description}</p>
+
+            </div>
+
+            <a href="skill-details.html?id=${skill.id}" class="skill-overlay">
+
+                <i class="fa-solid fa-eye"></i>
+
+                <span>Explore Skill</span>
+
+            </a>
+
+        </div>
+
+    `;
+
+    skillsGrid.innerHTML += card;
 
 });
