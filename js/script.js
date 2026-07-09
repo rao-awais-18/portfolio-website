@@ -73,8 +73,7 @@ const skillsGrid = document.getElementById("skills-grid"); // to modify an html 
 dynamic skill cards logic
 -----------------------------------------------*/
 skills.forEach(function (skill) {
-
-    if (!skill.showOnHome) return; // temporary check⚠️
+  if (!skill.showOnHome) return; // temporary check⚠️
   const card = `
     
         <div class="skill-card">
@@ -246,20 +245,16 @@ function enableProjectCardClick() {
   const projectCards = document.querySelectorAll(".project-card");
 
   projectCards.forEach((card) => {
-  card.addEventListener("click", (event) => {
+    card.addEventListener("click", (event) => {
+      const clickedLink = event.target.closest("a");
 
-    const clickedLink = event.target.closest("a");
-
-    if (clickedLink) {
-
+      if (clickedLink) {
         return;
+      }
+      const projectId = card.dataset.id;
 
-    }
-    const projectId = card.dataset.id;
-
-window.location.href = `project-details.html?id=${projectId}`;
-
-});
+      window.location.href = `project-details.html?id=${projectId}`;
+    });
   });
 }
 

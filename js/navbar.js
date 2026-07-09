@@ -30,8 +30,38 @@ function renderNavbar() {
   navbarContainer.innerHTML = createNavbar();
 }
 
-function setActiveNavLink(){
+function setActiveNavLink() {
+  const currentPage = window.location.pathname.split("/").pop();
 
+  const pageMap = {
+    "": "home", // Agar website root se open ho
+
+    "index.html": "home",
+
+    "about.html": "about",
+
+    "projects.html": "projects",
+
+    "project-details.html": "projects",
+
+    "skills.html": "skills",
+
+    "skill-details.html": "skills",
+
+    "contact.html": "contact",
+  };
+
+  const activePage = pageMap[currentPage];
+
+  const navLinks = document.querySelectorAll("[data-page]");
+
+  navLinks.forEach(function (link) {
+    link.classList.remove("active");
+
+    if (link.dataset.page === activePage) {
+      link.classList.add("active");
+    }
+  });
 }
 
 //---------------- function calls -------------------------

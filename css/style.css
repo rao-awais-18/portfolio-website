@@ -30,8 +30,7 @@
         COMMON COMPONENTS
 =====================================*/
 
-.btn{
-  
+.btn {
 }
 
 /* full body color */
@@ -572,21 +571,18 @@ html {
   margin-bottom: 20px;
 }
 
-
 .skill-card {
   position: relative;
 
   overflow: hidden;
 }
 
-.skill-card:hover{
+.skill-card:hover {
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
 }
 
-.skill-card p{
-
-    color:var(--muted);
-
+.skill-card p {
+  color: var(--muted);
 }
 
 .skill-overlay {
@@ -623,22 +619,17 @@ html {
   font-size: 20px;
 }
 
-.skill-overlay{
+.skill-overlay {
+  transform: translateY(30px);
 
-    transform:translateY(30px);
-
-    opacity:0;
-
+  opacity: 0;
 }
 
-.skill-card:hover .skill-overlay{
+.skill-card:hover .skill-overlay {
+  opacity: 1;
 
-    opacity:1;
-
-    transform:translateY(0);
-
+  transform: translateY(0);
 }
-
 
 /*------------------------ projects section ----------------------------*/
 .projects-preview {
@@ -709,7 +700,7 @@ html {
   flex-direction: column;
 }
 .project-card {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .project-card img {
@@ -1277,4 +1268,8 @@ footer {
 
 .footer-contact-info p:hover {
   color: #ffffff;
+}
+
+.nav-links a.active {
+  color: var(--primary);
 }

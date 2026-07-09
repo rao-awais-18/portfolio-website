@@ -195,8 +195,8 @@ const projects = [
 
     lastUpdated: "July 2026",
 
-    platform: "Web"
+    platform: "Web",
   },
 
-  // more objects here! 
+  // more objects here!
 ];
