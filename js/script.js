@@ -74,7 +74,7 @@ backToTop.addEventListener("click", () => {
 
 const skillsGrid = document.getElementById("skills-grid");  // to modify an html struture we have accessed that html element in this skillsGrid variable
 
-// dynamic cards logic
+// dynamic skill cards logic
 skills.forEach(function (skill) {
 
     const card = `
@@ -106,3 +106,125 @@ skills.forEach(function (skill) {
     skillsGrid.innerHTML += card;
 
 });
+
+// for dyamic projets cards
+const projectsGrid =
+document.getElementById("projects-grid");
+
+//dynamic badges
+function createBadges(badges) {
+
+    let badgesHTML = "";
+
+    badges.forEach(badge => {
+
+        badgesHTML += `
+        
+            <span class="project-status">
+
+                ${badge}
+
+            </span>
+
+        `;
+
+    });
+
+    return badgesHTML;
+
+}
+
+
+
+// project cards creation
+function createProjectCard(project) {
+
+    return `
+
+        <div class="project-card">
+
+            <div class="project-image">
+
+                <img
+                    src="${project.thumbnail}"
+                    alt="${project.title}"
+                />
+
+                <a href="project-details.html?id=${project.id}" class="project-overlay">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    View Details
+
+                </a>
+
+                ${createBadges(project.badges)}
+
+            </div>
+
+            <span class="project-category">
+
+                ${project.category}
+
+            </span>
+
+            <div class="project-info">
+
+                <h3>
+
+                    ${project.title}
+
+                </h3>
+
+                <p>
+
+                    ${project.shortDescription}
+
+                </p>
+
+                <div class="tech-stack">
+
+                </div>
+
+                <div class="project-links">
+
+                    <a href="${project.liveDemo}">
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        Live Demo
+
+                    </a>
+
+                    <a href="${project.github}">
+
+                        <i class="fa-brands fa-github"></i>
+
+                        GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+function renderProjects(){
+    let cards = "";
+
+    projects.forEach(project=>{
+
+        cards += createProjectCard(project);
+
+    });
+
+    projectsGrid.innerHTML = cards;
+
+}
+
+renderProjects();
