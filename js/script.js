@@ -134,7 +134,34 @@ function createBadges(badges) {
 
 }
 
+// helper function for tec bages
+function createTechnologyBadges(technologies) {
 
+    let techHTML = "";
+
+    const maxVisible = 4;
+
+    technologies.slice(0, maxVisible).forEach(tech => {
+
+        techHTML += `
+            <span>${tech}</span>
+        `;
+
+    });
+
+    const remaining = technologies.length - maxVisible;
+
+    if (remaining > 0) {
+
+        techHTML += `
+            <span>+${remaining}</span>
+        `;
+
+    }
+
+    return techHTML;
+
+}
 
 // project cards creation
 function createProjectCard(project) {
@@ -183,6 +210,8 @@ function createProjectCard(project) {
                 </p>
 
                 <div class="tech-stack">
+
+                 ${createTechnologyBadges(project.technologies)}
 
                 </div>
 

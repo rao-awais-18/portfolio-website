@@ -37,12 +37,12 @@ const projects = [
         detailedDescription:
             "A professional portfolio website built with HTML, CSS and JavaScript. The project follows reusable components, dynamic rendering, responsive layouts and clean architecture.",
 
-        thumbnail: "assets/images/projects/portfolio-thumbnail.png",
+        thumbnail: "images/projects/project1/placeholder.png",
 
         screenshots: [
-            "assets/images/projects/portfolio-1.png",
-            "assets/images/projects/portfolio-2.png",
-            "assets/images/projects/portfolio-3.png"
+            "images/projects/project1/p1-img1.jpg",
+            "images/projects/project1/p1-img1.jpg",
+            "images/projects/project1/p1-img2.jpg"
         ],
 
         technologies: [
@@ -91,12 +91,12 @@ const projects = [
         detailedDescription:
             "A complete management system for NGOs including member management, donations, reports, authentication and dashboard.",
 
-        thumbnail: "assets/images/projects/ngo-thumbnail.png",
+        thumbnail: "images/projects/project1/placeholder.png",
 
         screenshots: [
-            "assets/images/projects/ngo-1.png",
-            "assets/images/projects/ngo-2.png",
-            "assets/images/projects/ngo-3.png"
+            "images/projects/project2/p2i-img1.png",
+            "images/projects/project2/p2i-img2.png",
+            "images/projects/project2/p2i-img3.png"
         ],
 
         technologies: [
@@ -145,12 +145,12 @@ const projects = [
         detailedDescription:
             "A JavaScript-based task manager allowing users to organize daily work using categories, priorities, deadlines and local storage.",
 
-        thumbnail: "assets/images/projects/task-thumbnail.png",
+        thumbnail: "images/projects/project1/placeholder.png",
 
         screenshots: [
-            "assets/images/projects/task-1.png",
-            "assets/images/projects/task-2.png",
-            "assets/images/projects/task-3.png"
+            "images/projects/project3/p3-img1.png",
+            "images/projects/project3/p3-img1.png",
+            "images/projects/project3/p3-img1.png"
         ],
 
         technologies: [
