@@ -292,7 +292,7 @@ function updateLightbox() {
 
     lightboxCounter.textContent =
 
-        `${currentScreenshotIndex + 1} / ${currentProject.screenshots.length}`;
+        `viewing ${currentScreenshotIndex + 1} of ${currentProject.screenshots.length}`;
 
 }
 
@@ -338,6 +338,45 @@ function previousImage(){
 previousButton.addEventListener("click", function(){
 
     previousImage();
+
+});
+
+// keyboard navigation for lightbox
+document.addEventListener("keydown", function(event){
+
+    if(!lightbox.classList.contains("active")){
+
+        return;
+
+    }
+
+    if(event.key === "Escape"){
+
+        closeLightbox();
+
+    }
+
+    if(event.key === "ArrowRight"){
+
+    nextImage();
+
+}
+
+if(event.key === "ArrowLeft"){
+
+    previousImage();
+
+}
+
+});
+
+lightbox.addEventListener("click", function(event){
+
+    if(event.target === lightbox){
+
+        closeLightbox();
+
+    }
 
 });
 

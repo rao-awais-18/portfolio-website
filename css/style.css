@@ -1632,52 +1632,227 @@ footer {
    Lightbox
 ========================== */
 
+/* ==========================
+   Lightbox
+========================== */
+
+/* ==========================
+   Lightbox
+========================== */
+
 .lightbox{
 
-    position:fixed;
+    position: fixed;
 
-    inset:0;
+    inset: 0;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    background:rgba(0,0,0,.9);
+    background: rgba(0,0,0,.92);
 
-    opacity:0;
+    backdrop-filter: blur(10px);
 
-    visibility:hidden;
+    opacity: 0;
 
-    pointer-events:none;
+    visibility: hidden;
 
-    transition:.35s ease;
+    pointer-events: none;
 
-    z-index:9999;
+    transition: opacity .35s ease,
+                visibility .35s ease;
+
+    z-index: 9999;
 
 }
 
 .lightbox.active{
 
-    opacity:1;
+    opacity: 1;
 
-    visibility:visible;
+    visibility: visible;
 
-    pointer-events:auto;
+    pointer-events: auto;
 
 }
 
+/* ---------- Image ---------- */
+
 .lightbox img{
 
-    width:90%;
+    width: auto;
 
-    max-width:1000px;
+    max-width: min(90vw,1100px);
 
-    max-height:80vh;
+    max-height: 80vh;
 
-    object-fit:contain;
+    object-fit: contain;
 
-    border-radius:20px;
+    border-radius: 18px;
+
+    box-shadow: var(--hover-shadow);
+
+    cursor: default;
+
+    transform: scale(.92);
+
+    transition: transform .35s ease;
+
+}
+
+.lightbox.active img{
+
+    transform: scale(1);
+
+}
+
+/* ---------- Buttons ---------- */
+
+.lightbox button{
+
+    position: absolute;
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(15px);
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.lightbox button:hover{
+
+    background: rgba(255,255,255,.15);
+
+    box-shadow: var(--hover-shadow);
+
+}
+
+/* ---------- Close ---------- */
+
+.lightbox-close{
+
+    top: 30px;
+
+    right: 30px;
+
+}
+
+/* ---------- Navigation ---------- */
+
+.lightbox-prev{
+
+    left: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+.lightbox-next{
+
+    right: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+/* ---------- Counter ---------- */
+
+.lightbox-counter{
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid var(--border);
+
+    color: #fff;
+
+    font-size: .95rem;
+
+    white-space: nowrap;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:768px){
+
+    .lightbox img{
+
+        max-width: 92vw;
+
+        max-height: 70vh;
+
+    }
+
+    .lightbox-prev{
+
+        left: 15px;
+
+    }
+
+    .lightbox-next{
+
+        right: 15px;
+
+    }
+
+    .lightbox-close{
+
+        top: 15px;
+
+        right: 15px;
+
+    }
+
+    .lightbox-counter{
+
+        bottom: 20px;
+
+        font-size: .85rem;
+
+    }
 
 }
