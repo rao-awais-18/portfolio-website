@@ -277,6 +277,12 @@ function closeLightbox() {
 
 }
 
+closeButton.addEventListener("click", function(){
+
+    closeLightbox();
+
+});
+
 // update lightbox content
 function updateLightbox() {
 
@@ -289,6 +295,51 @@ function updateLightbox() {
         `${currentScreenshotIndex + 1} / ${currentProject.screenshots.length}`;
 
 }
+
+// move to next image
+function nextImage(){
+
+    currentScreenshotIndex++;
+
+    if(currentScreenshotIndex >= currentProject.screenshots.length){
+
+        currentScreenshotIndex = 0;
+
+    }
+
+    updateLightbox();
+
+}
+
+// listen for next button click
+nextButton.addEventListener("click", function(){
+
+    nextImage();
+
+});
+
+// move to previous image
+function previousImage(){
+
+    currentScreenshotIndex--;
+
+    if(currentScreenshotIndex < 0){
+
+        currentScreenshotIndex =
+
+        currentProject.screenshots.length - 1;
+
+    }
+
+    updateLightbox();
+
+}
+// listen for previous button click
+previousButton.addEventListener("click", function(){
+
+    previousImage();
+
+});
 
 
 // render Technologies
