@@ -1,0 +1,567 @@
+
+// ================================
+// Get Project
+// ================================
+
+const params = new URLSearchParams(window.location.search);
+
+const projectId = Number(params.get("id"));
+
+const currentProject = projects.find(function (project) {
+
+    return project.id === projectId;
+
+});
+
+
+// ================================
+// Render Functions
+// ================================
+
+function renderProjectHero() {
+
+    const hero = document.getElementById("project-hero");
+
+    if (!hero) {
+
+        return;
+
+    }
+
+    const {
+
+        title,
+
+        category,
+
+        thumbnail,
+
+        shortDescription,
+
+        badges,
+
+        github,
+
+        liveDemo
+
+    } = currentProject;
+
+    let badgesHTML = "";
+
+    badges.forEach(function (badge) {
+
+        badgesHTML += `
+
+            <span class="project-status">
+
+                ${badge}
+
+            </span>
+
+        `;
+
+    });
+
+    hero.innerHTML = `
+
+        <div class="project-hero-image">
+
+            <img src="${thumbnail}" alt="${title}">
+
+            <div class="project-badges">
+
+                ${badgesHTML}
+
+            </div>
+
+        </div>
+
+        <div class="project-hero-content">
+
+            <span class="project-category">
+
+                ${category}
+
+            </span>
+
+            <h1>
+
+                ${title}
+
+            </h1>
+
+            <p>
+
+                ${shortDescription}
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="${liveDemo}"
+
+                   class="btn btn-primary"
+
+                   target="_blank">
+
+                    Live Demo
+
+                </a>
+
+                <a href="${github}"
+
+                   class="btn btn-secondary"
+
+                   target="_blank">
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+renderProjectHero();
+
+function renderOverview() {
+
+    const overview = document.getElementById("project-overview");
+
+    if (!overview) {
+
+        return;
+
+    }
+
+    const {
+
+        detailedDescription
+
+    } = currentProject;
+
+    overview.innerHTML = `
+
+        <div class="section-heading">
+
+            <h2>
+
+                Project Overview
+
+            </h2>
+
+        </div>
+
+        <div class="project-overview-content">
+
+            <p>
+
+                ${detailedDescription}
+
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+renderOverview();
+
+function renderGallery() {
+
+    const gallery = document.getElementById("project-gallery");
+
+    if (!gallery) {
+
+        return;
+
+    }
+
+    const {
+
+        screenshots,
+
+        title
+
+    } = currentProject;
+
+    let screenshotsHTML = "";
+
+    screenshots.forEach(function (image) {
+
+        screenshotsHTML += `
+
+            <div class="gallery-item">
+
+                <img src="${image}" alt="${title} Screenshot">
+
+            </div>
+
+        `;
+
+    });
+
+    gallery.innerHTML = `
+
+        <div class="section-heading">
+
+            <h2>
+
+                Project Gallery
+
+            </h2>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            ${screenshotsHTML}
+
+        </div>
+
+    `;
+
+}
+
+renderGallery();
+
+function renderTechnologies() {
+
+    const technologiesContainer = document.getElementById("project-technologies");
+
+    if (!technologiesContainer) {
+
+        return;
+
+    }
+
+    const {
+
+        technologies
+
+    } = currentProject;
+
+    let technologiesHTML = "";
+
+    technologies.forEach(function (technology) {
+
+        technologiesHTML += `
+
+            <span>
+
+                ${technology}
+
+            </span>
+
+        `;
+
+    });
+
+    technologiesContainer.innerHTML = `
+
+        <div class="section-heading">
+
+            <h2>
+
+                Technologies Used
+
+            </h2>
+
+        </div>
+
+        <div class="tech-stack">
+
+            ${technologiesHTML}
+
+        </div>
+
+    `;
+
+}
+
+renderTechnologies();
+
+function renderFeatures() {
+
+    const featuresContainer = document.getElementById("project-features");
+
+    if (!featuresContainer) {
+
+        return;
+
+    }
+
+    const {
+
+        features
+
+    } = currentProject;
+
+    let featuresHTML = "";
+
+    features.forEach(function (feature) {
+
+        featuresHTML += `
+
+            <div class="feature-card"> 
+
+                <i class="fa-solid fa-check"></i>
+
+                <span>
+
+                    ${feature}
+
+                </span>
+
+            </div>
+
+        `;
+
+    });
+
+    featuresContainer.innerHTML = `
+
+        <div class="section-heading">
+
+            <h2>
+
+                Key Features
+
+            </h2>
+
+        </div>
+
+        <div class="features-grid">
+
+            ${featuresHTML}
+
+        </div>
+
+    `;
+
+}
+
+renderFeatures();
+
+function renderProjectInformation() {
+
+    const informationContainer = document.getElementById("project-information");
+
+    if (!informationContainer) {
+
+        return;
+
+    }
+
+    const {
+
+        year,
+
+        duration,
+
+        status,
+
+        role,
+
+        client,
+
+        version,
+
+        lastUpdated,
+
+        platform
+
+    } = currentProject;
+
+    const projectInformation = [
+
+        {
+
+            label: "Year",
+
+            value: year
+
+        },
+
+        {
+
+            label: "Duration",
+
+            value: duration
+
+        },
+
+        {
+
+            label: "Status",
+
+            value: status
+
+        },
+
+        {
+
+            label: "Role",
+
+            value: role
+
+        },
+
+        {
+
+            label: "Client",
+
+            value: client
+
+        },
+
+        {
+
+            label: "Platform",
+
+            value: platform
+
+        },
+
+        {
+
+            label: "Version",
+
+            value: version
+
+        },
+
+        {
+
+            label: "Last Updated",
+
+            value: lastUpdated
+
+        }
+
+    ];
+
+    let informationHTML = "";
+
+    projectInformation.forEach(function (item) {
+
+        informationHTML += `
+
+            <div class="info-item">
+
+                <span class="info-label">
+
+                    ${item.label}
+
+                </span>
+
+                <span class="info-value">
+
+                    ${item.value}
+
+                </span>
+
+            </div>
+
+        `;
+
+    });
+
+    informationContainer.innerHTML = `
+
+        <div class="section-heading">
+
+            <h2>
+
+                Project Information
+
+            </h2>
+
+        </div>
+
+        <div class="project-information-grid">
+
+            ${informationHTML}
+
+        </div>
+
+    `;
+
+}
+
+renderProjectInformation();
+
+function renderProjectNavigation() {
+
+    const navigation = document.getElementById("project-navigation");
+
+    if (!navigation) {
+
+        return;
+
+    }
+
+    const currentIndex = projects.findIndex(function (project) {
+
+        return project.id === projectId;
+
+    });
+
+    const previousIndex = (currentIndex - 1 + projects.length) % projects.length;
+
+    const nextIndex = (currentIndex + 1) % projects.length;
+
+    const previousProject = projects[previousIndex];
+
+    const nextProject = projects[nextIndex];
+
+    navigation.innerHTML = `
+
+        <a href="project-details.html?id=${previousProject.id}"
+
+           class="project-nav-card">
+
+            <small>
+
+                Previous Project
+
+            </small>
+
+            <h3>
+
+                ${previousProject.title}
+
+            </h3>
+
+        </a>
+
+        <a href="project-details.html?id=${nextProject.id}"
+
+           class="project-nav-card">
+
+            <small>
+
+                Next Project
+
+            </small>
+
+            <h3>
+
+                ${nextProject.title}
+
+            </h3>
+
+        </a>
+
+    `;
+
+}
+
+renderProjectNavigation();
+
+//console.log(currentProject);
