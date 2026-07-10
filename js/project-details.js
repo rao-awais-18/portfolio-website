@@ -178,7 +178,7 @@ function renderGallery() {
   screenshots.forEach(function (image, index) {
     screenshotsHTML += `
 
-            <div class="gallery-item">
+            <div class="gallery-item" data-index="${index}">
 
                 <img src="${image}" alt="${title} Screenshot" data-index="${index}">
 
@@ -219,6 +219,79 @@ function renderGallery() {
 
 renderGallery();
 
+function initializeGallery() {
+
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    galleryItems.forEach(function(item){
+
+        item.addEventListener("click", function(){
+
+            openLightbox(Number(this.dataset.index));
+
+        });
+
+    });
+
+}
+initializeGallery();
+
+/* ==========================
+   Lightbox
+========================== */
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImage = document.getElementById("lightbox-image");
+
+const lightboxCounter = document.getElementById("lightbox-counter");
+
+const closeButton = document.getElementById("lightbox-close");
+
+const previousButton = document.getElementById("lightbox-prev");
+
+const nextButton = document.getElementById("lightbox-next");
+
+let currentScreenshotIndex = 0;
+
+
+// open lightbox
+function openLightbox(index) {
+
+    currentScreenshotIndex = index;
+
+    updateLightbox();
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+// close lightbox
+function closeLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+// update lightbox content
+function updateLightbox() {
+
+    lightboxImage.src =
+
+        currentProject.screenshots[currentScreenshotIndex];
+
+    lightboxCounter.textContent =
+
+        `${currentScreenshotIndex + 1} / ${currentProject.screenshots.length}`;
+
+}
+
+
+// render Technologies
 function renderTechnologies() {
   const technologiesContainer = document.getElementById("project-technologies");
 
