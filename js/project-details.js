@@ -1,4 +1,3 @@
-
 // ================================
 // Get Project
 // ================================
@@ -8,49 +7,40 @@ const params = new URLSearchParams(window.location.search);
 const projectId = Number(params.get("id"));
 
 const currentProject = projects.find(function (project) {
-
-    return project.id === projectId;
-
+  return project.id === projectId;
 });
-
 
 // ================================
 // Render Functions
 // ================================
 
 function renderProjectHero() {
+  const hero = document.getElementById("project-hero");
 
-    const hero = document.getElementById("project-hero");
+  if (!hero) {
+    return;
+  }
 
-    if (!hero) {
+  const {
+    title,
 
-        return;
+    category,
 
-    }
+    thumbnail,
 
-    const {
+    shortDescription,
 
-        title,
+    badges,
 
-        category,
+    github,
 
-        thumbnail,
+    liveDemo,
+  } = currentProject;
 
-        shortDescription,
+  let badgesHTML = "";
 
-        badges,
-
-        github,
-
-        liveDemo
-
-    } = currentProject;
-
-    let badgesHTML = "";
-
-    badges.forEach(function (badge) {
-
-        badgesHTML += `
+  badges.forEach(function (badge) {
+    badgesHTML += `
 
             <span class="project-status">
 
@@ -59,36 +49,29 @@ function renderProjectHero() {
             </span>
 
         `;
+  });
 
-    });
+  hero.innerHTML = `
 
-    hero.innerHTML = `
+    <div class="project-hero-wrapper">    
+       
 
-        <div class="project-hero-image">
-
-            <img src="${thumbnail}" alt="${title}">
-
-            <div class="project-badges">
-
-                ${badgesHTML}
-
-            </div>
-
-        </div>
-
+    
         <div class="project-hero-content">
 
-            <span class="project-category">
-
-                ${category}
-
-            </span>
+           
 
             <h1>
 
                 ${title}
 
             </h1>
+
+             <span class="project-category">
+
+                ${category}
+
+            </span>
 
             <p>
 
@@ -122,29 +105,35 @@ function renderProjectHero() {
 
         </div>
 
-    `;
+<div class="project-hero-image">
 
+            <img src="${thumbnail}" alt="${title}">
+
+            <div class="project-badges">
+
+                ${badgesHTML}
+
+            </div>
+
+        </div>
+
+        </div>
+
+    `;
 }
 
 renderProjectHero();
 
 function renderOverview() {
+  const overview = document.getElementById("project-overview");
 
-    const overview = document.getElementById("project-overview");
+  if (!overview) {
+    return;
+  }
 
-    if (!overview) {
+  const { detailedDescription } = currentProject;
 
-        return;
-
-    }
-
-    const {
-
-        detailedDescription
-
-    } = currentProject;
-
-    overview.innerHTML = `
+  overview.innerHTML = `
 
         <div class="section-heading">
 
@@ -156,7 +145,7 @@ function renderOverview() {
 
         </div>
 
-        <div class="project-overview-content">
+        <div class="project-overview-content glass-card">
 
             <p>
 
@@ -167,46 +156,47 @@ function renderOverview() {
         </div>
 
     `;
-
 }
 
 renderOverview();
 
 function renderGallery() {
+  const gallery = document.getElementById("project-gallery");
 
-    const gallery = document.getElementById("project-gallery");
+  if (!gallery) {
+    return;
+  }
 
-    if (!gallery) {
+  const {
+    screenshots,
 
-        return;
+    title,
+  } = currentProject;
 
-    }
+  let screenshotsHTML = "";
 
-    const {
-
-        screenshots,
-
-        title
-
-    } = currentProject;
-
-    let screenshotsHTML = "";
-
-    screenshots.forEach(function (image) {
-
-        screenshotsHTML += `
+  screenshots.forEach(function (image, index) {
+    screenshotsHTML += `
 
             <div class="gallery-item">
 
-                <img src="${image}" alt="${title} Screenshot">
+                <img src="${image}" alt="${title} Screenshot" data-index="${index}">
+
+<div class="gallery-overlay">
+
+        <i class="fa-solid fa-eye"></i>
+
+        <span>View Image</span>
+
+    </div>
+
 
             </div>
 
         `;
+  });
 
-    });
-
-    gallery.innerHTML = `
+  gallery.innerHTML = `
 
         <div class="section-heading">
 
@@ -225,32 +215,23 @@ function renderGallery() {
         </div>
 
     `;
-
 }
 
 renderGallery();
 
 function renderTechnologies() {
+  const technologiesContainer = document.getElementById("project-technologies");
 
-    const technologiesContainer = document.getElementById("project-technologies");
+  if (!technologiesContainer) {
+    return;
+  }
 
-    if (!technologiesContainer) {
+  const { technologies } = currentProject;
 
-        return;
+  let technologiesHTML = "";
 
-    }
-
-    const {
-
-        technologies
-
-    } = currentProject;
-
-    let technologiesHTML = "";
-
-    technologies.forEach(function (technology) {
-
-        technologiesHTML += `
+  technologies.forEach(function (technology) {
+    technologiesHTML += `
 
             <span>
 
@@ -259,10 +240,9 @@ function renderTechnologies() {
             </span>
 
         `;
+  });
 
-    });
-
-    technologiesContainer.innerHTML = `
+  technologiesContainer.innerHTML = `
 
         <div class="section-heading">
 
@@ -281,32 +261,23 @@ function renderTechnologies() {
         </div>
 
     `;
-
 }
 
 renderTechnologies();
 
 function renderFeatures() {
+  const featuresContainer = document.getElementById("project-features");
 
-    const featuresContainer = document.getElementById("project-features");
+  if (!featuresContainer) {
+    return;
+  }
 
-    if (!featuresContainer) {
+  const { features } = currentProject;
 
-        return;
+  let featuresHTML = "";
 
-    }
-
-    const {
-
-        features
-
-    } = currentProject;
-
-    let featuresHTML = "";
-
-    features.forEach(function (feature) {
-
-        featuresHTML += `
+  features.forEach(function (feature) {
+    featuresHTML += `
 
             <div class="feature-card"> 
 
@@ -321,10 +292,9 @@ function renderFeatures() {
             </div>
 
         `;
+  });
 
-    });
-
-    featuresContainer.innerHTML = `
+  featuresContainer.innerHTML = `
 
         <div class="section-heading">
 
@@ -343,114 +313,89 @@ function renderFeatures() {
         </div>
 
     `;
-
 }
 
 renderFeatures();
 
 function renderProjectInformation() {
+  const informationContainer = document.getElementById("project-information");
 
-    const informationContainer = document.getElementById("project-information");
+  if (!informationContainer) {
+    return;
+  }
 
-    if (!informationContainer) {
+  const {
+    year,
 
-        return;
+    duration,
 
-    }
+    status,
 
-    const {
+    role,
 
-        year,
+    client,
 
-        duration,
+    version,
 
-        status,
+    lastUpdated,
 
-        role,
+    platform,
+  } = currentProject;
 
-        client,
+  const projectInformation = [
+    {
+      label: "Year",
 
-        version,
+      value: year,
+    },
 
-        lastUpdated,
+    {
+      label: "Duration",
 
-        platform
+      value: duration,
+    },
 
-    } = currentProject;
+    {
+      label: "Status",
 
-    const projectInformation = [
+      value: status,
+    },
 
-        {
+    {
+      label: "Role",
 
-            label: "Year",
+      value: role,
+    },
 
-            value: year
+    {
+      label: "Client",
 
-        },
+      value: client,
+    },
 
-        {
+    {
+      label: "Platform",
 
-            label: "Duration",
+      value: platform,
+    },
 
-            value: duration
+    {
+      label: "Version",
 
-        },
+      value: version,
+    },
 
-        {
+    {
+      label: "Last Updated",
 
-            label: "Status",
+      value: lastUpdated,
+    },
+  ];
 
-            value: status
+  let informationHTML = "";
 
-        },
-
-        {
-
-            label: "Role",
-
-            value: role
-
-        },
-
-        {
-
-            label: "Client",
-
-            value: client
-
-        },
-
-        {
-
-            label: "Platform",
-
-            value: platform
-
-        },
-
-        {
-
-            label: "Version",
-
-            value: version
-
-        },
-
-        {
-
-            label: "Last Updated",
-
-            value: lastUpdated
-
-        }
-
-    ];
-
-    let informationHTML = "";
-
-    projectInformation.forEach(function (item) {
-
-        informationHTML += `
+  projectInformation.forEach(function (item) {
+    informationHTML += `
 
             <div class="info-item">
 
@@ -469,10 +414,9 @@ function renderProjectInformation() {
             </div>
 
         `;
+  });
 
-    });
-
-    informationContainer.innerHTML = `
+  informationContainer.innerHTML = `
 
         <div class="section-heading">
 
@@ -491,36 +435,30 @@ function renderProjectInformation() {
         </div>
 
     `;
-
 }
 
 renderProjectInformation();
 
 function renderProjectNavigation() {
+  const navigation = document.getElementById("project-navigation");
 
-    const navigation = document.getElementById("project-navigation");
+  if (!navigation) {
+    return;
+  }
 
-    if (!navigation) {
+  const currentIndex = projects.findIndex(function (project) {
+    return project.id === projectId;
+  });
 
-        return;
+  const previousIndex = (currentIndex - 1 + projects.length) % projects.length;
 
-    }
+  const nextIndex = (currentIndex + 1) % projects.length;
 
-    const currentIndex = projects.findIndex(function (project) {
+  const previousProject = projects[previousIndex];
 
-        return project.id === projectId;
+  const nextProject = projects[nextIndex];
 
-    });
-
-    const previousIndex = (currentIndex - 1 + projects.length) % projects.length;
-
-    const nextIndex = (currentIndex + 1) % projects.length;
-
-    const previousProject = projects[previousIndex];
-
-    const nextProject = projects[nextIndex];
-
-    navigation.innerHTML = `
+  navigation.innerHTML = `
 
         <a href="project-details.html?id=${previousProject.id}"
 
@@ -559,7 +497,6 @@ function renderProjectNavigation() {
         </a>
 
     `;
-
 }
 
 renderProjectNavigation();
