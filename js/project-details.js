@@ -834,17 +834,17 @@ if (resources?.length) {
 
             <h2>
 
-                Interested in "${title}"?
+    Let's Build Something Great Together
 
-            </h2>
+</h2>
 
-            <p>
+<p>
 
-                Whether you want a similar project or have a completely new idea,
+    Inspired by <strong class="highlight-item">${title}</strong>?
 
-                I'd love to discuss it with you.
+    If you're looking for a similar solution or have a completely different idea, I'd be happy to help bring it to life.
 
-            </p>
+</p>
 
             <div class="project-cta-buttons">
 

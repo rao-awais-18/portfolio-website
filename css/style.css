@@ -2228,3 +2228,26 @@ footer {
     }
 
 }
+
+.project-cta-buttons .btn{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background-color .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+
+}
+
+.project-cta-buttons .btn-secondary:hover{
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--hover-shadow);
+
+}
+
+.highlight-item{
+  color: var(--primary);
+}
