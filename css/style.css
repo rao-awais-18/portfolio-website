@@ -1632,14 +1632,6 @@ footer {
    Lightbox
 ========================== */
 
-/* ==========================
-   Lightbox
-========================== */
-
-/* ==========================
-   Lightbox
-========================== */
-
 .lightbox{
 
     position: fixed;
@@ -1852,6 +1844,68 @@ footer {
         bottom: 20px;
 
         font-size: .85rem;
+
+    }
+
+}
+
+
+/* ==========================
+   Technologies
+========================== */
+
+.technologies-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.technology-card{
+
+    text-align:center;
+
+    padding:35px 25px;
+
+    transition:.3s ease;
+
+}
+
+.technology-card i{
+
+    font-size:3rem;
+
+    color:var(--primary-color);
+
+    margin-bottom:20px;
+
+}
+
+.technology-card h3{
+
+    margin:0;
+
+    font-size:1.1rem;
+
+}
+
+/* responsiveness */
+@media(max-width:768px){
+
+    .technology-card{
+
+        padding:25px 20px;
+
+    }
+
+    .technology-card i{
+
+        font-size:2.5rem;
 
     }
 

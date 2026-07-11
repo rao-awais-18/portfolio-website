@@ -383,50 +383,83 @@ lightbox.addEventListener("click", function(event){
 
 // render Technologies
 function renderTechnologies() {
-  const technologiesContainer = document.getElementById("project-technologies");
+
+  const technologiesContainer =
+    document.getElementById("project-technologies");
 
   if (!technologiesContainer) {
+
     return;
+
   }
 
-  const { technologies } = currentProject;
+  let cards = "";
 
-  let technologiesHTML = "";
+  currentProject.technologies.forEach(function (technology) {
 
-  technologies.forEach(function (technology) {
-    technologiesHTML += `
+    cards += `
 
-            <span>
+      <div class="technology-card glass-card">
 
-                ${technology}
+          <i class="${getTechnologyIcon(technology)}"></i>
 
-            </span>
+          <h3>${technology}</h3>
 
-        `;
+      </div>
+
+    `;
+
   });
 
   technologiesContainer.innerHTML = `
 
-        <div class="section-heading">
+    <div class="section-heading">
 
-            <h2>
+        <h2>Technologies Used</h2>
 
-                Technologies Used
+    </div>
 
-            </h2>
+    <div class="technologies-grid">
 
-        </div>
+        ${cards}
 
-        <div class="tech-stack">
+    </div>
 
-            ${technologiesHTML}
+  `;
 
-        </div>
-
-    `;
 }
 
 renderTechnologies();
+
+// tech-icon mapping function
+function getTechnologyIcon(technology) {
+
+  switch (technology) {
+
+    case "HTML5":
+      return "fa-brands fa-html5";
+
+    case "CSS3":
+      return "fa-brands fa-css3-alt";
+
+    case "JavaScript":
+      return "fa-brands fa-js";
+
+    case "Bootstrap":
+      return "fa-brands fa-bootstrap";
+
+    case "Font Awesome":
+      return "fa-solid fa-font-awesome";
+
+    default:
+      return "fa-solid fa-code";
+
+  }
+
+}
+
+
+
 
 function renderFeatures() {
   const featuresContainer = document.getElementById("project-features");
