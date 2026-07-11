@@ -491,6 +491,8 @@ function getFeatureIcon(feature) {
   }
 }
 
+
+// -------------------- render Project Information --------------------
 function renderProjectInformation() {
   const informationContainer = document.getElementById("project-information");
 
@@ -516,78 +518,82 @@ function renderProjectInformation() {
     platform,
   } = currentProject;
 
-  const projectInformation = [
-    {
-      label: "Year",
+const projectInformation = [
 
-      value: year,
+    {
+        key: "year",
+        label: "Year",
+        value: year,
     },
 
     {
-      label: "Duration",
-
-      value: duration,
+        key: "duration",
+        label: "Duration",
+        value: duration,
     },
 
     {
-      label: "Status",
-
-      value: status,
+        key: "status",
+        label: "Status",
+        value: status,
     },
 
     {
-      label: "Role",
-
-      value: role,
+        key: "role",
+        label: "Role",
+        value: role,
     },
 
     {
-      label: "Client",
-
-      value: client,
+        key: "client",
+        label: "Client",
+        value: client,
     },
 
     {
-      label: "Platform",
-
-      value: platform,
+        key: "platform",
+        label: "Platform",
+        value: platform,
     },
 
     {
-      label: "Version",
-
-      value: version,
+        key: "version",
+        label: "Version",
+        value: version,
     },
 
     {
-      label: "Last Updated",
-
-      value: lastUpdated,
+        key: "lastUpdated",
+        label: "Last Updated",
+        value: lastUpdated,
     },
-  ];
+
+];
 
   let informationHTML = "";
 
   projectInformation.forEach(function (item) {
     informationHTML += `
 
-            <div class="info-item">
+<div class="info-item glass-card">
 
-                <span class="info-label">
+    <i class="${getInfoIcon(item.key)}"></i>
 
-                    ${item.label}
+    <span class="info-label">
 
-                </span>
+        ${item.label}
 
-                <span class="info-value">
+    </span>
 
-                    ${item.value}
+    <span class="info-value">
 
-                </span>
+        ${item.value}
 
-            </div>
+    </span>
 
-        `;
+</div>
+
+`;
   });
 
   informationContainer.innerHTML = `
@@ -611,7 +617,112 @@ function renderProjectInformation() {
     `;
 }
 
+// function renderProjectInformation(){
+
+//     const container =
+//         document.getElementById("project-information");
+
+//     if(!container){
+
+//         return;
+
+//     }
+
+//     const information = [
+
+//         ["Year", currentProject.year],
+
+//         ["Duration", currentProject.duration],
+
+//         ["Status", currentProject.status],
+
+//         ["Role", currentProject.role],
+
+//         ["Client", currentProject.client],
+
+//         ["Version", currentProject.version],
+
+//         ["Last Updated", currentProject.lastUpdated],
+
+//         ["Platform", currentProject.platform]
+
+//     ];
+
+//     let cards = "";
+
+//     information.forEach(function(item){
+
+//         cards += `
+
+//             <div class="info-card glass-card">
+
+//                 <i class="${getInfoIcon(item[0])}"></i>
+
+//                 <h3>${item[0]}</h3>
+
+//                 <p>${item[1]}</p>
+
+//             </div>
+
+//         `;
+
+//     });
+
+//     container.innerHTML = `
+
+//         <div class="section-heading">
+
+//             <h2>Project Information</h2>
+
+//         </div>
+
+//         <div class="information-grid">
+
+//             ${cards}
+
+//         </div>
+
+//     `;
+
+// }
+
 renderProjectInformation();
+
+// helper fuction
+function getInfoIcon(key){
+
+    switch(key){
+
+        case "year":
+            return "fa-regular fa-calendar";
+
+        case "duration":
+            return "fa-regular fa-clock";
+
+        case "status":
+            return "fa-solid fa-circle-check";
+
+        case "role":
+            return "fa-solid fa-user";
+
+        case "client":
+            return "fa-solid fa-building";
+
+        case "platform":
+            return "fa-solid fa-desktop";
+
+        case "version":
+            return "fa-solid fa-code-branch";
+
+        case "lastUpdated":
+            return "fa-solid fa-rotate";
+
+        default:
+            return "fa-solid fa-circle-info";
+
+    }
+
+}
 
 function renderProjectNavigation() {
   const navigation = document.getElementById("project-navigation");
