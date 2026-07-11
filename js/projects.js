@@ -55,9 +55,34 @@ const projects = [
       "Project Detail Page",
     ],
 
-    github: "#",
+    github: "https://github.com/rao-awais-18/personal-portfolio", // temporary placeholder, replace with your own repo link
 
-    liveDemo: "#",
+    liveDemo: "https://rao-awais-18.github.io/personal-portfolio/", // temporary placeholder, replace with your own live demo link
+
+    // resources can be used to add additional links like case studies, Figma designs, etc. You can add as many resources as you want. Each resource should have a title, url and icon (Font Awesome icon class)
+    resources: [
+
+    {
+
+        title: "Case Study",
+
+        url: "#",
+
+        icon: "fa-solid fa-file-lines"
+
+    },
+
+    {
+
+        title: "Figma Design",
+
+        url: "#",
+
+        icon: "fa-brands fa-figma"
+
+    }
+
+],
 
     badges: ["Featured", "In Progress"],
 

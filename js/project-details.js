@@ -763,7 +763,101 @@ function renderProjectNavigation() {
 
 `;
 }
-
 renderProjectNavigation();
+
+
+
+// -------------------- Render Project CTA --------------------
+
+function renderProjectCTA() {
+
+    const ctaContainer = document.getElementById("project-cta");
+
+    if (!ctaContainer) {
+
+        return;
+
+    }
+
+    const {
+
+    title,
+
+    resources
+
+} = currentProject;
+
+    let buttonsHTML = `
+
+    <a href="contact.html"
+
+       class="btn btn-primary">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+        Contact Me
+
+    </a>
+
+`;
+
+if (resources?.length) {
+
+    resources.forEach(function (resource) {
+
+        buttonsHTML += `
+
+            <a href="${resource.url}"
+
+               target="_blank"
+
+               rel="noopener noreferrer"
+
+               class="btn btn-secondary">
+
+                <i class="${resource.icon}"></i>
+
+                ${resource.title}
+
+            </a>
+
+        `;
+
+    });
+
+}
+
+
+    ctaContainer.innerHTML = `
+
+        <div class="project-cta-content">
+
+            <h2>
+
+                Interested in "${title}"?
+
+            </h2>
+
+            <p>
+
+                Whether you want a similar project or have a completely new idea,
+
+                I'd love to discuss it with you.
+
+            </p>
+
+            <div class="project-cta-buttons">
+
+                ${buttonsHTML}
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+renderProjectCTA();
 
 //console.log(currentProject);
