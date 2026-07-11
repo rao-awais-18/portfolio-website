@@ -1777,6 +1777,8 @@ footer {
   margin: 0;
 
   font-size: 1.1rem;
+
+  color: var(--muted);
 }
 
 /* brand colors of tech icons */
