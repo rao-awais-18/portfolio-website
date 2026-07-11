@@ -618,45 +618,8 @@ const projectInformation = [
     `;
 }
 renderProjectInformation();
- 
 
-// helper fuction
-// function getInfoIcon(key){
-
-//     switch(key){
-
-//         case "year":
-//             return "fa-regular fa-calendar";
-
-//         case "duration":
-//             return "fa-regular fa-clock";
-
-//         case "status":
-//             return "fa-solid fa-circle-check";
-
-//         case "role":
-//             return "fa-solid fa-user";
-
-//         case "client":
-//             return "fa-solid fa-building";
-
-//         case "platform":
-//             return "fa-solid fa-desktop";
-
-//         case "version":
-//             return "fa-solid fa-code-branch";
-
-//         case "lastUpdated":
-//             return "fa-solid fa-rotate";
-
-//         default:
-//             return "fa-solid fa-circle-info";
-
-//     }
-
-// }
-
-// new helper function for info icons
+// helper function for info icons
 function getInfoData(key){
 
     switch(key){
@@ -708,8 +671,15 @@ function getInfoData(key){
                 icon: "fa-solid fa-rotate",
                 className: "info-update"
             };
+            
+// no need change any thing for other projects, sab kch automatically render hoga
+// agar kuch aur info field add karni ho to:
+// 1.  data model mein wo info field add karo,
+// 2.  projectInformation array mein uss filed ka object banao key k SVGPathElement
+// 3.  iss switch case mein uss key k liye aik aur case add karo, icon aur className ke sath(icon-name from font awesome website)      
+// 4.  css mein issi classname k sath usska color do.
 
-        default:
+default:
             return {
                 icon: "fa-solid fa-circle-info",
                 className: "info-default"

@@ -1915,3 +1915,40 @@ footer {
     color:var(--muted);
 
 }
+
+/* icon colors for project information */
+.info-year{
+    color:#3B82F6;
+}
+
+.info-duration{
+    color:#F59E0B;
+}
+
+.info-status{
+    color:#10B981;
+}
+
+.info-role{
+    color:#8B5CF6;
+}
+
+.info-client{
+    color:#EC4899;
+}
+
+.info-platform{
+    color:#06B6D4;
+}
+
+.info-version{
+    color:#F97316;
+}
+
+.info-update{
+    color:#14B8A6;
+}
+
+.info-default{
+    color:var(--primary-color);
+}
