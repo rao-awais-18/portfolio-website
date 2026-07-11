@@ -2142,3 +2142,89 @@ footer {
     transform:translateY(-2px);
 
 }
+
+/* ==========================
+   Project CTA
+========================== */
+
+.project-cta{
+
+    padding:100px 0;
+
+}
+
+.project-cta-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.project-cta-content h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    margin-bottom:20px;
+
+}
+
+.project-cta-content p{
+
+    max-width:650px;
+
+    margin:0 auto 40px;
+
+    color:var(--text-muted);
+
+    line-height:1.8;
+
+}
+
+.project-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.project-cta-buttons .btn{
+
+    min-width:190px;
+
+}
+
+/* responsiveness */
+
+@media(max-width:768px){
+
+    .project-cta{
+
+        padding:70px 0;
+
+    }
+
+    .project-cta-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .project-cta-buttons .btn{
+
+        width:100%;
+
+    }
+
+}
