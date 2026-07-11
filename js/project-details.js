@@ -491,7 +491,6 @@ function getFeatureIcon(feature) {
   }
 }
 
-
 // -------------------- render Project Information --------------------
 function renderProjectInformation() {
   const informationContainer = document.getElementById("project-information");
@@ -518,57 +517,55 @@ function renderProjectInformation() {
     platform,
   } = currentProject;
 
-const projectInformation = [
-
+  const projectInformation = [
     {
-        key: "year",
-        label: "Year",
-        value: year,
+      key: "year",
+      label: "Year",
+      value: year,
     },
 
     {
-        key: "duration",
-        label: "Duration",
-        value: duration,
+      key: "duration",
+      label: "Duration",
+      value: duration,
     },
 
     {
-        key: "status",
-        label: "Status",
-        value: status,
+      key: "status",
+      label: "Status",
+      value: status,
     },
 
     {
-        key: "role",
-        label: "Role",
-        value: role,
+      key: "role",
+      label: "Role",
+      value: role,
     },
 
     {
-        key: "client",
-        label: "Client",
-        value: client,
+      key: "client",
+      label: "Client",
+      value: client,
     },
 
     {
-        key: "platform",
-        label: "Platform",
-        value: platform,
+      key: "platform",
+      label: "Platform",
+      value: platform,
     },
 
     {
-        key: "version",
-        label: "Version",
-        value: version,
+      key: "version",
+      label: "Version",
+      value: version,
     },
 
     {
-        key: "lastUpdated",
-        label: "Last Updated",
-        value: lastUpdated,
+      key: "lastUpdated",
+      label: "Last Updated",
+      value: lastUpdated,
     },
-
-];
+  ];
 
   let informationHTML = "";
 
@@ -620,73 +617,69 @@ const projectInformation = [
 renderProjectInformation();
 
 // helper function for info icons
-function getInfoData(key){
+function getInfoData(key) {
+  switch (key) {
+    case "year":
+      return {
+        icon: "fa-regular fa-calendar",
+        className: "info-year",
+      };
 
-    switch(key){
+    case "duration":
+      return {
+        icon: "fa-regular fa-clock",
+        className: "info-duration",
+      };
 
-        case "year":
-            return {
-                icon: "fa-regular fa-calendar",
-                className: "info-year"
-            };
+    case "status":
+      return {
+        icon: "fa-solid fa-circle-check",
+        className: "info-status",
+      };
 
-        case "duration":
-            return {
-                icon: "fa-regular fa-clock",
-                className: "info-duration"
-            };
+    case "role":
+      return {
+        icon: "fa-solid fa-user",
+        className: "info-role",
+      };
 
-        case "status":
-            return {
-                icon: "fa-solid fa-circle-check",
-                className: "info-status"
-            };
+    case "client":
+      return {
+        icon: "fa-solid fa-building",
+        className: "info-client",
+      };
 
-        case "role":
-            return {
-                icon: "fa-solid fa-user",
-                className: "info-role"
-            };
+    case "platform":
+      return {
+        icon: "fa-solid fa-desktop",
+        className: "info-platform",
+      };
 
-        case "client":
-            return {
-                icon: "fa-solid fa-building",
-                className: "info-client"
-            };
+    case "version":
+      return {
+        icon: "fa-solid fa-code-branch",
+        className: "info-version",
+      };
 
-        case "platform":
-            return {
-                icon: "fa-solid fa-desktop",
-                className: "info-platform"
-            };
+    case "lastUpdated":
+      return {
+        icon: "fa-solid fa-rotate",
+        className: "info-update",
+      };
 
-        case "version":
-            return {
-                icon: "fa-solid fa-code-branch",
-                className: "info-version"
-            };
+    // no need change any thing for other projects, sab kch automatically render hoga
+    // agar kuch aur info field add karni ho to:
+    // 1.  data model mein wo info field add karo,
+    // 2.  projectInformation array mein uss filed ka object banao key k SVGPathElement
+    // 3.  iss switch case mein uss key k liye aik aur case add karo, icon aur className ke sath(icon-name from font awesome website)
+    // 4.  css mein issi classname k sath usska color do.
 
-        case "lastUpdated":
-            return {
-                icon: "fa-solid fa-rotate",
-                className: "info-update"
-            };
-            
-// no need change any thing for other projects, sab kch automatically render hoga
-// agar kuch aur info field add karni ho to:
-// 1.  data model mein wo info field add karo,
-// 2.  projectInformation array mein uss filed ka object banao key k SVGPathElement
-// 3.  iss switch case mein uss key k liye aik aur case add karo, icon aur className ke sath(icon-name from font awesome website)      
-// 4.  css mein issi classname k sath usska color do.
-
-default:
-            return {
-                icon: "fa-solid fa-circle-info",
-                className: "info-default"
-            };
-
-    }
-
+    default:
+      return {
+        icon: "fa-solid fa-circle-info",
+        className: "info-default",
+      };
+  }
 }
 
 function renderProjectNavigation() {
@@ -700,21 +693,28 @@ function renderProjectNavigation() {
     return project.id === projectId;
   });
 
-  const previousIndex = (currentIndex - 1 + projects.length) % projects.length;
+  const previousProject = currentIndex > 0
+    ? projects[currentIndex - 1]
+    : null;
 
-  const nextIndex = (currentIndex + 1) % projects.length;
-
-  const previousProject = projects[previousIndex];
-
-  const nextProject = projects[nextIndex];
+const nextProject = currentIndex < projects.length - 1
+    ? projects[currentIndex + 1]
+    : null;
 
   navigation.innerHTML = `
 
-        <a href="project-details.html?id=${previousProject.id}"
+<div class="project-navigation-wrapper">
 
-           class="project-nav-card">
+    ${
+        previousProject
+        ?
+        `
+        <a href="project-details.html?id=${previousProject.id}"
+           class="project-nav previous-project">
 
             <small>
+
+                <i class="fa-solid fa-arrow-left"></i>
 
                 Previous Project
 
@@ -727,14 +727,23 @@ function renderProjectNavigation() {
             </h3>
 
         </a>
+        `
+        :
+        `<div></div>`
+    }
 
+    ${
+        nextProject
+        ?
+        `
         <a href="project-details.html?id=${nextProject.id}"
-
-           class="project-nav-card">
+           class="project-nav next-project">
 
             <small>
 
                 Next Project
+
+                <i class="fa-solid fa-arrow-right"></i>
 
             </small>
 
@@ -745,8 +754,14 @@ function renderProjectNavigation() {
             </h3>
 
         </a>
+        `
+        :
+        `<div></div>`
+    }
 
-    `;
+</div>
+
+`;
 }
 
 renderProjectNavigation();

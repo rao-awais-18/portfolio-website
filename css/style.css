@@ -1954,3 +1954,109 @@ footer {
 .info-default{
     color:var(--primary-color);
 }
+
+/* ==========================
+   Project Navigation
+========================== */
+
+.project-navigation-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+    margin-top:50px;
+
+    padding-top:40px;
+
+    /* border-top:1px solid var(--border); */
+
+}
+
+.project-nav{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.3s ease;
+
+}
+
+.project-nav small{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--muted);
+
+    font-size:.9rem;
+
+    margin-bottom:12px;
+
+}
+
+.project-nav h3{
+
+    margin:0;
+
+    font-size:1.35rem;
+
+    line-height:1.5;
+
+    transition:.3s ease;
+
+}
+
+.project-nav:hover h3{
+
+    color:var(--primary-color);
+
+}
+
+.project-nav:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.next-project{
+
+    text-align:right;
+
+}
+
+.next-project small{
+
+    justify-content:flex-end;
+
+}
+
+@media(max-width:768px){
+
+    .project-navigation-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+    .next-project{
+
+        text-align:left;
+
+    }
+
+    .next-project small{
+
+        justify-content:flex-start;
+
+    }
+
+}
