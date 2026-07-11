@@ -693,22 +693,18 @@ function renderProjectNavigation() {
     return project.id === projectId;
   });
 
-  const previousProject = currentIndex > 0
-    ? projects[currentIndex - 1]
-    : null;
+  const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
 
-const nextProject = currentIndex < projects.length - 1
-    ? projects[currentIndex + 1]
-    : null;
+  const nextProject =
+    currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   navigation.innerHTML = `
 
 <div class="project-navigation-wrapper">
 
     ${
-        previousProject
-        ?
-        `
+      previousProject
+        ? `
         <a href="project-details.html?id=${previousProject.id}"
            class="project-nav previous-project">
 
@@ -720,22 +716,24 @@ const nextProject = currentIndex < projects.length - 1
 
             </small>
 
-            <h3>
+            <div class="tech-stack">
 
-                ${previousProject.title}
+    <span class="tech-badge">
 
-            </h3>
+        ${previousProject.title}
+
+    </span>
+
+</div>
 
         </a>
         `
-        :
-        `<div></div>`
+        : `<div></div>`
     }
 
     ${
-        nextProject
-        ?
-        `
+      nextProject
+        ? `
         <a href="project-details.html?id=${nextProject.id}"
            class="project-nav next-project">
 
@@ -747,16 +745,18 @@ const nextProject = currentIndex < projects.length - 1
 
             </small>
 
-            <h3>
+            <div class="tech-stack">
 
-                ${nextProject.title}
+    <span class="tech-badge">
 
-            </h3>
+        ${nextProject.title}
 
+    </span>
+
+</div>
         </a>
         `
-        :
-        `<div></div>`
+        : `<div></div>`
     }
 
 </div>
