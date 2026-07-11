@@ -220,19 +220,13 @@ function renderGallery() {
 renderGallery();
 
 function initializeGallery() {
+  const galleryItems = document.querySelectorAll(".gallery-item");
 
-    const galleryItems = document.querySelectorAll(".gallery-item");
-
-    galleryItems.forEach(function(item){
-
-        item.addEventListener("click", function(){
-
-            openLightbox(Number(this.dataset.index));
-
-        });
-
+  galleryItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      openLightbox(Number(this.dataset.index));
     });
-
+  });
 }
 initializeGallery();
 
@@ -254,161 +248,159 @@ const nextButton = document.getElementById("lightbox-next");
 
 let currentScreenshotIndex = 0;
 
-
 // open lightbox
 function openLightbox(index) {
+  currentScreenshotIndex = index;
 
-    currentScreenshotIndex = index;
+  updateLightbox();
 
-    updateLightbox();
+  lightbox.classList.add("active");
 
-    lightbox.classList.add("active");
-
-    document.body.style.overflow = "hidden";
-
+  document.body.style.overflow = "hidden";
 }
 
 // close lightbox
 function closeLightbox() {
+  lightbox.classList.remove("active");
 
-    lightbox.classList.remove("active");
-
-    document.body.style.overflow = "";
-
+  document.body.style.overflow = "";
 }
 
-closeButton.addEventListener("click", function(){
-
-    closeLightbox();
-
+closeButton.addEventListener("click", function () {
+  closeLightbox();
 });
 
 // update lightbox content
 function updateLightbox() {
+  lightboxImage.src = currentProject.screenshots[currentScreenshotIndex];
 
-    lightboxImage.src =
-
-        currentProject.screenshots[currentScreenshotIndex];
-
-    lightboxCounter.textContent =
-
-        `viewing ${currentScreenshotIndex + 1} of ${currentProject.screenshots.length}`;
-
+  lightboxCounter.textContent = `viewing ${currentScreenshotIndex + 1} of ${currentProject.screenshots.length}`;
 }
 
 // move to next image
-function nextImage(){
+function nextImage() {
+  currentScreenshotIndex++;
 
-    currentScreenshotIndex++;
+  if (currentScreenshotIndex >= currentProject.screenshots.length) {
+    currentScreenshotIndex = 0;
+  }
 
-    if(currentScreenshotIndex >= currentProject.screenshots.length){
-
-        currentScreenshotIndex = 0;
-
-    }
-
-    updateLightbox();
-
+  updateLightbox();
 }
 
 // listen for next button click
-nextButton.addEventListener("click", function(){
-
-    nextImage();
-
+nextButton.addEventListener("click", function () {
+  nextImage();
 });
 
 // move to previous image
-function previousImage(){
+function previousImage() {
+  currentScreenshotIndex--;
 
-    currentScreenshotIndex--;
+  if (currentScreenshotIndex < 0) {
+    currentScreenshotIndex = currentProject.screenshots.length - 1;
+  }
 
-    if(currentScreenshotIndex < 0){
-
-        currentScreenshotIndex =
-
-        currentProject.screenshots.length - 1;
-
-    }
-
-    updateLightbox();
-
+  updateLightbox();
 }
 // listen for previous button click
-previousButton.addEventListener("click", function(){
-
-    previousImage();
-
+previousButton.addEventListener("click", function () {
+  previousImage();
 });
 
 // keyboard navigation for lightbox
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function (event) {
+  if (!lightbox.classList.contains("active")) {
+    return;
+  }
 
-    if(!lightbox.classList.contains("active")){
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
 
-        return;
-
-    }
-
-    if(event.key === "Escape"){
-
-        closeLightbox();
-
-    }
-
-    if(event.key === "ArrowRight"){
-
+  if (event.key === "ArrowRight") {
     nextImage();
+  }
 
-}
-
-if(event.key === "ArrowLeft"){
-
+  if (event.key === "ArrowLeft") {
     previousImage();
+  }
+});
 
+lightbox.addEventListener("click", function (event) {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+//-------------------- render Technologies --------------------
+
+// tech-icon mapping helper function
+function getTechnologyData(technology) {
+  switch (technology) {
+    case "HTML5":
+      return {
+        icon: "fa-brands fa-html5",
+        className: "html5-tech",
+      };
+
+    case "CSS3":
+      return {
+        icon: "fa-brands fa-css3-alt",
+        className: "css3-tech",
+      };
+
+    case "JavaScript":
+      return {
+        icon: "fa-brands fa-js",
+        className: "javascript-tech",
+      };
+
+    case "Bootstrap":
+      return {
+        icon: "fa-brands fa-bootstrap",
+        className: "bootstrap-tech",
+      };
+
+    case "Font Awesome":
+      return {
+        icon: "fa-solid fa-font-awesome",
+        className: "fontawesome-tech",
+      };
+
+    // agr aur technologies hain to unke liye bhi case add kar sakte hain, icon aur className ke saath(icon-name from font awesome website)
+    // data model mein tech name add karo, switch mein aik aur case add karo, aur css mein issi classname k sath usska color do.
+    default:
+      return {
+        icon: "fa-solid fa-code",
+        className: "default-tech",
+      };
+  }
 }
 
-});
-
-lightbox.addEventListener("click", function(event){
-
-    if(event.target === lightbox){
-
-        closeLightbox();
-
-    }
-
-});
-
-
-// render Technologies
 function renderTechnologies() {
-
-  const technologiesContainer =
-    document.getElementById("project-technologies");
+  const technologiesContainer = document.getElementById("project-technologies");
 
   if (!technologiesContainer) {
-
     return;
-
   }
 
   let cards = "";
 
   currentProject.technologies.forEach(function (technology) {
+    const tech = getTechnologyData(technology);
 
     cards += `
 
-      <div class="technology-card glass-card">
+<div class="technology-card glass-card">
 
-          <i class="${getTechnologyIcon(technology)}"></i>
+    <i class="${tech.icon} ${tech.className}"></i>
 
-          <h3>${technology}</h3>
+    <h3>${technology}</h3>
 
-      </div>
+</div>
 
-    `;
-
+`;
   });
 
   technologiesContainer.innerHTML = `
@@ -426,40 +418,9 @@ function renderTechnologies() {
     </div>
 
   `;
-
 }
 
 renderTechnologies();
-
-// tech-icon mapping function
-function getTechnologyIcon(technology) {
-
-  switch (technology) {
-
-    case "HTML5":
-      return "fa-brands fa-html5";
-
-    case "CSS3":
-      return "fa-brands fa-css3-alt";
-
-    case "JavaScript":
-      return "fa-brands fa-js";
-
-    case "Bootstrap":
-      return "fa-brands fa-bootstrap";
-
-    case "Font Awesome":
-      return "fa-solid fa-font-awesome";
-
-    default:
-      return "fa-solid fa-code";
-
-  }
-
-}
-
-
-
 
 function renderFeatures() {
   const featuresContainer = document.getElementById("project-features");
