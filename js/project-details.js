@@ -419,9 +419,9 @@ function renderTechnologies() {
 
   `;
 }
-
 renderTechnologies();
 
+// -------------------- render Features --------------------
 function renderFeatures() {
   const featuresContainer = document.getElementById("project-features");
 
@@ -429,22 +429,16 @@ function renderFeatures() {
     return;
   }
 
-  const { features } = currentProject;
+  let cards = "";
 
-  let featuresHTML = "";
+  currentProject.features.forEach(function (feature) {
+    cards += `
 
-  features.forEach(function (feature) {
-    featuresHTML += `
+            <div class="feature-card glass-card">
 
-            <div class="feature-card"> 
+                <i class="${getFeatureIcon(feature)}"></i>
 
-                <i class="fa-solid fa-check"></i>
-
-                <span>
-
-                    ${feature}
-
-                </span>
+                <h3>${feature}</h3>
 
             </div>
 
@@ -455,24 +449,47 @@ function renderFeatures() {
 
         <div class="section-heading">
 
-            <h2>
-
-                Key Features
-
-            </h2>
+            <h2>Key Features</h2>
 
         </div>
 
         <div class="features-grid">
 
-            ${featuresHTML}
+            ${cards}
 
         </div>
 
     `;
 }
-
 renderFeatures();
+
+// helper function for features section
+function getFeatureIcon(feature) {
+  switch (feature) {
+    case "Fully Responsive Layout":
+      return "fa-solid fa-mobile-screen-button";
+
+    case "Dynamic Project Rendering":
+      return "fa-solid fa-layer-group";
+
+    case "Dynamic Skills Rendering":
+      return "fa-solid fa-code";
+
+    case "Animated Hero Section":
+      return "fa-solid fa-wand-magic-sparkles";
+
+    case "Glassmorphism UI":
+      return "fa-solid fa-cubes";
+
+    case "Project Detail Page":
+      return "fa-solid fa-file-lines";
+
+    // agr aur features hain to unke liye bhi case add kar sakte hain, case mein feature name aur return mein uss ky lie suited icon
+    //  aur data model mein feature name add karo,
+    default:
+      return "fa-solid fa-circle-check";
+  }
+}
 
 function renderProjectInformation() {
   const informationContainer = document.getElementById("project-information");
