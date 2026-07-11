@@ -573,11 +573,12 @@ const projectInformation = [
   let informationHTML = "";
 
   projectInformation.forEach(function (item) {
+    const info = getInfoData(item.key);
     informationHTML += `
 
 <div class="info-item glass-card">
 
-    <i class="${getInfoIcon(item.key)}"></i>
+    <i class="${info.icon} ${info.className}"></i>
 
     <span class="info-label">
 
@@ -616,109 +617,103 @@ const projectInformation = [
 
     `;
 }
+renderProjectInformation();
+ 
 
-// function renderProjectInformation(){
+// helper fuction
+// function getInfoIcon(key){
 
-//     const container =
-//         document.getElementById("project-information");
+//     switch(key){
 
-//     if(!container){
+//         case "year":
+//             return "fa-regular fa-calendar";
 
-//         return;
+//         case "duration":
+//             return "fa-regular fa-clock";
+
+//         case "status":
+//             return "fa-solid fa-circle-check";
+
+//         case "role":
+//             return "fa-solid fa-user";
+
+//         case "client":
+//             return "fa-solid fa-building";
+
+//         case "platform":
+//             return "fa-solid fa-desktop";
+
+//         case "version":
+//             return "fa-solid fa-code-branch";
+
+//         case "lastUpdated":
+//             return "fa-solid fa-rotate";
+
+//         default:
+//             return "fa-solid fa-circle-info";
 
 //     }
 
-//     const information = [
-
-//         ["Year", currentProject.year],
-
-//         ["Duration", currentProject.duration],
-
-//         ["Status", currentProject.status],
-
-//         ["Role", currentProject.role],
-
-//         ["Client", currentProject.client],
-
-//         ["Version", currentProject.version],
-
-//         ["Last Updated", currentProject.lastUpdated],
-
-//         ["Platform", currentProject.platform]
-
-//     ];
-
-//     let cards = "";
-
-//     information.forEach(function(item){
-
-//         cards += `
-
-//             <div class="info-card glass-card">
-
-//                 <i class="${getInfoIcon(item[0])}"></i>
-
-//                 <h3>${item[0]}</h3>
-
-//                 <p>${item[1]}</p>
-
-//             </div>
-
-//         `;
-
-//     });
-
-//     container.innerHTML = `
-
-//         <div class="section-heading">
-
-//             <h2>Project Information</h2>
-
-//         </div>
-
-//         <div class="information-grid">
-
-//             ${cards}
-
-//         </div>
-
-//     `;
-
 // }
 
-renderProjectInformation();
-
-// helper fuction
-function getInfoIcon(key){
+// new helper function for info icons
+function getInfoData(key){
 
     switch(key){
 
         case "year":
-            return "fa-regular fa-calendar";
+            return {
+                icon: "fa-regular fa-calendar",
+                className: "info-year"
+            };
 
         case "duration":
-            return "fa-regular fa-clock";
+            return {
+                icon: "fa-regular fa-clock",
+                className: "info-duration"
+            };
 
         case "status":
-            return "fa-solid fa-circle-check";
+            return {
+                icon: "fa-solid fa-circle-check",
+                className: "info-status"
+            };
 
         case "role":
-            return "fa-solid fa-user";
+            return {
+                icon: "fa-solid fa-user",
+                className: "info-role"
+            };
 
         case "client":
-            return "fa-solid fa-building";
+            return {
+                icon: "fa-solid fa-building",
+                className: "info-client"
+            };
 
         case "platform":
-            return "fa-solid fa-desktop";
+            return {
+                icon: "fa-solid fa-desktop",
+                className: "info-platform"
+            };
 
         case "version":
-            return "fa-solid fa-code-branch";
+            return {
+                icon: "fa-solid fa-code-branch",
+                className: "info-version"
+            };
 
         case "lastUpdated":
-            return "fa-solid fa-rotate";
+            return {
+                icon: "fa-solid fa-rotate",
+                className: "info-update"
+            };
 
         default:
-            return "fa-solid fa-circle-info";
+            return {
+                icon: "fa-solid fa-circle-info",
+                className: "info-default"
+            };
 
     }
 
