@@ -8,27 +8,99 @@
   box-sizing: border-box;
 }
 
-:root {
-  --primary: #38bdf8;
+:root{
 
-  --background: #0f172a;
+    /* ==========================
+       Colors
+    ========================== */
 
-  --card-bg: rgba(255, 255, 255, 0.05);
+    --primary:#38bdf8;
 
-  --border: rgba(255, 255, 255, 0.08);
+    --background:#0f172a;
 
-  --text: #f8fafc;
+    --card-bg:rgba(255,255,255,.05);
 
-  --muted: #94a3b8;
+    --border:rgba(255,255,255,.08);
 
-  --radius: 20px;
+    --text:#f8fafc;
 
-  --transition: 0.35s ease;
+    --muted:#94a3b8;
 
-  /* --hover-shadow: 0 20px 45px rgba(99, 102, 241, 0.18); */
 
-  /* --hover-shadow: 0 20px 45px rgba(0, 0, 0, 0.18); */
-  --hover-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+    /* ==========================
+       Border Radius
+    ========================== */
+
+    --radius-sm:10px;
+
+    --radius-md:14px;
+
+    --radius-lg:20px;
+
+    --radius-xl:28px;
+
+    /* Backward compatibility */
+
+    --radius:var(--radius-lg);
+
+
+    /* ==========================
+       Typography
+    ========================== */
+
+    --fs-300:.9rem;
+
+    --fs-400:1rem;
+
+    --fs-500:1.15rem;
+
+    --fs-600:1.4rem;
+
+    --fs-700:2rem;
+
+    --fs-800:2.8rem;
+
+    --fs-900:3.6rem;
+
+
+    /* ==========================
+       Spacing
+    ========================== */
+
+    --space-xs:10px;
+
+    --space-sm:15px;
+
+    --space-md:25px;
+
+    --space-lg:40px;
+
+    --space-xl:60px;
+
+    --space-2xl:100px;
+
+
+    /* ==========================
+       Animations
+    ========================== */
+
+    --transition-fast:.25s ease;
+
+    --transition:.35s ease;
+
+    --transition-slow:.5s ease;
+
+
+    /* ==========================
+       Shadows
+    ========================== */
+
+    --shadow-sm:0 4px 12px rgba(0,0,0,.15);
+
+    --shadow-md:0 10px 25px rgba(0,0,0,.22);
+
+    --hover-shadow:0 0 30px rgba(56,189,248,.20);
+
 }
 
 /*=====================================
