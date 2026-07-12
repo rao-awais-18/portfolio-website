@@ -120,7 +120,7 @@
 
   box-shadow: var(--shadow);
 
-  transition: 0.35s ease;
+  transition:var(--transition);
 }
 
 .glass-card:hover {
@@ -173,7 +173,7 @@ body {
 
   font-weight: 500;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .nav-links a:hover {
@@ -256,7 +256,7 @@ body {
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .btn-primary {
@@ -341,7 +341,7 @@ body {
 
   font-weight: 600;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .cv-btn:hover {
@@ -369,7 +369,7 @@ body {
 
   background: #38bdf8;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .nav-links a:hover::after {
@@ -451,7 +451,7 @@ body {
 
   font-size: 22px;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .social-icons a:hover {
@@ -659,7 +659,7 @@ html {
 
   text-align: center;
 
-  transition: 0.35s;
+  transition:var(--transition);
 }
 
 /* T */
@@ -708,7 +708,7 @@ html {
 
   opacity: 0;
 
-  transition: 0.35s ease;
+  transition:var(--transition);
 }
 
 .skill-card:hover .skill-overlay {
@@ -793,7 +793,7 @@ html {
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  transition: 0.35s;
+  transition:var(--transition);
 
   display: flex;
 
@@ -864,7 +864,7 @@ html {
 
   border: 1px solid #38bdf8;
 
-  transition: 0.3s;
+  transition:var(--transition);
 
   flex: 1;
 
@@ -913,7 +913,7 @@ html {
 
   opacity: 0;
 
-  transition: 0.35s ease;
+  transition:var(--transition);
 }
 
 .project-card:hover .project-overlay {
@@ -1224,7 +1224,7 @@ footer {
 .footer-links a {
   color: #94a3b8;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .footer-links a:hover {
@@ -1254,7 +1254,7 @@ footer {
 
   color: white;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .footer-social a:hover {
@@ -1296,7 +1296,7 @@ footer {
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 #backToTop:hover {
@@ -1363,7 +1363,7 @@ footer {
 }
 
 .footer-contact-info p {
-  transition: 0.3s;
+  transition:var(--transition);
 }
 
 .footer-contact-info p:hover {
@@ -1527,7 +1527,7 @@ footer {
 
   cursor: pointer;
 
-  transition: 0.35s ease;
+  transition:var(--transition);
 }
 
 .gallery-item img {
@@ -1539,7 +1539,7 @@ footer {
 
   display: block;
 
-  transition: 0.4s ease;
+  transition:var(--transition);
 }
 
 .gallery-item:hover {
@@ -1591,7 +1591,7 @@ footer {
 
   visibility: hidden;
 
-  transition: 0.35s ease;
+  transition:var(--transition);
 }
 
 .gallery-overlay i {
@@ -1837,7 +1837,7 @@ footer {
 
   padding: 35px 25px;
 
-  transition: 0.3s ease;
+  transition:var(--transition);
 }
 
 
@@ -2205,7 +2205,7 @@ footer {
 
 .project-nav .tech-badge{
 
-    transition:.3s ease;
+    transition:var(--transition);
 
 }
 
