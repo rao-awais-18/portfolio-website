@@ -54,19 +54,6 @@ function typeEffect() {
 
 typeEffect();
 
-// latest date fetch
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const backToTop = document.getElementById("backToTop");
-
-backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-
-    behavior: "smooth",
-  });
-});
-
 const skillsGrid = document.getElementById("skills-grid"); // to modify an html struture we have accessed that html element in this skillsGrid variable
 
 /*----------------------------------------------
@@ -259,5 +246,5 @@ function enableProjectCardClick() {
 }
 
 /*------------------------ function calls --------------*/
-renderProjects();
+
 enableProjectCardClick();

@@ -113,11 +113,11 @@
 
     opacity:0;
 
-    transform:translateY(30px);
+    transform:translateY(24px);
 
     transition:
-        opacity .6s ease,
-        transform .6s ease;
+        opacity .6s ease-out,
+        transform .6s ease-out;
 
     will-change:opacity,transform;
 
@@ -689,6 +689,8 @@ html {
   margin: auto;
 }
 
+
+/* skills section */
 .skills-grid {
   display: grid;
 
