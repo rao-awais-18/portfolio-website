@@ -107,6 +107,45 @@
 
     --transition-slow:.5s ease;
 
+    /*==================================== Scroll Reveal ============================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+    will-change:opacity,transform;
+
+}
+
+.reveal.is-visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce){
+
+    .reveal{
+
+        opacity:1;
+
+        transform:none;
+
+        transition:none;
+
+    }
+
+}
+
 
     /* ==========================
        Shadows
@@ -142,9 +181,6 @@
   box-shadow: var(--hover-shadow);
 }
 
-/*=====================================
-        COMMON COMPONENTS
-=====================================*/
 
 /* full body items */
 body {
