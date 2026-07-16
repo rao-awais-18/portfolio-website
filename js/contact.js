@@ -2,6 +2,10 @@ const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
 
+    // ==========================
+    // Elements
+    // ==========================
+
     const nameInput = document.getElementById("name");
 
     const emailInput = document.getElementById("email");
@@ -16,6 +20,10 @@ if (contactForm) {
 
     const buttonHTML = submitButton.innerHTML;
 
+    // ==========================
+    // Helper Functions
+    // ==========================
+
     function isValidEmail(email) {
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -24,13 +32,42 @@ if (contactForm) {
 
     }
 
+    function showStatus(message, type) {
+
+        formStatus.textContent = message;
+
+        formStatus.className = `form-status ${type}`;
+
+    }
+
+    function setButtonLoading() {
+
+        submitButton.disabled = true;
+
+        submitButton.innerHTML = `
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            Sending...
+        `;
+
+    }
+
+    function resetButton() {
+
+        submitButton.disabled = false;
+
+        submitButton.innerHTML = buttonHTML;
+
+    }
+
+    // ==========================
+    // Submit Event
+    // ==========================
+
     contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-        formStatus.textContent = "";
-
-        formStatus.className = "form-status";
+        showStatus("", "");
 
         const name = nameInput.value.trim();
 
@@ -42,9 +79,7 @@ if (contactForm) {
 
         if (!name || !email || !subject || !message) {
 
-            formStatus.textContent = "Please fill in all fields.";
-
-            formStatus.className = "form-status error";
+            showStatus("Please fill in all fields.", "error");
 
             return;
 
@@ -52,40 +87,21 @@ if (contactForm) {
 
         if (!isValidEmail(email)) {
 
-            formStatus.textContent = "Please enter a valid email.";
-
-            formStatus.className = "form-status error";
+            showStatus("Please enter a valid email.", "error");
 
             return;
 
         }
 
-        function showStatus(message, type) {
-
-    formStatus.textContent = message;
-
-    formStatus.className = `form-status ${type}`;
-
-}
-
-        submitButton.disabled = true;
-
-        submitButton.innerHTML = `
-            <i class="fa-solid fa-spinner fa-spin"></i>
-            Sending...
-        `;
+        setButtonLoading();
 
         setTimeout(function () {
 
-            formStatus.textContent = "Message sent successfully.";
-
-            formStatus.className = "form-status success";
+            showStatus("Message sent successfully.", "success");
 
             contactForm.reset();
 
-            submitButton.disabled = false;
-
-            submitButton.innerHTML = buttonHTML;
+            resetButton();
 
         }, 2000);
 
