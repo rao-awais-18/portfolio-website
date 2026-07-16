@@ -1,3 +1,7 @@
+if (typeof emailjs !== "undefined") {
+emailjs.init("wVUpBuwiwUeRdLO8Q"); // public key
+}
+
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
@@ -59,6 +63,22 @@ if (contactForm) {
 
     }
 
+   function showInputError(input) {
+
+    input.classList.remove("input-success");
+
+    input.classList.add("input-error");
+
+}
+
+function clearInputError(input) {
+
+    input.classList.remove("input-error");
+
+    input.classList.remove("input-success");
+
+}
+
     // ==========================
     // Submit Event
     // ==========================
@@ -68,6 +88,14 @@ if (contactForm) {
         event.preventDefault();
 
         showStatus("", "");
+
+        clearInputError(nameInput);
+
+clearInputError(emailInput);
+
+clearInputError(subjectInput);
+
+clearInputError(messageInput);
 
         const name = nameInput.value.trim();
 
@@ -79,13 +107,40 @@ if (contactForm) {
 
         if (!name || !email || !subject || !message) {
 
-            showStatus("Please fill in all fields.", "error");
+            if (!name) {
 
-            return;
+    showInputError(nameInput);
+
+}
+
+if (!email) {
+
+    showInputError(emailInput);
+
+}
+
+if (!subject) {
+
+    showInputError(subjectInput);
+
+}
+
+if (!message) {
+
+    showInputError(messageInput);
+
+}
+
+
+          showStatus("Please fill in all fields.", "error");
+
+return;
 
         }
 
         if (!isValidEmail(email)) {
+
+            showInputError(emailInput);
 
             showStatus("Please enter a valid email.", "error");
 
@@ -95,16 +150,84 @@ if (contactForm) {
 
         setButtonLoading();
 
-        setTimeout(function () {
+emailjs.send(
 
-            showStatus("Message sent successfully.", "success");
+    "service_2tpwbly",  // service id
 
-            contactForm.reset();
+    "template_nbjpv9o", // template id
 
-            resetButton();
+    {
 
-        }, 2000);
+        name: name,
+
+        email: email,
+
+        subject: subject,
+
+        message: message
+
+    }
+
+)
+
+.then(function () {
+
+    showStatus("Message sent successfully.", "success");
+
+    contactForm.reset();
+
+})
+
+.catch(function () {
+
+    showStatus("Something went wrong. Please try again.", "error");
+
+})
+
+.finally(function () {
+
+    resetButton();
+
+});
 
     });
+
+[nameInput, emailInput, subjectInput, messageInput].forEach(function (input) {
+
+    input.addEventListener("input", function () {
+
+        showStatus("", "");
+
+        if (input === emailInput) {
+
+            if (emailInput.value.trim() === "") {
+
+                clearInputError(emailInput);
+
+            }
+
+            else if (isValidEmail(emailInput.value.trim())) {
+
+                clearInputError(emailInput);
+
+            }
+
+            else {
+
+                showInputError(emailInput);
+
+            }
+
+        }
+
+        else {
+
+            clearInputError(input);
+
+        }
+
+    });
+
+});
 
 }
