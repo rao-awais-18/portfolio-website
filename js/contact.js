@@ -36,13 +36,29 @@ if (contactForm) {
 
     }
 
-    function showStatus(message, type) {
+    let statusTimeout;
 
-        formStatus.textContent = message;
+function showStatus(message, type) {
 
-        formStatus.className = `form-status ${type}`;
+    clearTimeout(statusTimeout);
+
+    formStatus.textContent = message;
+
+    formStatus.className = `form-status ${type}`;
+
+    if (message) {
+
+        statusTimeout = setTimeout(function () {
+
+            formStatus.textContent = "";
+
+            formStatus.className = "form-status";
+
+        }, 4000);
 
     }
+
+}
 
     function setButtonLoading() {
 
