@@ -4,65 +4,91 @@ if (contactForm) {
 
     const nameInput = document.getElementById("name");
 
-const emailInput = document.getElementById("email");
+    const emailInput = document.getElementById("email");
 
-const subjectInput = document.getElementById("subject");
+    const subjectInput = document.getElementById("subject");
 
-const messageInput = document.getElementById("message");
+    const messageInput = document.getElementById("message");
 
-const submitButton = contactForm.querySelector("button");
+    const submitButton = contactForm.querySelector("button");
 
-const formStatus = document.querySelector(".form-status");
+    const formStatus = document.querySelector(".form-status");
 
-function isValidEmail(email) {
+    const buttonHTML = submitButton.innerHTML;
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    function isValidEmail(email) {
 
-    return emailPattern.test(email);
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        return emailPattern.test(email);
+
+    }
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        formStatus.textContent = "";
+
+        formStatus.className = "form-status";
+
+        const name = nameInput.value.trim();
+
+        const email = emailInput.value.trim();
+
+        const subject = subjectInput.value.trim();
+
+        const message = messageInput.value.trim();
+
+        if (!name || !email || !subject || !message) {
+
+            formStatus.textContent = "Please fill in all fields.";
+
+            formStatus.className = "form-status error";
+
+            return;
+
+        }
+
+        if (!isValidEmail(email)) {
+
+            formStatus.textContent = "Please enter a valid email.";
+
+            formStatus.className = "form-status error";
+
+            return;
+
+        }
+
+        function showStatus(message, type) {
+
+    formStatus.textContent = message;
+
+    formStatus.className = `form-status ${type}`;
 
 }
 
-contactForm.addEventListener("submit", function (event) {
+        submitButton.disabled = true;
 
-    const name = nameInput.value.trim();
+        submitButton.innerHTML = `
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            Sending...
+        `;
 
-const email = emailInput.value.trim();
+        setTimeout(function () {
 
-const subject = subjectInput.value.trim();
+            formStatus.textContent = "Message sent successfully.";
 
-const message = messageInput.value.trim();
+            formStatus.className = "form-status success";
 
-if (
+            contactForm.reset();
 
-    !name ||
+            submitButton.disabled = false;
 
-    !email ||
+            submitButton.innerHTML = buttonHTML;
 
-    !subject ||
+        }, 2000);
 
-    !message
-
-) {
-
-    alert("Please fill in all fields.");
-
-    return;
-
-}
-
-if (!isValidEmail(email)) {
-
-    alert("Please enter a valid email address.");
-
-    return;
-
-}
-
-alert("Form validation successful.");
-    event.preventDefault();
-
-});
-
-
+    });
 
 }
