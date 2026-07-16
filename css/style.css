@@ -2806,3 +2806,28 @@ gap:var(--space-md);
     pointer-events: none;
 
 }
+
+.form-status{
+
+    min-height:24px;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    margin-bottom:var(--space-sm);
+
+}
+
+.form-status.success{
+
+    color:#22c55e;
+
+}
+
+.form-status.error{
+
+    color:#ef4444;
+
+}
+
