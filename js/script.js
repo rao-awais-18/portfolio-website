@@ -7,6 +7,10 @@ const words = [
   "Web Developer",
 
   "AI Enthusiast",
+
+  "Open Source Contributor",
+
+  "Tech Blogger",
 ];
 
 let wordIndex = 0;
