@@ -134,7 +134,7 @@ const skillTechnologies = document.getElementById("skill-technologies");
 
 const skillCapabilities = document.getElementById("skill-capabilities");
 
-const learningJourney = document.getElementById("learning-journey");
+const skillLearning = document.getElementById("skill-learning");
 
 const skillNavigation = document.getElementById("skill-navigation");
 
@@ -338,31 +338,51 @@ function renderCapabilities() {
 // Render Learning
 // ==========================
 
-function renderLearningJourney() {
+function renderLearning() {
 
-    learningJourney.innerHTML = `
+    skillLearning.innerHTML = `
 
-        <div class="section-heading">
+        <div class="section-header">
 
             <span class="section-tag">
 
-                <h2>Journey</h2>
+                <h2>Learning Journey</h2>
 
             </span>
 
-            <h4>
+            <h3>
 
-                Learning Journey
+                What I Learned
 
-            </h4>
+            </h3>
+
+            <p>
+
+                Every technology teaches more than syntax. It shapes the way I solve problems and build better software.
+
+            </p>
 
         </div>
 
-        <p>
+        <div class="learning-card">
 
-            ${selectedSkill.learning}
+            <div class="learning-line">
 
-        </p>
+                <span class="learning-dot"></span>
+
+            </div>
+
+            <div class="learning-content">
+
+                <p>
+
+                    ${selectedSkill.learning}
+
+                </p>
+
+            </div>
+
+        </div>
 
     `;
 
@@ -379,7 +399,7 @@ function renderPage() {
 
     renderCapabilities();
 
-    renderLearningJourney();
+    renderLearning();
 
     // renderNavigation();
 
