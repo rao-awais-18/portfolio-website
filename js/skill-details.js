@@ -64,7 +64,7 @@ function renderHero() {
 
                 <span class="section-tag">
 
-                    <h2>Frontend Development</h2>
+                    <h2>${selectedSkill.category}</h2>
 
                 </span>
 

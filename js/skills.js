@@ -8,7 +8,7 @@ const skills = [
 
     icon: "fa-brands fa-html5",
 
-    category: "Frontend",
+    category: "Frontend Development",
 
     description: "The foundation of every modern website.",
 
@@ -66,7 +66,7 @@ const skills = [
 
     icon: "fa-brands fa-css3-alt",
 
-    category: "Frontend",
+    category: "Modern Styling",
 
     description: "Modern styling and responsive layouts.",
 
@@ -126,7 +126,7 @@ Longdescription: "CSS3 is the latest evolution of the Cascading Style Sheets lan
 
     icon: "fa-brands fa-js",
 
-    category: "Frontend",
+    category: "Programming Language",
 
     description: "Interactive and dynamic web applications.",
 
@@ -187,7 +187,7 @@ Longdescription: "JavaScript is a versatile programming language that enables de
 
     icon: "fa-brands fa-bootstrap",
 
-    category: "Frontend",
+    category: "Frontend Framework",
 
     description: "Rapid responsive UI development.",
 
