@@ -1,4 +1,6 @@
 const skills = [
+  
+  // object # 01
   {
     id: "html",
 
@@ -10,9 +12,14 @@ const skills = [
 
     description: "The foundation of every modern website.",
 
-    overview:
-        "HTML5 is the backbone of every website I build. I use semantic elements to create clean, accessible and SEO-friendly page structures.",
+    Longdescription: "HTML5 is the latest version of the HyperText Markup Language, providing a robust foundation for building modern, semantic, and accessible websites.",
 
+    overview: [
+    "Semantic HTML Structure",
+    "SEO Friendly Markup",
+    "Accessibility Best Practices",
+    "Responsive Web Foundation"
+],
     technologies: [
 
         "Semantic HTML",
@@ -51,6 +58,7 @@ const skills = [
     showOnHome: true
 },
 
+// object # 02
 {
     id: "css",
 
@@ -62,9 +70,14 @@ const skills = [
 
     description: "Modern styling and responsive layouts.",
 
-    overview:
-        "CSS3 allows me to create responsive, modern and visually appealing user interfaces using Flexbox, Grid, animations and reusable design systems.",
+Longdescription: "CSS3 is the latest evolution of the Cascading Style Sheets language, enabling developers to create visually appealing and responsive web designs with advanced styling techniques.",
 
+    overview: [
+    "overview point 1",
+    "overview point 2",
+    "overview point 3",
+    "overview point 4"
+],
     technologies: [
 
         "Flexbox",
@@ -105,6 +118,7 @@ const skills = [
     showOnHome: true
 },
 
+// object # 03
 {
     id: "javascript",
 
@@ -116,8 +130,14 @@ const skills = [
 
     description: "Interactive and dynamic web applications.",
 
-    overview:
-        "JavaScript brings my websites to life through dynamic rendering, DOM manipulation, animations, API integration and reusable application logic.",
+Longdescription: "JavaScript is a versatile programming language that enables developers to create interactive and dynamic web applications, enhancing user experiences through client-side scripting.",
+
+    overview: [
+    "overview point 1",
+    "overview point 2",
+    "overview point 3",
+    "overview point 4"
+],
 
     technologies: [
 
@@ -159,6 +179,7 @@ const skills = [
     showOnHome: true
 },
 
+// object # 04
 {
     id: "bootstrap",
 
@@ -170,8 +191,14 @@ const skills = [
 
     description: "Rapid responsive UI development.",
 
-    overview:
-        "Bootstrap helps me rapidly develop responsive layouts while combining its components with custom CSS to maintain a unique design.",
+Longdescription: "Bootstrap is a popular front-end framework that simplifies the process of designing responsive and mobile-first websites with pre-built components and utilities.",
+
+    overview: [
+    "overview point 1",
+    "overview point 2",
+    "overview point 3",
+    "overview point 4"
+],
 
     technologies: [
 
@@ -211,6 +238,7 @@ const skills = [
     showOnHome: true
 },
 
+// object # 05
 {
     id: "flutter",
 
@@ -222,9 +250,14 @@ const skills = [
 
     description: "Cross-platform mobile app development.",
 
-    overview:
-        "Flutter enables me to build beautiful cross-platform mobile applications from a single codebase using Google's modern UI framework.",
+    Longdescription: "A long description about Flutter and its capabilities in building cross-platform mobile applications.",
 
+    overview: [
+    "Cross Platform Apps",
+    "Single Codebase",
+    "Beautiful UI",
+    "High Performance"
+],
     technologies: [
 
         "Dart",
@@ -263,6 +296,7 @@ const skills = [
     showOnHome: true
 },
 
+// object # 06
 {
     id: "github",
 
@@ -274,8 +308,14 @@ const skills = [
 
     description: "Professional version control and collaboration.",
 
-    overview:
-        "I use Git and GitHub to manage project versions, track changes and collaborate efficiently while following professional development workflows.",
+Longdescription: "Git and GitHub are essential tools for version control and collaboration in software development, allowing developers to track changes, manage code repositories, and work together effectively.",
+
+    overview: [
+    "overview point 1",
+    "overview point 2",
+    "overview point 3",
+    "overview point 4"
+],
 
     technologies: [
 

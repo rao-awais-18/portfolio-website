@@ -64,7 +64,7 @@ function renderHero() {
 
                 <span class="section-tag">
 
-                    Frontend Development
+                    <h2>Frontend Development</h2>
 
                 </span>
 
@@ -146,29 +146,57 @@ const skillNavigation = document.getElementById("skill-navigation");
 
 function renderOverview() {
 
+    let overviewItems = "";
+
+    selectedSkill.overview.forEach(function(item){
+
+        overviewItems += `
+
+            <li>
+
+<i class="fa-solid fa-angle-right"></i>
+
+                <span>${item}</span>
+
+            </li>
+
+        `;
+
+    });
+
     skillOverview.innerHTML = `
 
-        <div class="section-heading">
+        <div class="section-header">
 
             <span class="section-tag">
 
-                Overview
+                <h2>Overview</h2>
 
             </span>
 
-            <h2>
+            <h4>
 
-                About ${selectedSkill.name}
+                Why ${selectedSkill.name}?
 
-            </h2>
+            </h4>
+
+            <p class="overview-description">
+
+                ${selectedSkill.Longdescription}
+
+            </p>
 
         </div>
 
-        <p>
+        <div class="overview-content">
 
-            ${selectedSkill.overview}
+            <ul class="overview-list">
 
-        </p>
+                ${overviewItems}
+
+            </ul>
+
+        </div>
 
     `;
 
@@ -202,15 +230,15 @@ function renderTechnologies() {
 
             <span class="section-tag">
 
-                Technologies
+                <h2>Technologies</h2>
 
             </span>
 
-            <h2>
+            <h4>
 
                 What I Use
 
-            </h2>
+            </h4>
 
         </div>
 
@@ -252,15 +280,15 @@ function renderFeatures() {
 
             <span class="section-tag">
 
-                Capabilities
+                <h2>Capabilities</h2>
 
             </span>
 
-            <h2>
+            <h4>
 
                 What I Can Build
 
-            </h2>
+            </h4>
 
         </div>
 
@@ -286,15 +314,15 @@ function renderLearningJourney() {
 
             <span class="section-tag">
 
-                Journey
+                <h2>Journey</h2>
 
             </span>
 
-            <h2>
+            <h4>
 
                 Learning Journey
 
-            </h2>
+            </h4>
 
         </div>
 
