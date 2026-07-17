@@ -125,7 +125,7 @@ function renderHero() {
 }
 
 // ==========================
-// Containers
+// Containers DOM
 // ==========================
 
 const skillOverview = document.getElementById("skill-overview");
@@ -352,35 +352,27 @@ function renderLearning() {
 
             <h3>
 
-                What I Learned
+                Reflection
 
             </h3>
 
             <p>
 
-                Every technology teaches more than syntax. It shapes the way I solve problems and build better software.
+                Every technology teaches something beyond syntax. Here's what I learned while working with ${selectedSkill.name}.
 
             </p>
 
         </div>
 
-        <div class="learning-card">
+        <div class="learning-reflection">
 
-            <div class="learning-line">
+            <i class="fa-solid fa-quote-left"></i>
 
-                <span class="learning-dot"></span>
+            <p>
 
-            </div>
+                ${selectedSkill.learning}
 
-            <div class="learning-content">
-
-                <p>
-
-                    ${selectedSkill.learning}
-
-                </p>
-
-            </div>
+            </p>
 
         </div>
 

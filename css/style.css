@@ -3428,81 +3428,95 @@ gap:var(--space-md);
 
 }
 
-
 /* ==========================
    Learning Journey
 ========================== */
 
-.learning-card{
+.skill-learning{
 
-    display:flex;
-
-    gap:var(--space-xl);
-
-    margin-top:var(--space-xl);
+    padding: var(--space-xxl) 0;
 
 }
 
-.learning-line{
+.learning-reflection{
 
-    display:flex;
+    margin-top: var(--space-xl);
 
-    flex-direction:column;
+    padding: var(--space-xl);
 
-    align-items:center;
+    border-left: 4px solid var(--primary);
 
-}
+    background: var(--card-bg);
 
-.learning-dot{
+    border-radius: var(--radius-md);
 
-    width:14px;
-
-    height:14px;
-
-    border-radius:50%;
-
-    background:var(--primary);
+    transition: var(--transition);
 
 }
 
-.learning-line::after{
+/* hover */
+.learning-reflection:hover{
 
-    content:"";
+    transform: translateY(-4px);
 
-    width:2px;
+    /* border-left-width: 6px; */
 
-    flex:1;
-
-    margin-top:8px;
-
-    background:var(--border);
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
 
 }
 
-.learning-content{
+.learning-reflection p{
 
-    flex:1;
-
-}
-
-.learning-content p{
-
-    line-height:1.9;
-
-    color:var(--text-muted);
+    transition:var(--transition);
 
 }
 
-/* responsive */
-@media(max-width:768px){
+.learning-reflection:hover p{
 
-    .learning-card{
-
-        gap:var(--space-md);
-
-    }
+    color:var(--text);
 
 }
+
+.learning-reflection i{
+
+    font-size: 1.5rem;
+
+    color: var(--primary);
+
+    margin-bottom: var(--space-md);
+
+    transition:var(--transition);
+
+}
+
+.learning-reflection p{
+
+    line-height: 1.9;
+
+    color: var(--text-muted);
+
+    font-style: italic;
+
+    font-size: 1.05rem;
+
+}
+
+.learning-journey{
+
+    margin-bottom: var(--space-md);
+
+}
+
+.learning-reflection i{
+
+    transition: var(--transition);
+
+}
+
+/* .learning-reflection:hover i{
+
+transform:translateX(8px);
+} */
 
 /*-------------------------------- universal classes -------------------------------- */
 .container{
