@@ -30,6 +30,10 @@
 
     --black:#000000;
 
+    --red:#ef4444;
+
+    --green:#22c55e;
+
 
     /* FOR LIGHT MODE WLL IMPLEMENT IT LATER */
     /* :root.light{
@@ -2821,19 +2825,19 @@ gap:var(--space-md);
 
 .form-status.success{
 
-    color:#22c55e;
+    color:var(--green);
 
 }
 
 .form-status.error{
 
-    color:#ef4444;
+    colorvar(--red);
 
 }
 
 .input-error {
 
-    border-color: #ef4444 !important;
+    border-color:var(--red) !important;
 
     box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
 
@@ -2841,7 +2845,7 @@ gap:var(--space-md);
 
 .input-success {
 
-    border-color: #22c55e !important;
+    border-color: var(--green) !important;
 
 }
 
