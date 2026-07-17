@@ -380,6 +380,56 @@ function renderLearning() {
 
 }
 
+// ==========================
+// Render Navigation
+// ==========================
+
+function renderNavigation() {
+
+    const currentIndex = skills.findIndex(function(skill){
+
+        return skill.id === selectedSkill.id;
+
+    });
+
+    const previousSkill = skills[currentIndex - 1];
+
+    const nextSkill = skills[currentIndex + 1];
+
+    skillNavigation.innerHTML = `
+
+        <div class="navigation-wrapper">
+
+            ${previousSkill ? `
+
+                <a href="skill-details.html?id=${previousSkill.id}" class="navigation-card">
+
+                    <span>← Previous Skill</span>
+
+                    <h3>${previousSkill.name}</h3>
+
+                </a>
+
+            ` : `<div></div>`}
+
+            ${nextSkill ? `
+
+                <a href="skill-details.html?id=${nextSkill.id}" class="navigation-card align-right">
+
+                    <span>Next Skill →</span>
+
+                    <h3>${nextSkill.name}</h3>
+
+                </a>
+
+            ` : `<div></div>`}
+
+        </div>
+
+    `;
+
+}
+
 // function calls
 function renderPage() {
 
@@ -393,7 +443,7 @@ function renderPage() {
 
     renderLearning();
 
-    // renderNavigation();
+    renderNavigation();
 
 }
 
