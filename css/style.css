@@ -3290,7 +3290,7 @@ gap:var(--space-md);
 
 .section-header{
 
-    margin-bottom: var(--space-xxl);
+    margin-bottom: var(--space-xl);
 
 }
 
@@ -3328,52 +3328,106 @@ gap:var(--space-md);
 }
 
 /* ==========================
-   Features
+   Capabilities
 ========================== */
 
-.skill-projects{
+.capability-list{
 
-    padding-bottom:var(--space-xxl);
+    display:flex;
 
-}
+    flex-direction:column;
 
-.feature-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:var(--space-lg);
-
-    margin-top:var(--space-lg);
+    margin-top:var(--space-xl);
 
 }
 
-.feature-card{
+.capability-item{
 
-    padding:var(--space-lg);
+    display:flex;
 
-    background:var(--card-bg);
+    gap:var(--space-xl);
 
-    border:1px solid var(--border);
+    padding:var(--space-xl) 0;
 
-    border-radius:var(--radius-lg);
+    border-bottom:1px solid var(--border);
 
     transition:var(--transition);
 
-    text-align:center;
+}
+
+.capability-item:last-child{
+
+    border-bottom:none;
 
 }
 
-.feature-card:hover{
+.capability-number{
 
-    transform:translateY(-6px);
+    font-size:2rem;
 
-    border-color:var(--primary);
+    font-weight:700;
 
-    box-shadow:var(--hover-shadow);
+    color:var(--primary);
+
+    opacity:.35;
+
+    min-width:60px;
+
+    transition:var(--transition);
 
 }
+
+.capability-content{
+
+    flex:1;
+
+}
+
+.capability-content h3{
+
+    margin-bottom:var(--space-sm);
+
+}
+
+.capability-content p{
+
+    color:var(--text-muted);
+
+    line-height:1.8;
+
+}
+
+.capability-item:hover{
+
+    padding-left:12px;
+
+}
+
+.capability-item:hover .capability-number{
+
+    opacity:1;
+
+}
+
+/* responsive */
+@media (max-width:768px){
+
+    .capability-item{
+
+        gap:var(--space-md);
+
+    }
+
+    .capability-number{
+
+        min-width:40px;
+
+        font-size:1.5rem;
+
+    }
+
+}
+
 
 /* ==========================
    Learning Journey

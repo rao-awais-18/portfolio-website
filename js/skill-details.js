@@ -16,8 +16,6 @@ const selectedSkill = skills.find(function (skill) {
 
 });
 
-console.log(selectedSkill);
-
 // ==========================
 // Invalid Skill
 // ==========================
@@ -308,19 +306,19 @@ function renderCapabilities() {
 
             <span class="section-tag">
 
-                Capabilities
+                <h2>Capabilities</h2>
 
             </span>
 
-            <h2>
+            <h3>
 
-                What You Can Build
+                Core Capabilities I Have
 
-            </h2>
+            </h3>
 
             <p>
 
-                Practical skills and real-world capabilities developed while working with ${selectedSkill.name}.
+                Key development capabilities gained through hands-on experience with ${selectedSkill.name}.
 
             </p>
 
