@@ -3513,11 +3513,63 @@ gap:var(--space-md);
 
 }
 
-/* .learning-reflection:hover i{
+/* ==========================
+   Skill Navigation
+========================== */
 
-transform:translateX(8px);
-} */
+.skill-navigation{
 
+    padding:0 0 var(--space-xxl);
+
+}
+
+.navigation-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.nav-btn{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    background:var(--card-bg);
+
+    border:1px solid var(--border);
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.nav-btn:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
 /*-------------------------------- universal classes -------------------------------- */
 .container{
 

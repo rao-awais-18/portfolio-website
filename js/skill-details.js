@@ -398,31 +398,47 @@ function renderNavigation() {
 
     skillNavigation.innerHTML = `
 
-        <div class="navigation-wrapper">
+        <div class="navigation-buttons">
 
-            ${previousSkill ? `
+            ${
+                previousSkill
+                ?
 
-                <a href="skill-details.html?id=${previousSkill.id}" class="navigation-card">
+                `<a
+                    href="skill-details.html?id=${previousSkill.id}"
+                    class="nav-btn"
+                    title="Previous Skill"
+                >
 
-                    <span>← Previous Skill</span>
+                    <i class="fa-solid fa-chevron-left"></i>
 
-                    <h3>${previousSkill.name}</h3>
+                </a>`
 
-                </a>
+                :
 
-            ` : `<div></div>`}
+                ""
 
-            ${nextSkill ? `
+            }
 
-                <a href="skill-details.html?id=${nextSkill.id}" class="navigation-card align-right">
+            ${
+                nextSkill
+                ?
 
-                    <span>Next Skill →</span>
+                `<a
+                    href="skill-details.html?id=${nextSkill.id}"
+                    class="nav-btn"
+                    title="Next Skill"
+                >
 
-                    <h3>${nextSkill.name}</h3>
+                    <i class="fa-solid fa-chevron-right"></i>
 
-                </a>
+                </a>`
 
-            ` : `<div></div>`}
+                :
+
+                ""
+
+            }
 
         </div>
 
