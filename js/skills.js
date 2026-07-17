@@ -1,6 +1,6 @@
 const skills = [
   {
-    id: 1,
+    id: "html",
 
     name: "HTML5",
 
@@ -12,7 +12,7 @@ const skills = [
   },
 
   {
-    id: 2,
+    id: "css",
 
     name: "CSS3",
 
@@ -23,7 +23,7 @@ const skills = [
   },
 
   {
-    id: 3,
+    id: "bootstrap",
 
     name: "Bootstrap",
 
@@ -34,7 +34,7 @@ const skills = [
   },
 
   {
-    id: 4,
+    id: "flutter",
     name: "Flutter",
     icon: "fa-brands fa-flutter",
     description: "Cross-platform mobile app development.",
