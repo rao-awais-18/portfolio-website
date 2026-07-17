@@ -214,11 +214,13 @@ function renderTechnologies() {
 
         technologiesHTML += `
 
-            <span class="tech-badge">
+            <li>
 
-                ${technology}
+                <i class="fa-solid fa-code"></i>
 
-            </span>
+                <span>${technology}</span>
+
+            </li>
 
         `;
 
@@ -226,27 +228,33 @@ function renderTechnologies() {
 
     skillTechnologies.innerHTML = `
 
-        <div class="section-heading">
+        <div class="section-header">
 
             <span class="section-tag">
 
-                <h2>Technologies</h2>
+                Technologies
 
             </span>
 
-            <h4>
+            <h2>
 
-                What I Use
+                Technologies & Concepts
 
-            </h4>
+            </h2>
+
+            <p>
+
+                These are the core technologies, concepts, and best practices I use while working with ${selectedSkill.name}.
+
+            </p>
 
         </div>
 
-        <div class="tech-list">
+        <ul class="technology-list">
 
             ${technologiesHTML}
 
-        </div>
+        </ul>
 
     `;
 
