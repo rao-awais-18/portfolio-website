@@ -20,6 +20,7 @@ const skills = [
     "Accessibility Best Practices",
     "Responsive Web Foundation"
 ],
+
     technologies: [
 
         "Semantic HTML",
@@ -34,17 +35,33 @@ const skills = [
 
     ],
 
-    features: [
+    capabilities: [
 
-        "Responsive Layout Structure",
+    {
 
-        "Semantic Markup",
+        title: "Semantic HTML",
 
-        "Accessible Content",
+        description: "Write meaningful and well-structured HTML documents."
 
-        "SEO-Friendly Pages"
+    },
 
-    ],
+    {
+
+        title: "Forms",
+
+        description: "Create accessible and user-friendly form interfaces."
+
+    },
+
+    {
+
+        title: "SEO Friendly",
+
+        description: "Structure pages for better search engine visibility."
+
+    }
+
+],
 
     learning:
         "HTML was the first web technology I learned. It introduced me to website structure and became the foundation of my frontend development journey.",
@@ -92,19 +109,17 @@ Longdescription: "CSS3 is the latest evolution of the Cascading Style Sheets lan
 
     ],
 
-    features: [
+    capabilities: [
 
-        "Responsive Design",
+    {
 
-        "Glassmorphism",
+        title:"Semantic HTML",
 
-        "Hover Effects",
+        description:"randommmmmmmmmmmm"
 
-        "Dark UI",
+    }
 
-        "Reusable Components"
-
-    ],
+],
 
     learning:
         "After learning HTML, CSS helped me transform simple pages into professional-looking websites with responsive layouts and smooth animations.",
@@ -153,19 +168,17 @@ Longdescription: "JavaScript is a versatile programming language that enables de
 
     ],
 
-    features: [
+    capabilities: [
 
-        "Dynamic UI",
+    {
 
-        "Form Validation",
+        title:"Semantic HTML",
 
-        "Reusable Components",
+        description:"randommmmmmmmmmmm"
 
-        "API Integration",
+    }
 
-        "Interactive Features"
-
-    ],
+],
 
     learning:
         "JavaScript completely changed how I build websites by allowing me to create interactive and data-driven user experiences.",
@@ -214,17 +227,17 @@ Longdescription: "Bootstrap is a popular front-end framework that simplifies the
 
     ],
 
-    features: [
+    capabilities: [
 
-        "Responsive Layout",
+    {
 
-        "Fast Development",
+        title:"Semantic HTML",
 
-        "Reusable Components",
+        description:"randommmmmmmmmmmm"
 
-        "Mobile First Design"
+    }
 
-    ],
+],
 
     learning:
         "Bootstrap taught me how professional UI frameworks are structured and helped me speed up frontend development.",
@@ -272,17 +285,17 @@ Longdescription: "Bootstrap is a popular front-end framework that simplifies the
 
     ],
 
-    features: [
+    capabilities: [
 
-        "Cross Platform Apps",
+    {
 
-        "Responsive UI",
+        title:"Semantic HTML",
 
-        "Authentication",
+        description:"randommmmmmmmmmmm"
 
-        "State Management"
+    }
 
-    ],
+],
 
     learning:
         "I started learning Flutter to expand my development skills beyond websites and build modern Android applications.",
@@ -331,17 +344,17 @@ Longdescription: "Git and GitHub are essential tools for version control and col
 
     ],
 
-    features: [
+    capabilities: [
 
-        "Version Control",
+    {
 
-        "Project Backup",
+        title:"Semantic HTML",
 
-        "Branch Management",
+        description:"randommmmmmmmmmmm"
 
-        "Collaboration"
+    }
 
-    ],
+],
 
     learning:
         "Learning Git and GitHub helped me organize projects professionally and understand real-world software development workflows.",

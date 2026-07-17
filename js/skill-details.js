@@ -52,7 +52,7 @@ function renderHero() {
 
     const totalTechnologies = selectedSkill.technologies.length;
 
-    const totalFeatures = selectedSkill.features.length;
+    const totalCapabilities = selectedSkill.capabilities.length;
 
     const totalProjects = selectedSkill.projects.length;
 
@@ -92,7 +92,7 @@ function renderHero() {
 
                     <div class="info-card">
 
-                        <h3>${totalFeatures}</h3>
+                        <h3>${totalCapabilities}</h3>
 
                         <span>Capabilities</span>
 
@@ -134,7 +134,7 @@ const skillOverview = document.getElementById("skill-overview");
 
 const skillTechnologies = document.getElementById("skill-technologies");
 
-const skillProjects = document.getElementById("skill-projects");
+const skillCapabilities = document.getElementById("skill-capabilities");
 
 const learningJourney = document.getElementById("learning-journey");
 
@@ -174,11 +174,11 @@ function renderOverview() {
 
             </span>
 
-            <h4>
+            <h3>
 
                 Why ${selectedSkill.name}?
 
-            </h4>
+            </h3>
 
             <p class="overview-description">
 
@@ -232,15 +232,15 @@ function renderTechnologies() {
 
             <span class="section-tag">
 
-                Technologies
+                <h2>Technologies</h2>
 
             </span>
 
-            <h2>
+            <h3>
 
                 Technologies & Concepts
 
-            </h2>
+            </h3>
 
             <p>
 
@@ -261,20 +261,40 @@ function renderTechnologies() {
 }
 
 // ==========================
-// Render Features
+// Render Capabilities
 // ==========================
 
-function renderFeatures() {
+function renderCapabilities() {
 
-    let featuresHTML = "";
+    let capabilitiesHTML = "";
 
-    selectedSkill.features.forEach(function (feature) {
+    selectedSkill.capabilities.forEach(function(capability,index){
 
-        featuresHTML += `
+        capabilitiesHTML += `
 
-            <div class="feature-card">
+            <div class="capability-item">
 
-                ${feature}
+                <div class="capability-number">
+
+                    ${(index+1).toString().padStart(2,"0")}
+
+                </div>
+
+                <div class="capability-content">
+
+                    <h3>
+
+                        ${capability.title}
+
+                    </h3>
+
+                    <p>
+
+                        ${capability.description}
+
+                    </p>
+
+                </div>
 
             </div>
 
@@ -282,27 +302,33 @@ function renderFeatures() {
 
     });
 
-    skillProjects.innerHTML = `
+    skillCapabilities.innerHTML = `
 
-        <div class="section-heading">
+        <div class="section-header">
 
             <span class="section-tag">
 
-                <h2>Capabilities</h2>
+                Capabilities
 
             </span>
 
-            <h4>
+            <h2>
 
-                What I Can Build
+                What You Can Build
 
-            </h4>
+            </h2>
+
+            <p>
+
+                Practical skills and real-world capabilities developed while working with ${selectedSkill.name}.
+
+            </p>
 
         </div>
 
-        <div class="feature-grid">
+        <div class="capability-list">
 
-            ${featuresHTML}
+            ${capabilitiesHTML}
 
         </div>
 
@@ -353,7 +379,7 @@ function renderPage() {
 
     renderTechnologies();
 
-    renderFeatures();
+    renderCapabilities();
 
     renderLearningJourney();
 

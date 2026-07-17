@@ -3215,45 +3215,115 @@ gap:var(--space-md);
    Technologies
 ========================== */
 
-.skill-technologies{
+.technology-list{
 
-    padding-bottom:var(--space-xxl);
+    list-style: none;
 
-}
+    padding: 0;
 
-.tech-list{
+    margin: var(--space-xl) 0 0;
 
-    display:flex;
+    display: grid;
 
-    flex-wrap:wrap;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap:var(--space-md);
-
-    margin-top:var(--space-lg);
+    gap: var(--space-lg) var(--space-xxl);
 
 }
 
-.tech-badge{
+.technology-list li{
 
-    padding:12px 20px;
+    display: flex;
 
-    border-radius:999px;
+    align-items: center;
 
-    background:var(--card-bg);
+    gap: var(--space-md);
 
-    border:1px solid var(--border);
+    padding: var(--space-sm) 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition: var(--transition);
+
+}
+
+.technology-list li:last-child{
+
+    border-bottom: none;
+
+}
+
+.technology-list i{
+
+    color: var(--primary);
+
+    font-size: .9rem;
+
+    transition: var(--transition);
+
+}
+
+.technology-list span{
+
+    background-image:linear-gradient(
+        var(--primary),
+        var(--primary)
+    );
+
+    background-repeat:no-repeat;
+
+    background-position:left bottom;
+
+    background-size:0% 2px;
 
     transition:var(--transition);
 
 }
 
-.tech-badge:hover{
+.technology-list li:hover span{
 
-    transform:translateY(-5px);
+    background-size:100% 2px;
 
-    border-color:var(--primary);
+    color:var(--primary);
 
-    box-shadow:var(--hover-shadow);
+}
+
+.section-header{
+
+    margin-bottom: var(--space-xxl);
+
+}
+
+.section-header p{
+
+    margin-top: var(--space-md);
+    color: var(--muted);
+
+}
+
+
+.technology-list li:hover{
+
+    padding-left: 6px;
+
+}
+
+.technology-list li:hover i{
+
+    transform: translateX(5px);
+
+}
+
+/* responsive */
+@media (max-width:768px){
+
+    .technology-list{
+
+        grid-template-columns: 1fr;
+
+        gap: var(--space-md);
+
+    }
 
 }
 
