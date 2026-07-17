@@ -50,31 +50,77 @@ const skillHero = document.getElementById("skill-hero");
 
 function renderHero() {
 
+    const totalTechnologies = selectedSkill.technologies.length;
+
+    const totalFeatures = selectedSkill.features.length;
+
+    const totalProjects = selectedSkill.projects.length;
+
     skillHero.innerHTML = `
 
-        <span class="page-tag">
+        <div class="skill-hero-content">
 
-            ${selectedSkill.category}
+            <div class="hero-left">
 
-        </span>
+                <span class="section-tag">
 
-        <div class="skill-title">
+                    Frontend Development
 
-            <i class="${selectedSkill.icon}"></i>
+                </span>
 
-            <h1>
+                <h1>
 
-                ${selectedSkill.name}
+                    ${selectedSkill.name}
 
-            </h1>
+                </h1>
+
+                <p>
+
+                    ${selectedSkill.description}
+
+                </p>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+
+                        <h3>${totalTechnologies}</h3>
+
+                        <span>Technologies</span>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>${totalFeatures}</h3>
+
+                        <span>Capabilities</span>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>${totalProjects}</h3>
+
+                        <span>Projects</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="hero-icon">
+
+                    <i class="${selectedSkill.icon}"></i>
+
+                </div>
+
+            </div>
 
         </div>
-
-        <p>
-
-            ${selectedSkill.description}
-
-        </p>
 
     `;
 
@@ -190,11 +236,11 @@ function renderFeatures() {
 
         featuresHTML += `
 
-            <li>
+            <div class="feature-card">
 
                 ${feature}
 
-            </li>
+            </div>
 
         `;
 
@@ -218,11 +264,11 @@ function renderFeatures() {
 
         </div>
 
-        <ul class="feature-list">
+        <div class="feature-grid">
 
             ${featuresHTML}
 
-        </ul>
+        </div>
 
     `;
 
@@ -275,7 +321,7 @@ function renderPage() {
 
     renderLearningJourney();
 
-    renderNavigation();
+    // renderNavigation();
 
 }
 
