@@ -64,7 +64,7 @@ const skills = [
 ],
 
     learning:
-        "HTML was the first web technology I learned. It introduced me to website structure and became the foundation of my frontend development journey.",
+        "HTML was my first step into web development. It taught me how every webpage is structured and laid the foundation for everything I learned afterward. Understanding semantic markup, accessibility, and clean document structure changed the way I approach frontend development.",
 
     projects: [
 

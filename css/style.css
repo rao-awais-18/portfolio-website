@@ -3433,24 +3433,76 @@ gap:var(--space-md);
    Learning Journey
 ========================== */
 
-.learning-journey{
+.learning-card{
 
-    padding:var(--space-xxl) 0;
+    display:flex;
+
+    gap:var(--space-xl);
+
+    margin-top:var(--space-xl);
 
 }
 
-.learning-journey p{
+.learning-line{
 
-    margin-top:var(--space-lg);
+    display:flex;
 
-    max-width:900px;
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.learning-dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+}
+
+.learning-line::after{
+
+    content:"";
+
+    width:2px;
+
+    flex:1;
+
+    margin-top:8px;
+
+    background:var(--border);
+
+}
+
+.learning-content{
+
+    flex:1;
+
+}
+
+.learning-content p{
 
     line-height:1.9;
 
-    color:var(--muted);
+    color:var(--text-muted);
 
 }
 
+/* responsive */
+@media(max-width:768px){
+
+    .learning-card{
+
+        gap:var(--space-md);
+
+    }
+
+}
 
 /*-------------------------------- universal classes -------------------------------- */
 .container{
