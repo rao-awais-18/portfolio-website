@@ -3,17 +3,15 @@ const projectsCount = document.getElementById("projects-count");
 const filterButtons = document.getElementById("filter-buttons");
 const searchInput = document.getElementById("project-search");
 const projectsGrid = document.getElementById("projects-grid");
-// 1
 const sortProjects = document.getElementById("sort-projects");
 let currentSort = "default";
-
 const resetButton = document.getElementById("reset-filters");
+const activeFilters = document.getElementById("active-filters");
 
 // state variables
 let currentCategory = "All";
 let currentSearch = "";
 
-// 2
 sortProjects.addEventListener("change",function(){
 
     currentSort=this.value;
@@ -176,9 +174,35 @@ const matchesSearch =
 
     });
 
-    projectsCount.textContent =
+    let info = `Showing <strong>${filteredProjects.length}</strong> Project${filteredProjects.length === 1 ? "" : "s"}`;
 
-`Showing ${filteredProjects.length} Project${filteredProjects.length === 1 ? "" : "s"}`;
+if (currentCategory !== "All") {
+
+    info += ` • Category:<span class = "highlight"> ${currentCategory}</span>`;
+
+}
+
+if (currentSearch) {
+
+    info += ` • Search:<span class = "highlight"> "${currentSearch}"</span>`;
+
+}
+
+if (currentSort !== "default") {
+
+    const sortLabel =
+
+        currentSort === "az"
+
+            ? "A–Z"
+
+            : "Z–A";
+
+    info += ` • Sort: <span class="highlight">${sortLabel}</span>`;
+
+}
+
+projectsCount.innerHTML = info;
 
     if (filteredProjects.length === 0) {
 
@@ -204,7 +228,6 @@ const matchesSearch =
 
 }
 
-// 3
 if(currentSort==="az"){
 
     filteredProjects.sort(function(a,b){
@@ -224,6 +247,7 @@ if(currentSort==="za"){
     });
 
 }
+
 
 renderProjects(filteredProjects, projectsGrid);
 
