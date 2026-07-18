@@ -11,7 +11,7 @@ if (searchInput) {
 
     searchInput.addEventListener("input", function () {
 
-        currentSearch = this.value;
+        currentSearch = this.value.trim();
 
 updateProjects();
 
@@ -25,8 +25,6 @@ if (projectsGrid){
 
     renderFilters();
     updateProjects();
-
-    // enableProjectCardClick();
 
 }
 
@@ -101,11 +99,31 @@ function updateProjects() {
 
             project.category === currentCategory;
 
-        const matchesSearch =
+        const search = currentSearch.toLowerCase();
 
-            project.title
-                .toLowerCase()
-                .includes(currentSearch.toLowerCase());
+const matchesSearch =
+
+    (project.title || "")
+        .toLowerCase()
+        .includes(search)
+
+    ||
+
+    (project.shortDescription || "")
+        .toLowerCase()
+        .includes(search)
+
+    ||
+
+    (project.category || "")
+        .toLowerCase()
+        .includes(search);
+
+      project.technologies.some(function(tech){
+
+        return tech.toLowerCase().includes(search);
+
+    });  
 
         return matchesCategory && matchesSearch;
 
