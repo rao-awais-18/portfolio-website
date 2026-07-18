@@ -226,17 +226,13 @@ function createProjectCard(project) {
 }
 
 // render projects
-function renderProjects(
+function renderProjects(projectList, container) {
 
-  projectList = projects.filter(project => project.showOnHome),
-
-  container = projectsGrid
-
-) {
+  if (!container) return;
 
   let cards = "";
 
-  projectList.forEach((project) => {
+  projectList.forEach(function(project){
 
     cards += createProjectCard(project);
 
@@ -245,8 +241,6 @@ function renderProjects(
   container.innerHTML = cards;
 
 }
-
-renderProjects();
 
 // fuction to make whole project card clickable, click event
 function enableProjectCardClick() {
@@ -266,6 +260,19 @@ function enableProjectCardClick() {
   });
 }
 
-/*------------------------ function calls --------------*/
+const homeProjectsGrid = document.getElementById("projects-grid");
 
-enableProjectCardClick();
+if (homeProjectsGrid) {
+
+    renderProjects(
+
+        projects.filter(project => project.showOnHome),
+
+        homeProjectsGrid
+
+    );
+
+    enableProjectCardClick();
+
+}
+

@@ -26,7 +26,7 @@ if (projectsGrid){
     renderFilters();
     updateProjects();
 
-    enableProjectCardClick();
+    // enableProjectCardClick();
 
 }
 
