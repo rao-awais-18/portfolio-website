@@ -7,6 +7,8 @@ const sortProjects = document.getElementById("sort-projects");
 let currentSort = "default";
 const resetButton = document.getElementById("reset-filters");
 const activeFilters = document.getElementById("active-filters");
+let searchTimeout;
+
 
 // state variables
 let currentCategory = "All";
@@ -26,7 +28,13 @@ if (searchInput) {
 
         currentSearch = this.value.trim();
 
-updateProjects();
+        clearTimeout(searchTimeout);
+
+        searchTimeout = setTimeout(function () {
+
+            updateProjects();
+
+        }, 250);
 
     });
 
