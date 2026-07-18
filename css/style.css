@@ -3774,6 +3774,64 @@ transform: translateY(-5px) scale(1.05);
 
 }
 
+/* ==========================
+   Filters
+========================== */
+
+.projects-filter{
+
+    padding-bottom: var(--space-xl);
+
+}
+
+#filter-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.filter-btn{
+
+    padding:10px 18px;
+
+    border:1px solid var(--border);
+
+    background:transparent;
+
+    color:var(--text);
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.filter-btn:hover{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+.filter-btn.active{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-color:var(--primary);
+
+}
+
 /*-------------------------------- universal classes -------------------------------- */
 .container{
 
