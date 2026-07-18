@@ -3,10 +3,24 @@ const projectsCount = document.getElementById("projects-count");
 const filterButtons = document.getElementById("filter-buttons");
 const searchInput = document.getElementById("project-search");
 const projectsGrid = document.getElementById("projects-grid");
+// 1
+const sortProjects = document.getElementById("sort-projects");
+let currentSort = "default";
+
+const resetButton = document.getElementById("reset-filters");
 
 // state variables
 let currentCategory = "All";
 let currentSearch = "";
+
+// 2
+sortProjects.addEventListener("change",function(){
+
+    currentSort=this.value;
+
+    updateProjects();
+
+});
 
 if (searchInput) {
 
@@ -15,6 +29,38 @@ if (searchInput) {
         currentSearch = this.value.trim();
 
 updateProjects();
+
+    });
+
+}
+
+if(resetButton){
+
+    resetButton.addEventListener("click",function(){
+
+        currentCategory = "All";
+
+        currentSearch = "";
+
+        currentSort = "default";
+
+        searchInput.value = "";
+
+        sortProjects.value = "default";
+
+        document.querySelectorAll(".filter-btn").forEach(function(button){
+
+            button.classList.toggle(
+
+                "active",
+
+                button.dataset.category === "All"
+
+            );
+
+        });
+
+        updateProjects();
 
     });
 
@@ -155,6 +201,27 @@ const matchesSearch =
     `;
 
     return;
+
+}
+
+// 3
+if(currentSort==="az"){
+
+    filteredProjects.sort(function(a,b){
+
+        return a.title.localeCompare(b.title);
+
+    });
+
+}
+
+if(currentSort==="za"){
+
+    filteredProjects.sort(function(a,b){
+
+        return b.title.localeCompare(a.title);
+
+    });
 
 }
 

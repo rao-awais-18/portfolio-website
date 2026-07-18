@@ -3885,6 +3885,160 @@ transform: translateY(-5px) scale(1.05);
 
 }
 
+/*===================================
+Reset Button
+===================================*/
+
+#reset-filters{
+
+    padding:12px 20px;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font:inherit;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    transition:var(--transition);
+
+}
+
+#reset-filters i{
+
+    font-size:.9rem;
+
+}
+
+#reset-filters:hover{
+
+    color:var(--primary);
+
+    border-color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+#reset-filters:active{
+
+    transform:translateY(0);
+
+}
+
+#reset-filters:hover i{
+
+    transform:rotate(-180deg);
+
+}
+
+#reset-filters i{
+
+    transition:transform .4s ease;
+
+}
+
+
+
+@media(max-width:576px){
+
+    .sort-wrapper{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    #sort-projects,
+
+    #reset-filters{
+
+        width:100%;
+
+    }
+
+}
+
+/*===================================
+Projects Sorting
+===================================*/
+
+.sort-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+    padding-bottom:var(--space-xl);
+
+}
+
+#sort-projects{
+
+    min-width:180px;
+
+    padding:12px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    background:var(--card-bg);
+
+    color:var(--text);
+
+    font:inherit;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:var(--transition);
+
+}
+
+#sort-projects option{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+#sort-projects:hover{
+
+    border-color:var(--primary);
+
+}
+
+#sort-projects:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(99,102,241,.15);
+
+}
+
 /*-------------------------------- universal classes -------------------------------- */
 .container{
 
