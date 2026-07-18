@@ -111,8 +111,32 @@ function updateProjects() {
 
     });
 
-    renderProjects(filteredProjects, projectsGrid);
+    if (filteredProjects.length === 0) {
 
-    enableProjectCardClick();
+    projectsGrid.innerHTML = `
+
+        <div class="empty-state">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <h3>No Projects Found</h3>
+
+            <p>
+
+                Try changing the search keyword or selecting another category.
+
+            </p>
+
+        </div>
+
+    `;
+
+    return;
+
+}
+
+renderProjects(filteredProjects, projectsGrid);
+
+enableProjectCardClick();
 
 }
