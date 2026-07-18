@@ -175,7 +175,7 @@ function updateProjects(animate = false) {
 
             project.category === currentCategory;
 
-        const search = currentSearch.toLowerCase();
+        const search = (currentSearch || "").toLowerCase();
 
 const matchesSearch =
 
@@ -193,9 +193,11 @@ const matchesSearch =
 
     (project.category || "")
         .toLowerCase()
-        .includes(search);
+        .includes(search)
 
-      project.technologies.some(function(tech){
+    ||
+
+    project.technologies.some(function (tech) {
 
         return tech.toLowerCase().includes(search);
 
