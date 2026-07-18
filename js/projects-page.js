@@ -14,11 +14,13 @@ let searchTimeout;
 let currentCategory = "All";
 let currentSearch = "";
 
+
+// Events
 sortProjects.addEventListener("change",function(){
 
     currentSort=this.value;
 
-    updateProjects();
+    updateProjects(true); //3
 
 });
 
@@ -66,7 +68,7 @@ if(resetButton){
 
         });
 
-        updateProjects();
+        updateProjects(true); //2
 
     });
 
@@ -137,7 +139,7 @@ filterButtons.addEventListener("click", function(event){
 
     currentCategory = button.dataset.category;
 
-    updateProjects();
+    updateProjects(true); //1
 
 });
 
@@ -163,7 +165,7 @@ function animateProjects(filteredProjects) {
 
 
 
-function updateProjects() {
+function updateProjects(animate = false) {
 
     let filteredProjects = projects.filter(function(project){
 
@@ -278,6 +280,16 @@ if(currentSort==="za"){
 }
 
 
-animateProjects(filteredProjects);
+if (animate) {
+
+    animateProjects(filteredProjects);
+
+} else {
+
+    renderProjects(filteredProjects, projectsGrid);
+
+    enableProjectCardClick();
+
+}
 
 }
