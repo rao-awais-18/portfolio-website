@@ -3868,6 +3868,23 @@ transform: translateY(-5px) scale(1.05);
 
 }
 
+/* search result count styling */
+.projects-info{
+
+    margin:var(--space-sm);
+
+    text-align:center;
+
+}
+
+#projects-count{
+
+    color:var(--muted);
+
+    font-size:0.95rem;
+
+}
+
 /*-------------------------------- universal classes -------------------------------- */
 .container{
 

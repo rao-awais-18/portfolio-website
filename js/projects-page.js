@@ -1,4 +1,5 @@
 // DOM
+const projectsCount = document.getElementById("projects-count");
 const filterButtons = document.getElementById("filter-buttons");
 const searchInput = document.getElementById("project-search");
 const projectsGrid = document.getElementById("projects-grid");
@@ -128,6 +129,10 @@ const matchesSearch =
         return matchesCategory && matchesSearch;
 
     });
+
+    projectsCount.textContent =
+
+`Showing ${filteredProjects.length} Project${filteredProjects.length === 1 ? "" : "s"}`;
 
     if (filteredProjects.length === 0) {
 
