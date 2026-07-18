@@ -204,7 +204,7 @@ const projects = [
 
     badges: ["Coming Soon"],
 
-    showOnHome: false,
+    showOnHome: true,
 
     year: 2025,
 

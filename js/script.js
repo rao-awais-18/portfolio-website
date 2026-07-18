@@ -21,6 +21,9 @@ let isDeleting = false;
 const typingText = document.getElementById("typing-text");
 
 function typeEffect() {
+
+if (!typingText) return;
+
   currentWord = words[wordIndex];
 
   if (!isDeleting) {
@@ -63,6 +66,8 @@ const skillsGrid = document.getElementById("skills-grid"); // to modify an html 
 /*----------------------------------------------
 dynamic skill cards logic
 -----------------------------------------------*/
+
+if (skillsGrid && typeof skills !== "undefined") {
 skills.forEach(function (skill) {
   if (!skill.showOnHome) return; // temporary check⚠️
   const card = `
@@ -93,11 +98,12 @@ skills.forEach(function (skill) {
 
   skillsGrid.innerHTML += card;
 });
+}
 
 /* ----------------------------------------------
 for dyamic projet cards 
 -------------------------------------------------*/
-const projectsGrid = document.getElementById("projects-grid");
+// const projectsGrid = document.getElementById("projects-grid");
 
 //dynamic badges
 function createBadges(badges) {
@@ -219,14 +225,25 @@ function createProjectCard(project) {
     `;
 }
 
-function renderProjects() {
+// render projects
+function renderProjects(
+
+  projectList = projects.filter(project => project.showOnHome),
+
+  container = projectsGrid
+
+) {
+
   let cards = "";
 
-  projects.forEach((project) => {
+  projectList.forEach((project) => {
+
     cards += createProjectCard(project);
+
   });
 
-  projectsGrid.innerHTML = cards;
+  container.innerHTML = cards;
+
 }
 
 renderProjects();
