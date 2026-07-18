@@ -142,6 +142,27 @@ filterButtons.addEventListener("click", function(event){
 });
 
 
+// helper function to animate projects shuffle
+function animateProjects(filteredProjects) {
+
+    renderProjects(filteredProjects, projectsGrid);
+
+    enableProjectCardClick();
+
+    const cards = document.querySelectorAll(".project-card");
+
+    cards.forEach(function(card,index){
+
+        card.style.animationDelay = `${index * 70}ms`;
+
+        card.classList.add("animate-card");
+
+    });
+
+}
+
+
+
 function updateProjects() {
 
     let filteredProjects = projects.filter(function(project){
@@ -257,8 +278,6 @@ if(currentSort==="za"){
 }
 
 
-renderProjects(filteredProjects, projectsGrid);
-
-enableProjectCardClick();
+animateProjects(filteredProjects);
 
 }
