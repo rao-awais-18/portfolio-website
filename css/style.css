@@ -3715,6 +3715,65 @@ transform: translateY(-5px) scale(1.05);
 
 }
 
+/* ==========================
+   Projects Page
+========================== */
+
+/*----------------------------------- search -------------------------------------- */
+.projects-search{
+
+    padding-bottom: var(--space-xl);
+
+}
+
+.search-box{
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+}
+
+.search-box i{
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+}
+
+.search-box input{
+
+    width: 100%;
+
+    padding: 16px 20px 16px 50px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    background: var(--card-bg);
+
+    color: var(--text);
+
+    transition: var(--transition);
+
+}
+
+.search-box input:focus{
+
+    border-color: var(--primary);
+
+}
+
 /*-------------------------------- universal classes -------------------------------- */
 .container{
 
