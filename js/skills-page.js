@@ -263,6 +263,8 @@ skillsCount.innerHTML = info;
 
     );
 
+    enableFilters();
+
 }
 
 if (skillsGrid && typeof skills !== "undefined") {
