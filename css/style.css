@@ -16,6 +16,8 @@
 
     --primary:#38bdf8;
 
+    --primary-rgb:rgba(255,255,255,.06);
+
     --background:#0f172a;
 
     --card-bg:rgba(255,255,255,.05);
@@ -4205,7 +4207,10 @@ Project Cards Entrance
 
     pointer-events: none;
 
-    transition: all .25s ease;
+    transition:
+    color .25s ease,
+    transform .25s cubic-bezier(.22,1,.36,1),
+    background-color .25s ease;
 
 }
 
@@ -4219,10 +4224,15 @@ Project Cards Entrance
 
 }
 
-.clear-search:hover{
+.clear-search i{
+
+    transition: color .25s ease,
+                transform .25s cubic-bezier(.22,1,.36,1);
+
+}
+
+.clear-search:hover i{
 
     color: var(--primary);
-
-    /* transform: translateY(-50%) rotate(90deg); */
 
 }
