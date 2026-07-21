@@ -176,6 +176,23 @@ function enableReset() {
 
 }
 
+// amination
+function animateSkills(filteredSkills) {
+
+    renderSkills(filteredSkills, skillsGrid);
+
+    const cards = document.querySelectorAll(".skill-card");
+
+    cards.forEach(function (card, index) {
+
+        card.style.animationDelay = `${index * 45}ms`;
+
+        card.classList.add("animate-card");
+
+    });
+
+}
+
 
 function updateSkills(animate = false) {
 
@@ -297,15 +314,17 @@ skillsCount.innerHTML = info;
 
     /* ---------- Render ---------- */
 
-    renderSkills(
+    if (animate) {
 
-        filteredSkills,
+    animateSkills(filteredSkills);
 
-        skillsGrid
+} else {
 
-    );
+    renderSkills(filteredSkills, skillsGrid);
 
-    enableFilters();
+}
+
+enableFilters();
 
 }
 

@@ -4138,6 +4138,21 @@ Project Cards Entrance
 }
 
 
+
+                     /*===================================
+                                  Skills Page
+                       ===================================*/
+
+
+
+/* skill cards aimation same as project cards */
+  .skill-card.animate-card{
+
+    animation: cardReveal .45s cubic-bezier(.22,1,.36,1) forwards;
+
+}
+
+
 /*-------------------------------- universal classes -------------------------------- */
 .container{
 
