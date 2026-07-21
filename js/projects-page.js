@@ -20,7 +20,7 @@ sortProjects.addEventListener("change",function(){
 
     currentSort=this.value;
 
-    updateProjects(true); //3
+    updateProjects(true); 
 
 });
 

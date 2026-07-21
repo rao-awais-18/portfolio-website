@@ -13,6 +13,8 @@ const resetSkills = document.getElementById("reset-skills");
 
 const heroContainer = document.getElementById("skills-hero");
 
+
+
 // state variables
 let currentCategory = "All";
 
@@ -22,7 +24,7 @@ let currentSort = "default";
 
 let searchTimeout;
 
-
+// search bar
 function renderSearch() {
 
     const searchContainer = document.getElementById("skills-search-bar");
@@ -43,6 +45,12 @@ function renderSearch() {
 
             >
 
+            <button class="clear-search" type="button" aria-label="Clear Search">
+
+    <i class="fa-solid fa-xmark"></i>
+
+</button>
+
         </div>
 
     `;
@@ -52,8 +60,10 @@ function renderSearch() {
 function enableSearch() {
 
     const input = document.getElementById("skills-search-input");
+    const clearBtn = input.parentElement.querySelector(".clear-search");
 
     input.addEventListener("input", function () {
+        clearBtn.classList.toggle("show", this.value.trim() !== "");
 
         currentSearch = this.value.trim();
 
@@ -64,6 +74,39 @@ function enableSearch() {
             updateSkills();
 
         }, 250);
+
+    });
+
+    clearBtn.addEventListener("click", function () {
+
+    input.value = "";
+
+    currentSearch = "";
+
+    clearBtn.classList.remove("show");
+
+    input.focus();
+
+    updateSkills();
+
+});
+
+}
+
+// clear search
+function enableClearSearch(inputId) {
+
+    const input = document.getElementById(inputId);
+
+    const clearBtn = input.parentElement.querySelector(".clear-search");
+
+    clearBtn.addEventListener("click", function () {
+
+        input.value = "";
+
+        input.focus();
+
+        clearBtn.classList.remove("show");
 
     });
 
