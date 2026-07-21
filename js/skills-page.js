@@ -149,7 +149,7 @@ function enableSorting() {
     });
 
 }
-enableSorting();
+
 
 // reset button functionality
 function enableReset() {
@@ -175,7 +175,7 @@ function enableReset() {
     });
 
 }
-enableReset();
+
 
 function updateSkills(animate = false) {
 
@@ -318,6 +318,10 @@ renderFilters();
 enableSearch();
 
 enableFilters();
+
+enableSorting();
+
+enableReset();
 
 updateSkills();
 
