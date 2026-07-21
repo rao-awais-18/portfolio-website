@@ -189,7 +189,7 @@ Longdescription: "JavaScript is a versatile programming language that enables de
 
     ],
 
-    showOnHome: true
+    showOnHome: false
 },
 
 // object # 04

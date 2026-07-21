@@ -13,3 +13,8 @@ const resetSkills = document.getElementById("reset-skills");
 
 const heroContainer = document.getElementById("skills-hero");
 
+if (skillsGrid && typeof skills !== "undefined") {
+
+    renderSkills(skills, skillsGrid);
+
+}

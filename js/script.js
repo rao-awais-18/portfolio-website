@@ -98,17 +98,11 @@ function createSkillCard(skill) {
 }
 
 // render skill cards
-function renderSkills(
-
-    skillList = skills.filter(skill => skill.showOnHome),
-
-    container = skillsGrid
-
-) {
+function renderSkills(skillList, container) {
 
     let cards = "";
 
-    skillList.forEach(function (skill) {
+    skillList.forEach(function(skill){
 
         cards += createSkillCard(skill);
 
@@ -120,7 +114,13 @@ function renderSkills(
 
 if (skillsGrid && typeof skills !== "undefined") {
 
-    renderSkills();
+    renderSkills(
+
+        skills.filter(skill => skill.showOnHome),
+
+        skillsGrid
+
+    );
 
 }
 
