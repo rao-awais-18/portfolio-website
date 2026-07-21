@@ -3746,7 +3746,7 @@ transform: translateY(-5px) scale(1.05);
 
     transform: translateY(-50%);
 
-    color: var(--text-muted);
+    color: var(--muted);
 
 }
 
