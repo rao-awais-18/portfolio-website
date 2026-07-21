@@ -69,6 +69,72 @@ function enableSearch() {
 
 }
 
+// render filters
+function renderFilters() {
+
+    const categories = [
+
+        "All",
+
+        ...new Set(
+
+            skills.map(function (skill) {
+
+                return skill.category;
+
+            })
+
+        )
+
+    ];
+
+    let buttons = "";
+
+    categories.forEach(function (category) {
+
+        buttons += `
+
+            <button
+
+                class="filter-btn ${category === currentCategory ? "active" : ""}"
+
+                data-category="${category}"
+
+            >
+
+                ${category}
+
+            </button>
+
+        `;
+
+    });
+
+    skillsFilters.innerHTML = buttons;
+
+}
+
+// filter events
+function enableFilters() {
+
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            currentCategory = this.dataset.category;
+
+            renderFilters();
+
+            updateSkills(true);
+
+        });
+
+    });
+
+}
+
 function updateSkills(animate = false) {
 
     let filteredSkills = skills.filter(function (skill) {
@@ -203,8 +269,12 @@ if (skillsGrid && typeof skills !== "undefined") {
 
     renderSearch();
 
-    enableSearch();
+renderFilters();
 
-    updateSkills();
+enableSearch();
+
+enableFilters();
+
+updateSkills();
 
 }
