@@ -2,6 +2,9 @@
 const projectsCount = document.getElementById("projects-count");
 const filterButtons = document.getElementById("filter-buttons");
 const searchInput = document.getElementById("project-search");
+
+const clearSearchBtn = document.querySelector(".clear-search");
+
 const projectsGrid = document.getElementById("projects-grid");
 const sortProjects = document.getElementById("sort-projects");
 let currentSort = "default";
@@ -30,6 +33,18 @@ if (searchInput) {
 
         currentSearch = this.value.trim();
 
+        if (clearSearchBtn) {
+
+    clearSearchBtn.classList.toggle(
+
+        "show",
+
+        this.value.trim() !== ""
+
+    );
+
+}
+
         clearTimeout(searchTimeout);
 
         searchTimeout = setTimeout(function () {
@@ -37,6 +52,25 @@ if (searchInput) {
             updateProjects();
 
         }, 250);
+
+    });
+
+}
+
+// clear search button event
+if (clearSearchBtn) {
+
+    clearSearchBtn.addEventListener("click", function () {
+
+        searchInput.value = "";
+
+        currentSearch = "";
+
+        this.classList.remove("show");
+
+        searchInput.focus();
+
+        updateProjects();
 
     });
 
@@ -53,6 +87,12 @@ if(resetButton){
         currentSort = "default";
 
         searchInput.value = "";
+
+        if (clearSearchBtn) {
+
+    clearSearchBtn.classList.remove("show");
+
+}
 
         sortProjects.value = "default";
 
