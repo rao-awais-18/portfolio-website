@@ -4170,6 +4170,8 @@ Project Cards Entrance
 
 .skills-hero p{
 
+  color: var(--muted);
+
     max-width: 700px;
 
     margin: 0 auto;
@@ -4200,7 +4202,7 @@ Project Cards Entrance
 
     background:var(--card-bg);
 
-    border:1px solid var(--border-color);
+    border:1px solid var(--border);
 
 }
 
@@ -4253,6 +4255,20 @@ Project Cards Entrance
     color:white;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*-------------------------------- universal classes -------------------------------- */

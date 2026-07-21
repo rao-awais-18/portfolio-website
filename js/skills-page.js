@@ -13,6 +13,10 @@ const resetSkills = document.getElementById("reset-skills");
 
 const heroContainer = document.getElementById("skills-hero");
 
+const skillsHeroCount = document.getElementById("skills-count-number");
+
+const categoriesHeroCount = document.getElementById("categories-count");
+
 
 
 // state variables
@@ -250,6 +254,19 @@ function animateSkills(filteredSkills) {
     });
 
 }
+
+// skills and categories count numbers for hero section!
+skillsHeroCount.textContent = skills.length;
+
+categoriesHeroCount.textContent = [
+
+    ...new Set(
+
+        skills.map(skill => skill.category)
+
+    )
+
+].length;
 
 
 function updateSkills(animate = false) {
