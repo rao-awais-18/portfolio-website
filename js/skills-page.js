@@ -69,12 +69,75 @@ function enableSearch() {
 
 }
 
-// temp function to clear console errors
-function updateSkills() {
+function updateSkills(animate = false) {
+
+    let filteredSkills = skills.filter(function (skill) {
+
+        const matchesCategory =
+
+            currentCategory === "All" ||
+
+            skill.category === currentCategory;
+
+        const search = (currentSearch || "").toLowerCase();
+
+        const matchesSearch =
+
+            (skill.name || "")
+                .toLowerCase()
+                .includes(search)
+
+            ||
+
+            (skill.description || "")
+                .toLowerCase()
+                .includes(search)
+
+            ||
+
+            (skill.category || "")
+                .toLowerCase()
+                .includes(search)
+
+            ||
+
+            skill.technologies.some(function (tech) {
+
+                return tech.toLowerCase().includes(search);
+
+            });
+
+        return matchesCategory && matchesSearch;
+
+    });
+
+    /* ---------- Sorting ---------- */
+
+    if (currentSort === "az") {
+
+        filteredSkills.sort(function (a, b) {
+
+            return a.name.localeCompare(b.name);
+
+        });
+
+    }
+
+    if (currentSort === "za") {
+
+        filteredSkills.sort(function (a, b) {
+
+            return b.name.localeCompare(a.name);
+
+        });
+
+    }
+
+    /* ---------- Render ---------- */
 
     renderSkills(
 
-        skills,
+        filteredSkills,
 
         skillsGrid
 
