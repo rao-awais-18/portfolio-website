@@ -4154,6 +4154,50 @@ Project Cards Entrance
 
 }
 
+.filter-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.filter-count{
+
+    min-width:22px;
+
+    height:22px;
+
+    padding:0 6px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--text-secondary);
+
+    font-size:.75rem;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s ease;
+
+}
+
+.filter-btn.active .filter-count{
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+}
+
 
 /*-------------------------------- universal classes -------------------------------- */
 .container{

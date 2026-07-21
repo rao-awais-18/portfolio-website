@@ -133,25 +133,40 @@ function renderFilters() {
 
     let buttons = "";
 
-    categories.forEach(function (category) {
+    categories.forEach(function(category){
 
-        buttons += `
+    let count;
 
-            <button
+    if(category === "All"){
 
-                class="filter-btn ${category === currentCategory ? "active" : ""}"
+        count = skills.length;
 
-                data-category="${category}"
+    }else{
 
-            >
+        count = skills.filter(function(skill){
 
-                ${category}
+            return skill.category === category;
 
-            </button>
+        }).length;
 
-        `;
+    }
 
-    });
+    buttons += `
+
+        <button
+            class="filter-btn ${category === currentCategory ? "active" : ""}"
+            data-category="${category}"
+        >
+
+            <span>${category}</span>
+
+            <span class="filter-count">${count}</span>
+
+        </button>
+
+    `;
+
+});
 
     skillsFilters.innerHTML = buttons;
 
