@@ -67,11 +67,11 @@ const skillsGrid = document.getElementById("skills-grid"); // to modify an html 
 dynamic skill cards logic
 -----------------------------------------------*/
 
-if (skillsGrid && typeof skills !== "undefined") {
-skills.forEach(function (skill) {
-  if (!skill.showOnHome) return; // temporary check⚠️
-  const card = `
-    
+// helper function to make a card
+function createSkillCard(skill) {
+
+    return `
+
         <div class="skill-card">
 
             <div class="skill-content">
@@ -95,15 +95,38 @@ skills.forEach(function (skill) {
         </div>
 
     `;
+}
 
-  skillsGrid.innerHTML += card;
-});
+// render skill cards
+function renderSkills(
+
+    skillList = skills.filter(skill => skill.showOnHome),
+
+    container = skillsGrid
+
+) {
+
+    let cards = "";
+
+    skillList.forEach(function (skill) {
+
+        cards += createSkillCard(skill);
+
+    });
+
+    container.innerHTML = cards;
+
+}
+
+if (skillsGrid && typeof skills !== "undefined") {
+
+    renderSkills();
+
 }
 
 /* ----------------------------------------------
 for dyamic projet cards 
 -------------------------------------------------*/
-// const projectsGrid = document.getElementById("projects-grid");
 
 //dynamic badges
 function createBadges(badges) {
