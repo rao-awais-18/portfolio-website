@@ -4165,9 +4165,16 @@ Project Cards Entrance
 }
 
 
+/* search box clear  */
 .search-box{
 
     position: relative;
+
+}
+
+.search-box input{
+
+    padding-right: 48px;
 
 }
 
@@ -4177,7 +4184,7 @@ Project Cards Entrance
 
     top: 50%;
 
-    right: 14px;
+    right: 24px;
 
     transform: translateY(-50%);
 
@@ -4191,8 +4198,6 @@ Project Cards Entrance
 
     background: transparent;
 
-    color: var(--text-secondary);
-
     display: flex;
 
     align-items: center;
@@ -4201,6 +4206,8 @@ Project Cards Entrance
 
     cursor: pointer;
 
+    color: var(--text-secondary);
+
     opacity: 0;
 
     visibility: hidden;
@@ -4208,9 +4215,9 @@ Project Cards Entrance
     pointer-events: none;
 
     transition:
-    color .25s ease,
-    transform .25s cubic-bezier(.22,1,.36,1),
-    background-color .25s ease;
+        opacity .25s ease,
+        visibility .25s ease,
+        background-color .25s ease;
 
 }
 
@@ -4226,13 +4233,28 @@ Project Cards Entrance
 
 .clear-search i{
 
-    transition: color .25s ease,
-                transform .25s cubic-bezier(.22,1,.36,1);
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
+
+    line-height: 1;
+
+    transition:
+        color .25s ease,
+        transform .25s cubic-bezier(.22,1,.36,1);
 
 }
 
 .clear-search:hover i{
 
     color: var(--primary);
+
+    /* transform: translateY(-2px); */
 
 }
