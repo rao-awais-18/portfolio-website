@@ -111,6 +111,35 @@ function updateSkills(animate = false) {
 
     });
 
+    // skills count
+    let info = `Showing <strong>${filteredSkills.length}</strong> Skill${filteredSkills.length === 1 ? "" : "s"}`;
+
+if (currentCategory !== "All") {
+
+    info += ` • Category: <span class="highlight">${currentCategory}</span>`;
+
+}
+
+if (currentSearch) {
+
+    info += ` • Search: <span class="highlight">"${currentSearch}"</span>`;
+
+}
+
+if (currentSort !== "default") {
+
+    const sortLabel = currentSort === "az"
+
+        ? "A–Z"
+
+        : "Z–A";
+
+    info += ` • Sort: <span class="highlight">${sortLabel}</span>`;
+
+}
+
+skillsCount.innerHTML = info;
+
     /* ---------- Sorting ---------- */
 
     if (currentSort === "az") {
