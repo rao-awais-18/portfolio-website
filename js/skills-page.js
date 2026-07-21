@@ -151,6 +151,32 @@ function enableSorting() {
 }
 enableSorting();
 
+// reset button functionality
+function enableReset() {
+
+    if (!resetSkills) return;
+
+    resetSkills.addEventListener("click", function () {
+
+        currentCategory = "All";
+
+        currentSearch = "";
+
+        currentSort = "default";
+
+        document.getElementById("skills-search-input").value = "";
+
+        sortSkills.value = "default";
+
+        renderFilters();
+
+        updateSkills(true);
+
+    });
+
+}
+enableReset();
+
 function updateSkills(animate = false) {
 
     let filteredSkills = skills.filter(function (skill) {
