@@ -135,6 +135,22 @@ function enableFilters() {
 
 }
 
+// sorting
+function enableSorting() {
+
+    if (!sortSkills) return;
+
+    sortSkills.addEventListener("change", function () {
+
+        currentSort = this.value;
+
+        updateSkills(true);
+
+    });
+
+}
+enableSorting();
+
 function updateSkills(animate = false) {
 
     let filteredSkills = skills.filter(function (skill) {
