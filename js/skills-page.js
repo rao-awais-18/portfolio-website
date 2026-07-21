@@ -162,6 +162,31 @@ skillsCount.innerHTML = info;
 
     }
 
+    // empty state management for no results of search
+    if (filteredSkills.length === 0) {
+
+    skillsGrid.innerHTML = `
+
+        <div class="empty-state">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>No Skills Found</h3>
+
+            <p>
+
+                Try changing the search keyword or selecting another category.
+
+            </p>
+
+        </div>
+
+    `;
+
+    return;
+
+}
+
     /* ---------- Render ---------- */
 
     renderSkills(
