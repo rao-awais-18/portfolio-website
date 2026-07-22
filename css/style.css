@@ -4220,7 +4220,120 @@ Project Cards Entrance
 
 }
 
+/*===================== responsiveness ==========================*/
 
+/* tablets(<= 992px) */
+@media(max-width:992px){
+
+.hero-layout{
+
+grid-template-columns:1fr;
+
+gap:28px;
+
+}
+
+.hero-controls{
+
+align-items:flex-start;
+
+gap:14px;
+
+}
+
+.hero-controls .search-box{
+
+width:100%;
+
+max-width:520px;
+
+}
+
+.hero-controls .sort-wrapper{
+
+display:flex;
+
+gap:10px;
+
+flex-wrap:nowrap;
+
+}
+
+#sort-projects{
+
+padding:0 16px;
+
+width:100px;
+
+flex:none;
+
+}
+
+#reset-filters{
+
+padding:0 16px;
+
+white-space:nowrap;
+
+flex:none;
+
+height: 40px;
+
+}
+
+}
+
+/* mobiles (<=768px) */
+@media (max-width: 768px){
+
+    .hero-controls{
+
+        gap: 14px;
+
+    }
+
+    .hero-controls .search-box{
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+    .hero-controls .sort-wrapper{
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+    }
+
+}
+
+/* small phones(<= 480px) */
+@media (max-width: 480px){
+
+    .hero-controls .sort-wrapper{
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    #sort-projects,
+
+    #reset-filters{
+
+        width: 100%;
+
+    }
+
+}
 
 
 
