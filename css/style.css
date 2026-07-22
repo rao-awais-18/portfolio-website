@@ -4286,6 +4286,13 @@ height: 40px;
 /* mobiles (<=768px) */
 @media (max-width: 768px){
 
+
+  .hero-layout{
+
+gap:20px;
+
+}
+
     .hero-controls{
 
         gap: 14px;
@@ -4302,15 +4309,23 @@ height: 40px;
 
     .hero-controls .sort-wrapper{
 
-        width: 100%;
+        width:100%;
 
-        justify-content: space-between;
-
-        flex-wrap: wrap;
-
-        gap: 10px;
+justify-content:flex-start;
 
     }
+
+    #sort-projects{
+
+width:110px;
+
+}
+
+#reset-filters{
+
+padding:0 14px;
+
+}
 
 }
 
