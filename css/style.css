@@ -3722,11 +3722,11 @@ transform: translateY(-5px) scale(1.05);
 ========================== */
 
 /*----------------------------------- search -------------------------------------- */
-.projects-search{
+/* .projects-search{
 
     padding-bottom: var(--space-xl);
 
-}
+} */
 
 .search-box{
 
@@ -3883,11 +3883,11 @@ transform: translateY(-5px) scale(1.05);
 Projects Info
 ===================================*/
 
-.projects-info{
+/* .projects-info{
 
     padding-bottom:var(--space-lg);
 
-}
+} */
 
 #projects-count{
 
@@ -4023,7 +4023,7 @@ Reset Button
 Projects Sorting
 ===================================*/
 
-.sort-wrapper{
+/* .sort-wrapper{
 
     display:flex;
 
@@ -4037,7 +4037,7 @@ Projects Sorting
 
     padding-bottom:var(--space-xl);
 
-}
+} */
 
 #sort-projects{
 
@@ -4138,6 +4138,91 @@ Project Cards Entrance
     }
 
 }
+
+/* ==================================================
+   PROJECT HERO LAYOUT MODIFIED
+================================================== */
+.projects-hero .section-tag h1{
+
+    font-size: clamp(3rem, 0.9rem + 0.5vw, 1.2rem);
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+    line-height: 1.2;
+
+    margin: 0;
+
+}
+
+
+.projects-hero .hero-layout{
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: start;
+
+    gap: 50px;
+
+}
+
+.hero-controls{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 16px;
+
+}
+
+/* search width control */
+.hero-controls .search-box{
+
+    width: 400px;
+
+}
+
+.hero-controls .sort-wrapper{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+/* projects filter */
+.projects-filter{
+
+    margin-top: -10px;
+
+}
+
+.projects-info{
+
+    margin-top: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+.projects-section{
+
+    padding-top: 0;
+    padding-bottom: var(--space-lg);
+
+}
+
+
+
+
 
 
 
