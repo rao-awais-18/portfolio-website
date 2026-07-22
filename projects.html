@@ -28,25 +28,101 @@
 
         <div class="container">
 
-            <div class="section-header">
+            <div class="hero-layout">
 
-                <span class="section-tag">
+                <!-- LEFT -->
 
-                    <h1>My Projects</h1>
+                <div class="hero-content">
 
-                </span>
+                    <div class="section-header">
 
-                <h2>
+                        <span class="section-tag">
 
-                    Projects Portfolio
+                            <h1>My Projects</h1>
 
-                </h2>
+                        </span>
 
-                <p>
+                        <h2>
 
-                    A collection of projects showcasing my skills, creativity, and problem-solving approach.
+                            Projects Portfolio
 
-                </p>
+                        </h2>
+
+                        <p>
+
+                            A collection of projects showcasing my skills, creativity, and problem-solving approach.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="hero-controls">
+
+                    <!-- Search -->
+
+                    <div class="projects-search">
+
+                        <div class="search-box">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input
+                                type="text"
+                                id="project-search"
+                                placeholder="Search projects..."
+                            >
+
+                            <button class="clear-search" type="button">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Sort + Reset -->
+
+                    <div class="sort-wrapper">
+
+                        <select id="sort-projects">
+
+                            <option value="default">
+
+                                Default
+
+                            </option>
+
+                            <option value="az">
+
+                                A-Z
+
+                            </option>
+
+                            <option value="za">
+
+                                Z-A
+
+                            </option>
+
+                        </select>
+
+                        <button id="reset-filters">
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -54,81 +130,6 @@
 
     </section>
 
-
-<!-- =========================== search =================== -->
-
-    <section class="projects-search">
-
-    <div class="container">
-
-        <div class="search-box">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-            <input
-                type="text"
-                id="project-search"
-                placeholder="Search projects..."
-            >
-
-            <button class="clear-search" type="button">
-
-    <i class="fa-solid fa-xmark"></i>
-
-</button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- search result count -->
-<div class="projects-info">
-
-    <p id="projects-count">
-
-        Showing 0 Projects
-
-    </p>
-
-</div>
-
-<!-- sorting -->
-
-<div class="sort-wrapper">
-
-    <select id="sort-projects">
-
-        <option value="default">
-
-            Default
-
-        </option>
-
-        <option value="az">
-
-            A-Z
-
-        </option>
-
-        <option value="za">
-
-            Z-A
-
-        </option>
-
-    </select>
-
-    <button id="reset-filters">
-
-    <i class="fa-solid fa-rotate-left"></i>
-
-    Reset
-
-</button>
-
-</div>
 
     <!-- ==========================
          Filters
@@ -138,13 +139,31 @@
 
         <div class="container">
 
-            <div id="filter-buttons">
-
-            </div>
+            <div id="filter-buttons"></div>
 
         </div>
 
     </section>
+
+
+    <!-- ==========================
+         Results
+    =========================== -->
+
+    <section class="projects-info">
+
+        <div class="container">
+
+            <p id="projects-count">
+
+                Showing 0 Projects
+
+            </p>
+
+        </div>
+
+    </section>
+
 
     <!-- ==========================
          Projects Grid
@@ -155,12 +174,8 @@
         <div class="container">
 
             <div
-
                 id="projects-grid"
-
-                class="projects-grid"
-
-            >
+                class="projects-grid">
 
             </div>
 
