@@ -23,77 +23,94 @@
     <!-- skill hero section -->
 <section class="skills-hero reveal">
 
-    <div class="container">
+    <div class="container hero-layout">
+
+
+<div class="hero-content">
 
         <span class="section-tag">
 
-            My Expertise
+            <h1>Skills & Technologies</h1>
 
         </span>
-
-        <h1>
-
-            My Skills
-
-        </h1>
 
         <p>
 
             Technologies, frameworks, and tools that I've learned through continuous practice, university projects, and hands-on development.
 
         </p>
+</div>
+
+<div class="hero-toolbar">
+
+    <section class="skills-search">
+
+        <div id="skills-search-bar"></div>
+
+    </section>
+
+    <section class="skills-sort">
+
+        <div class="sort-wrapper">
+
+            <select id="sort-skills">
+
+                <option value="">Sort</option>
+
+                <option value="default">Default</option>
+
+                <option value="az">A-Z</option>
+
+                <option value="za">Z-A</option>
+
+            </select>
+
+            <button id="reset-skills">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Reset
+
+            </button>
+
+        </div>
+
+    </section>
+
+</div>    
+
 
         <div class="hero-stats">
 
-            <div class="hero-stat">
+    <span class="hero-stat-item">
 
-                <h3 id="skills-count-number">
+        <strong id="skills-count-number">0</strong>
 
-                    0
+        <span>Skills</span>
 
-                </h3>
+    </span>
 
-                <span>
+    <span class="stat-divider">•</span>
 
-                    Skills
+    <span class="hero-stat-item">
 
-                </span>
+        <strong id="categories-count">0</strong>
 
-            </div>
+        <span>Categories</span>
 
-            <div class="hero-stat">
+    </span>
 
-                <h3 id="categories-count">
+    <span class="stat-divider">•</span>
 
-                    0
+    <span class="hero-stat-item">
 
-                </h3>
+        <strong class="learning-symbol">∞</strong>
 
-                <span>
+        <span>Learning</span>
 
-                    Categories
+    </span>
 
-                </span>
-
-            </div>
-
-            <div class="hero-stat">
-
-                <h3>
-
-                    ∞
-
-                </h3>
-
-                <span>
-
-                    Learning
-
-                </span>
-
-            </div>
-
-        </div>
+</div>
 
     </div>
 
@@ -115,15 +132,15 @@
 
         <!-- Dynamic Search -->
 
-        <section class="skills-search">
+        <!-- <section class="skills-search">
 
             <div id="skills-search-bar"></div>
 
-        </section>
+        </section> -->
 
         <!-- Sort + Reset -->
 
-        <section class="skills-sort">
+        <!-- <section class="skills-sort">
 
             <div class="sort-wrapper">
 
@@ -159,7 +176,7 @@
 
             </div>
 
-        </section>
+        </section> -->
 
     </div>
 
