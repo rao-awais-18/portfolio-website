@@ -4458,12 +4458,6 @@ flex:1;
 
 }
 
-/* .hero-layout{
-
-    text-align:left;
-
-} */
-
 .hero-content{
 
     text-align:left;
@@ -4496,9 +4490,9 @@ flex:1;
 
     justify-content:flex-start;
 
-    gap:14px;
+    gap:30px;
 
-    /* margin-top:22px; */
+    margin-top:-14px;
 
     flex-wrap:wrap;
 
@@ -4511,9 +4505,9 @@ flex:1;
 
     align-items:baseline;
 
-    gap:6px;
+    gap:10px;
 
-    color:var(--text-secondary);
+    color:var(--text);
 
     font-size:1rem;
 
@@ -4543,7 +4537,7 @@ flex:1;
 
     color:var(--border);
 
-    font-size:1rem;
+    font-size:1.5rem;
 
     user-select:none;
     -webkit-user-select: none
@@ -4577,7 +4571,7 @@ flex:1;
 
     background:rgba(255,255,255,.08);
 
-    color:var(--text-secondary);
+    color:var(--text);
 
     font-size:.75rem;
 
@@ -4653,9 +4647,9 @@ flex:1;
 
 .skills-filter{
 
-    margin-top:26px;
+    margin-top:-22px;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
 }
 
@@ -4671,7 +4665,7 @@ flex:1;
 
 .skills-info{
 
-    padding-top: 0;
+    margin-bottom:20px;
 
     display:flex;
 
