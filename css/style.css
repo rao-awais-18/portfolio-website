@@ -4535,7 +4535,9 @@ flex:1;
 
 .stat-divider{
 
-    color:var(--border);
+    color:var(--muted);
+
+    opacity: 0.1;
 
     font-size:1.5rem;
 
@@ -4679,6 +4681,8 @@ flex:1;
 .skills-info p{
 
     margin:0;
+
+    margin-bottom: 10px;
 
     font-size:.95rem;
 
@@ -4893,9 +4897,11 @@ min-width:110px;
 
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
 
     align-items:center;
+
+    justify-content:center;
 
     margin-top:18px;
 
@@ -5102,5 +5108,62 @@ min-width:110px;
     color:var(--text-secondary);
 
     letter-spacing:.3px;
+
+}
+
+
+/* scroll hint */
+.scroll-hint{
+
+    margin-top:10px;
+
+    font-size:.88rem;
+
+    color:var(--text-secondary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    opacity:.5;
+
+    transition:opacity .35s ease,
+               transform .35s ease;
+
+}
+
+.scroll-hint i{
+
+    animation:scrollArrow 1.6s ease-in-out infinite;
+
+}
+
+@keyframes scrollArrow{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(4px);
+
+    }
+
+}
+
+.scroll-hint.hide{
+
+    opacity:0;
+
+    transform:translateY(-8px);
+
+    pointer-events:none;
 
 }

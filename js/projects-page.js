@@ -335,3 +335,27 @@ if (animate) {
 }
 
 }
+
+
+// SCROLL HINT FADE OUT LOGIC
+const scrollHint = document.querySelector(".scroll-hint");
+
+function toggleScrollHint(){
+
+    if(!scrollHint) return;
+
+    if(window.scrollY > 120){
+
+        scrollHint.classList.add("hide");
+
+    }else{
+
+        scrollHint.classList.remove("hide");
+
+    }
+
+}
+
+window.addEventListener("scroll", toggleScrollHint);
+
+toggleScrollHint();
