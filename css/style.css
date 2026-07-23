@@ -4537,7 +4537,7 @@ flex:1;
 
     color:var(--muted);
 
-    opacity: 0.1;
+    opacity: 0.05;
 
     font-size:1.5rem;
 
@@ -4950,7 +4950,228 @@ min-width:110px;
 
 
 
-/* responsive */
+/* ==========================================
+   Skills Page Resposiveness
+========================================== */
+
+/* temporary */
+@media (min-width:1400px){
+
+    :root{
+
+        --container-width:1280px;
+
+    }
+
+}
+
+
+
+/* large desktops */
+@media (max-width:1199px){
+
+    .controls-top{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:space-between;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .skills-search{
+
+        flex:1 1 420px;
+
+    }
+
+    .skills-sort{
+
+        flex:0 0 auto;
+
+    }
+
+    .hero-stats{
+
+        gap:10px;
+
+    }
+
+      #skills-grid{
+
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+
+        gap:22px;
+
+    }
+
+    .skills-hero-content{
+
+        gap:36px;
+
+        align-items:flex-start;
+
+    }
+
+    .skills-hero-text{
+
+        flex:1 1 55%;
+
+    }
+
+    .skills-hero p{
+
+        max-width:560px;
+
+    }
+
+     .skills-hero h1{
+
+        font-size:3rem;
+
+        line-height:1.15;
+
+    }
+
+    .hero-toolbar{
+
+        gap:10px;
+
+    }
+
+    .hero-toolbar .skills-search{
+
+    flex:1;
+
+    max-width:400px;
+
+}
+
+    .sort-wrapper select{
+
+        width:100px;
+
+        min-width:100px;
+
+    }
+
+    #reset-skills{
+
+        padding-inline:12px;
+
+        min-width:90px;
+
+    }
+
+    .hero-stats{
+
+        font-size:.95rem;
+
+    }
+
+    .hero-stat-item strong{
+
+        font-size:1.1rem;
+
+    }
+
+    .hero-stats{
+
+        justify-content:flex-start;
+
+        row-gap:10px;
+
+        column-gap:16px;
+
+    }
+
+    .stat-divider{
+
+        display:none;
+
+    }
+
+    .skill-card{
+
+        padding:24px;
+
+    }
+
+    .skill-card .skill-icon{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:1.55rem;
+
+    }
+
+    .skill-card h3{
+
+        font-size:1.25rem;
+
+    }
+
+    .skill-card p{
+
+        font-size:.95rem;
+
+        line-height:1.6;
+
+    }
+
+    .sort-wrapper select{
+
+    width:100px;
+
+}
+
+.skills-filter{
+
+    margin-top:-12px;
+
+}
+
+#skills-filters{
+
+    gap:10px;
+
+}
+
+.filter-btn{
+
+    padding:8px 14px;
+
+}
+
+.skills-info{
+
+    margin-top:20px;
+
+}
+
+.scroll-hint{
+
+    margin-top:8px;
+
+}
+
+.skills-section{
+
+    padding-top:12px;
+}
+
+
+
+}
+
+
 
 @media (max-width:768px){
 
