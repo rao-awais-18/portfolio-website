@@ -219,6 +219,8 @@ body {
   color: var(--text);
 }
 
+
+/* navbar */
 .navbar {
   display: flex;
 
@@ -229,12 +231,20 @@ body {
   padding: 20px 8%;
 }
 
-.logo {
-  font-size: 28px;
+.logo{
 
-  font-weight: 700;
+    font-size:28px;
 
-  color: var(--primary);
+    font-weight:700;
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    display:inline-flex;
+
+    align-items:center;
+
 }
 
 .nav-links {
@@ -258,6 +268,25 @@ body {
 .nav-links a:hover {
   color: var(--primary);
 }
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+}
+
+
+/* homepage */
 
 .hero {
   display: flex;
@@ -360,52 +389,9 @@ body {
   background: var(--primary);
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(15, 23, 42, 0.8);
-
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-    flex-direction: column;
-
-    gap: 20px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-
-    justify-content: center;
-  }
-
-  .hero {
-    flex-direction: column-reverse;
-
-    text-align: center;
-
-    padding: 40px 5%;
-
-    position: relative;
-
-    overflow: hidden;
-  }
-
-  .hero-content h1 {
-    font-size: 42px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-
-    flex-wrap: wrap;
-  }
-}
+/* @media (max-width: 768px) {
+  
+} */
 
 .cv-btn {
   text-decoration: none;
@@ -1413,35 +1399,10 @@ footer {
 }
 
 /* footer responsiveness */
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
+/* @media (max-width: 768px) {
+  
 
-    text-align: center;
-
-    gap: 40px;
-  }
-
-  .footer-about p {
-    margin: auto;
-  }
-
-  .footer-social {
-    justify-content: center;
-  }
-
-  .footer-contact-info p {
-    justify-content: center;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-
-    gap: 20px;
-
-    text-align: center;
-  }
-}
+} */
 
 .footer-contact-info p {
   transition:var(--transition);

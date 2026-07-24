@@ -1,12 +1,142 @@
 /* ==========================================
-   Skills Page Resposiveness
+   LARGE DESKTOPS
 ========================================== */
 
+/* temp grid extension */
+@media (min-width:1100px) and (max-width:1199px){
 
-/* large desktops */
+    #skills-grid{
+
+        grid-template-columns:repeat(3,minmax(0,1fr));
+
+        gap:22px;
+
+    }
+
+    .skill-card{
+
+    padding:22px;
+
+}
+
+.skill-card .skill-icon{
+
+    width:54px;
+
+    height:54px;
+
+    font-size:1.45rem;
+
+}
+
+.skill-card h3{
+
+    font-size:1.15rem;
+
+}
+
+.skill-card p{
+
+    font-size:.92rem;
+
+    line-height:1.55;
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+}
+
+
+/*====================================================
+                    1199px BREAKPOINT
+====================================================*/
+
 @media (max-width:1199px){
 
-    .controls-top{
+/*====================================================
+                        NAVBAR
+====================================================*/
+.navbar{
+
+    padding:18px 5%;
+
+}
+
+.logo{
+
+    font-size:1.6rem;
+
+}
+
+.nav-right{
+
+    gap:28px;
+
+}
+
+.nav-links{
+
+    gap:22px;
+
+}
+
+.nav-links a{
+
+    font-size:.95rem;
+
+}
+
+.cv-btn{
+
+    padding:12px 20px;
+
+    font-size:.9rem;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+}
+
+
+/*====================================================
+                        FOOTER
+====================================================*/
+
+
+
+/*====================================================
+                        HOME
+====================================================*/
+
+
+
+/*====================================================
+                        ABOUT
+====================================================*/
+
+
+
+/*====================================================
+                        PROJECTS
+====================================================*/
+
+
+
+/*====================================================
+                        SKILLS
+====================================================*/
+
+.controls-top{
 
         display:flex;
 
@@ -268,55 +398,8 @@
     }
 
 
-}
-
-/* grid extension */
-@media (min-width:1100px) and (max-width:1199px){
-
-    #skills-grid{
-
-        grid-template-columns:repeat(3,minmax(0,1fr));
-
-        gap:22px;
-
-    }
-
-    .skill-card{
-
-    padding:22px;
-
-}
-
-.skill-card .skill-icon{
-
-    width:54px;
-
-    height:54px;
-
-    font-size:1.45rem;
-
-}
-
-.skill-card h3{
-
-    font-size:1.15rem;
-
-}
-
-.skill-card p{
-
-    font-size:.92rem;
-
-    line-height:1.55;
-
-}
-
-.skill-card:hover{
-
-    transform:translateY(-6px);
-
-}
-
-
+/*====================================================
+                        CONTACT
+====================================================*/
 
 }

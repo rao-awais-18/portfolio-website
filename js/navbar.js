@@ -1,21 +1,35 @@
 function createNavbar() {
   return `
 <nav class="navbar">
-        <div class="logo">Rao Awais</div>
+ <a href = "index.html" class="logo">Rao Awais</div> </a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+    <i class="fa-solid fa-bars"></i>
+</button>
 
-        <ul class="nav-links">
-          <li><a href="index.html" data-page="home" >Home</a></li>
+<div class="nav-right">
 
-          <li><a href="about.html" data-page="about" >About</a></li>
+    <ul class="nav-links">
 
-          <li><a href="skills.html" data-page="skills" >Skills</a></li>
+        <li><a href="index.html" data-page="home">Home</a></li>
 
-          <li><a href="projects.html" data-page="projects" >Projects</a></li>
+        <li><a href="about.html" data-page="about">About</a></li>
 
-          <li><a href="contact.html" data-page="contact" >Contact</a></li>
-        </ul>
+        <li><a href="skills.html" data-page="skills">Skills</a></li>
 
-        <a href="resume/resume.pdf" class="cv-btn" download> Download CV </a>
+        <li><a href="projects.html" data-page="projects">Projects</a></li>
+
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+
+    </ul>
+
+    <a href="resume/resume.pdf" class="cv-btn" download>
+
+        Download CV
+
+    </a>
+
+</div>
+
       </nav>
     `;
 }
