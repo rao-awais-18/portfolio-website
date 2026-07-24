@@ -112,7 +112,7 @@ function enableMobileMenu(){
 
         document.body.classList.remove("menu-open");
 
-        const icon=toggle.querySelector("i");
+        // const icon=toggle.querySelector("i");
 
        
     }
