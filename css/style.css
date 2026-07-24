@@ -219,6 +219,12 @@ body {
   color: var(--text);
 }
 
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
 
 /* navbar */
 .navbar {

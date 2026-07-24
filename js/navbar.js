@@ -1,12 +1,17 @@
 function createNavbar() {
   return `
 <nav class="navbar">
+<div class="menu-overlay"></div>
  <a href = "index.html" class="logo">Rao Awais</div> </a>
         <button class="menu-toggle" aria-label="Toggle Menu">
     <i class="fa-solid fa-bars"></i>
 </button>
 
 <div class="nav-right">
+
+<button class="menu-close" aria-label="Close Menu">
+    <i class="fa-solid fa-xmark"></i>
+</button>
 
     <ul class="nav-links">
 
@@ -83,23 +88,64 @@ renderNavbar();
 
 setActiveNavLink();
 
-function enableMobileMenu() {
 
-    const toggle = document.querySelector(".menu-toggle");
 
-    const navRight = document.querySelector(".nav-right");
+function enableMobileMenu(){
 
-    if (!toggle || !navRight) return;
+    const toggle=document.querySelector(".menu-toggle");
 
-    toggle.addEventListener("click", function () {
+    const nav=document.querySelector(".nav-right");
 
-        navRight.classList.toggle("active");
+    const overlay=document.querySelector(".menu-overlay");
 
-        const icon = toggle.querySelector("i");
+    const closeBtn=document.querySelector(".menu-close");
 
-        icon.classList.toggle("fa-bars");
+    closeBtn.addEventListener("click",closeMenu);
 
-        icon.classList.toggle("fa-xmark");
+    if(!toggle||!nav||!overlay) return;
+
+    function closeMenu(){
+
+        nav.classList.remove("active");
+
+        overlay.classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+
+        const icon=toggle.querySelector("i");
+
+       
+    }
+
+    toggle.addEventListener("click",function(){
+
+        const open=nav.classList.toggle("active");
+
+        overlay.classList.toggle("active",open);
+
+        document.body.classList.toggle("menu-open",open);
+
+        const icon=toggle.querySelector("i");
+
+        
+
+    });
+
+    overlay.addEventListener("click",closeMenu);
+
+    document.querySelectorAll(".nav-links a,.cv-btn").forEach(function(link){
+
+        link.addEventListener("click",closeMenu);
+
+    });
+
+    document.addEventListener("keydown",function(e){
+
+        if(e.key==="Escape"){
+
+            closeMenu();
+
+        }
 
     });
 
