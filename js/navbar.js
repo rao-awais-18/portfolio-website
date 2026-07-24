@@ -82,3 +82,27 @@ function setActiveNavLink() {
 renderNavbar();
 
 setActiveNavLink();
+
+function enableMobileMenu() {
+
+    const toggle = document.querySelector(".menu-toggle");
+
+    const navRight = document.querySelector(".nav-right");
+
+    if (!toggle || !navRight) return;
+
+    toggle.addEventListener("click", function () {
+
+        navRight.classList.toggle("active");
+
+        const icon = toggle.querySelector("i");
+
+        icon.classList.toggle("fa-bars");
+
+        icon.classList.toggle("fa-xmark");
+
+    });
+
+}
+
+enableMobileMenu();
