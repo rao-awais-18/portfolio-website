@@ -78,6 +78,100 @@
                         FOOTER
 ====================================================*/
 
+footer{
+
+    padding:48px 0 20px;
+
+}
+
+.footer-grid{
+
+    gap:30px;
+
+}
+
+.footer-grid h3{
+
+    font-size:1.15rem;
+
+    margin-bottom:16px;
+
+}
+
+.footer-about p{
+
+    font-size:.95rem;
+
+    line-height:1.75;
+
+}
+
+.footer-links li{
+
+    margin-bottom:10px;
+
+}
+
+.footer-links a{
+
+    font-size:.95rem;
+
+}
+
+.footer-social{
+
+    gap:12px;
+
+}
+
+.footer-social a{
+
+    width:40px;
+
+    height:40px;
+
+    font-size:1rem;
+
+}
+
+.footer-contact-info{
+
+    margin-top:18px;
+
+}
+
+.footer-contact-info p{
+
+    font-size:.9rem;
+
+    gap:10px;
+
+}
+
+.footer-bottom{
+
+    padding-top:20px;
+
+    gap:16px;
+
+}
+
+.footer-bottom p{
+
+    font-size:.9rem;
+
+}
+
+#backToTop{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:.95rem;
+
+}
+
 
 
 /*====================================================

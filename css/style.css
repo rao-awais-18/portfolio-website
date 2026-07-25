@@ -184,10 +184,11 @@
 
 }
 
-/* html,
+/* TEMP: Remove after full responsive phase is completed */
+html,
 body{
     overflow-x:hidden;
-} */
+}
 
 /*=====================================
         COMMON COMPONENTS
