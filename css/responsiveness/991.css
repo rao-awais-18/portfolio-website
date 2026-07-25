@@ -258,6 +258,38 @@ visibility .45s ease;
                         FOOTER
 ====================================================*/
 
+footer{
+
+    padding:60px 0 24px;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px 32px;
+
+}
+
+.footer-about{
+
+    grid-column:1 / -1;
+
+}
+
+.footer-about p{
+
+    max-width:100%;
+
+}
+
+.footer-bottom{
+
+    gap:20px;
+
+}
+
 
 
 /*====================================================
