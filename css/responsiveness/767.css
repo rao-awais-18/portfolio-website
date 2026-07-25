@@ -8,50 +8,69 @@
                         NAVBAR
 ====================================================*/
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.navbar{
 
-    background: rgba(15, 23, 42, 0.8);
+    padding:16px 5%;
 
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+}
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.logo{
 
-    flex-direction: column;
+    font-size:1.4rem;
 
-    gap: 20px;
-  }
+}
 
-  .nav-links {
-    flex-wrap: wrap;
+.menu-toggle{
 
-    justify-content: center;
-  }
+    width:42px;
 
-  .hero {
-    flex-direction: column-reverse;
+    height:42px;
 
-    text-align: center;
+    font-size:1.3rem;
 
-    padding: 40px 5%;
+}
 
-    position: relative;
+.nav-right{
 
-    overflow: hidden;
-  }
+    width:280px;
 
-  .hero-content h1 {
-    font-size: 42px;
-  }
+    padding:70px 24px 32px;
 
-  .hero-buttons {
-    justify-content: center;
+    gap:32px;
 
-    flex-wrap: wrap;
-  }
+}
+
+.nav-links{
+
+    gap:22px;
+
+}
+
+.nav-links a{
+
+    font-size:1rem;
+
+}
+
+.cv-btn{
+
+    width:100%;
+
+    max-width:190px;
+
+    padding:12px 18px;
+
+    font-size:.95rem;
+
+}
+
+.menu-close{
+
+    top:20px;
+
+    left:20px;
+
+}
 
 
 /*====================================================
