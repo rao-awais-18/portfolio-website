@@ -7,7 +7,71 @@
 /*====================================================
                         NAVBAR
 ====================================================*/
+.navbar{
 
+    padding:14px 18px;
+
+}
+
+.logo{
+
+    font-size:1.25rem;
+
+}
+
+.menu-toggle{
+
+    width:40px;
+
+    height:40px;
+
+    font-size:1.2rem;
+
+}
+
+.nav-right{
+
+    width:100%;
+
+    max-width:100%;
+
+    padding:72px 24px 32px;
+
+    gap:28px;
+
+    border-left:none;
+
+}
+
+.nav-links{
+
+    gap:20px;
+
+}
+
+.nav-links a{
+
+    font-size:1rem;
+
+}
+
+.cv-btn{
+
+    width:100%;
+
+    max-width:220px;
+
+    padding:12px 18px;
+
+}
+
+.menu-close{
+
+    top:18px;
+
+    left:18px;
+
+}
 
 
 /*====================================================
