@@ -125,7 +125,7 @@ function enableMobileMenu(){
 
         document.body.classList.toggle("menu-open",open);
 
-        const icon=toggle.querySelector("i");
+        // const icon=toggle.querySelector("i");
 
         
 
