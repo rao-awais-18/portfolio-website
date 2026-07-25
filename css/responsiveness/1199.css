@@ -112,6 +112,46 @@
                         FOOTER
 ====================================================*/
 
+footer{
+
+    padding:70px 0 28px;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1.7fr 1fr 1fr;
+
+    gap:40px;
+
+}
+
+.footer-about p{
+
+    max-width:360px;
+
+}
+
+.footer-social{
+
+    gap:14px;
+
+}
+
+.footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.footer-bottom{
+
+    padding-top:24px;
+
+}
+
 
 
 /*====================================================
