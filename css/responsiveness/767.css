@@ -77,34 +77,63 @@
                         FOOTER
 ====================================================*/
 
-.footer-grid {
-    grid-template-columns: 1fr;
+footer{
 
-    text-align: center;
+    padding:56px 0 22px;
 
-    gap: 40px;
-  }
+}
 
-  .footer-about p {
-    margin: auto;
-  }
+.footer-grid{
 
-  .footer-social {
-    justify-content: center;
-  }
+    grid-template-columns:1fr;
 
-  .footer-contact-info p {
-    justify-content: center;
-  }
+    gap:36px;
 
-  .footer-bottom {
-    flex-direction: column;
+    text-align:center;
 
-    gap: 20px;
+}
 
-    text-align: center;
-  }
+.footer-about{
 
+    grid-column:auto;
+
+}
+
+.footer-about p{
+
+    max-width:100%;
+
+    margin:0 auto;
+
+}
+
+.footer-links ul{
+
+    padding:0;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+.footer-contact-info p{
+
+    justify-content:center;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    gap:18px;
+
+    text-align:center;
+
+}
 
 
 /*====================================================
