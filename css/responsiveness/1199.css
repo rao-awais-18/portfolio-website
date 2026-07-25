@@ -61,6 +61,84 @@
 @media (max-width:1199px){
 
 /*====================================================
+                    HOME-HERO-SECTION
+====================================================*/
+
+    .hero{
+
+    padding:40px 4%;
+
+    gap:24px;
+
+}
+
+.hero-content{
+
+    flex:1.15;
+
+}
+
+.hero-image{
+
+    flex:.85;
+
+}
+
+.hero-content h1{
+
+    font-size:56px;
+
+}
+
+.hero-content h2{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    max-width:560px;
+    margin-bottom: 25px;
+
+}
+
+/* .hero-image{
+
+    flex:.9;
+
+} */
+
+.image-circle{
+
+    width:360px;
+
+    height:360px;
+
+}
+
+.image-circle img{
+
+    width:340px;
+
+    height:340px;
+
+}
+
+.hero-buttons{
+
+    gap:16px;
+
+}
+
+.social-icons{
+
+    gap:16px;
+
+}
+
+
+/*====================================================
                         NAVBAR
 ====================================================*/
 .navbar{
