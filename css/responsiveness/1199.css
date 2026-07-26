@@ -61,6 +61,104 @@
 @media (max-width:1200px){
 
 /*====================================================
+                        NAVBAR
+====================================================*/
+.navbar{
+
+    padding:18px 5%;
+
+}
+
+.logo{
+
+    font-size:1.6rem;
+
+}
+
+.nav-right{
+
+    gap:28px;
+
+}
+
+.nav-links{
+
+    gap:22px;
+
+}
+
+.nav-links a{
+
+    font-size:.95rem;
+
+}
+
+.cv-btn{
+
+    padding:12px 20px;
+
+    font-size:.9rem;
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+}
+
+
+/*====================================================
+                        FOOTER
+====================================================*/
+
+footer{
+
+    padding:70px 0 28px;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1.7fr 1fr 1fr;
+
+    gap:40px;
+
+}
+
+.footer-about p{
+
+    max-width:360px;
+
+}
+
+.footer-social{
+
+    gap:14px;
+
+}
+
+.footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.footer-bottom{
+
+    padding-top:24px;
+
+}
+
+
+
+/*====================================================
+                        HOME PAGE
+====================================================*/
+
+/*====================================================
                     HOME-HERO-SECTION
 ====================================================*/
 
@@ -162,107 +260,6 @@
     padding:13px 28px;
 
 }
-
-
-
-
-/*====================================================
-                        NAVBAR
-====================================================*/
-.navbar{
-
-    padding:18px 5%;
-
-}
-
-.logo{
-
-    font-size:1.6rem;
-
-}
-
-.nav-right{
-
-    gap:28px;
-
-}
-
-.nav-links{
-
-    gap:22px;
-
-}
-
-.nav-links a{
-
-    font-size:.95rem;
-
-}
-
-.cv-btn{
-
-    padding:12px 20px;
-
-    font-size:.9rem;
-
-}
-
-.menu-toggle{
-
-    display:none;
-
-}
-
-
-/*====================================================
-                        FOOTER
-====================================================*/
-
-footer{
-
-    padding:70px 0 28px;
-
-}
-
-.footer-grid{
-
-    grid-template-columns:1.7fr 1fr 1fr;
-
-    gap:40px;
-
-}
-
-.footer-about p{
-
-    max-width:360px;
-
-}
-
-.footer-social{
-
-    gap:14px;
-
-}
-
-.footer-social a{
-
-    width:42px;
-
-    height:42px;
-
-}
-
-.footer-bottom{
-
-    padding-top:24px;
-
-}
-
-
-
-/*====================================================
-                        HOME
-====================================================*/
 
 
 
