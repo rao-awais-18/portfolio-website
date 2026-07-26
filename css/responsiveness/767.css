@@ -137,8 +137,115 @@ footer{
 
 
 /*====================================================
-                        HOME
+                        HOME PAGE
 ====================================================*/
+
+/*====================================================
+                        HOME-PAGE-HERO
+====================================================*/
+
+.hero{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:auto;
+
+    padding:50px 4%;
+
+    gap:42px;
+
+}
+
+.hero-content{
+
+    order:1;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero-image{
+
+    order:2;
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.hero-content h1{
+
+    font-size:42px;
+
+}
+
+.hero-content h2{
+
+    font-size:26px;
+    justify-content: space-between;
+
+}
+
+.hero-content p{
+
+    max-width:600px;
+
+    margin-inline:auto;
+
+    margin-bottom:36px;
+
+    
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+}
+
+.social-icons{
+
+    justify-content:center;
+
+}
+
+.image-circle{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+.image-circle img{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.hero-tag{
+
+    margin-bottom:16px;
+
+}
 
 
 
