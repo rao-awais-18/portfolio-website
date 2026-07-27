@@ -175,8 +175,154 @@ footer{
 
 
 /*====================================================
-                        HOME
+                        HOME PAGE
 ====================================================*/
+
+/*====================================================
+                        HOME-PAGE-HERO
+====================================================*/
+.hero{
+
+    min-height:auto;
+
+    padding:40px 20px 60px;
+
+    gap:40px;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:100%;
+
+    text-align:center;
+
+}
+
+.hero-tag{
+
+    font-size:13px;
+
+    padding:8px 16px;
+
+}
+
+.hero-content h1{
+
+    font-size:40px;
+
+    line-height:1.2;
+
+}
+
+.hero-content h2{
+
+    font-size:22px;
+
+    margin:-14px;
+
+}
+
+.hero-content p{
+
+    max-width:100%;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-top:18px;
+
+    margin-bottom:32px;
+
+}
+
+/* BUTTONNS LAYOUT */
+/* OPTION 1 */
+.hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+    gap:14px;
+
+}
+.btn-primary,
+.btn-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+/* OPTION 2 */
+/* .hero-buttons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+} */
+
+.social-icons{
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.social-icons a{
+
+    width:46px;
+
+    height:46px;
+
+    font-size:20px;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+}
+
+.image-circle{
+
+    width:230px;
+
+    height:230px;
+
+}
+
+.image-circle img{
+
+    width:214px;
+
+    height:214px;
+
+}
+
+.glow-1{
+
+    width:220px;
+
+    height:220px;
+
+}
+
+.glow-2{
+
+    width:180px;
+
+    height:180px;
+
+}
 
 
 
