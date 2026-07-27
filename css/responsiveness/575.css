@@ -226,8 +226,7 @@ footer{
 .hero-content h2{
 
     font-size:22px;
-
-    margin:-14px;
+    /* margin-top: 10px; */
 
 }
 
@@ -239,7 +238,7 @@ footer{
 
     line-height:1.8;
 
-    margin-top:18px;
+    /* margin-top:10px; */
 
     margin-bottom:32px;
 
@@ -328,6 +327,61 @@ footer{
 
     height:180px;
 
+}
+
+/*====================================================
+                        SKILLS-PREVIEW-SECTION
+====================================================*/
+
+.skills-preview{
+    padding: 0px 0;
+}
+
+.section-title{
+    margin-bottom: 35px;
+}
+
+.section-title h2{
+    font-size: 28px;
+}
+
+.section-title p{
+    font-size: 14px;
+
+    max-width: 100%;
+}
+
+.skills-grid{
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+}
+
+.skill-card{
+    padding: 22px;
+}
+
+.skill-content > i{
+    font-size: 40px;
+}
+
+.skill-card h3{
+    font-size: 19px;
+}
+
+.skill-card p{
+    font-size: 14px;
+}
+
+.section-button{
+    margin-top: 35px;
+}
+
+.section-button .btn-primary{
+
+    width:95%;
+
+    justify-content:center;
 }
 
 

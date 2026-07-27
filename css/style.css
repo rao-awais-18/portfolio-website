@@ -402,10 +402,6 @@ body.menu-open{
   background: var(--primary);
 }
 
-/* @media (max-width: 768px) {
-  
-} */
-
 .cv-btn {
   text-decoration: none;
 
@@ -694,6 +690,8 @@ html {
   animation: fadeUp 0.8s ease-out;
 }
 
+/* skills section */
+
 .skills-preview {
   padding: 100px 0;
 }
@@ -719,7 +717,7 @@ html {
 }
 
 
-/* skills section */
+
 .skills-grid {
   display: grid;
 
@@ -1411,12 +1409,6 @@ footer {
   text-align: center;
 }
 
-/* footer responsiveness */
-/* @media (max-width: 768px) {
-  
-
-} */
-
 .footer-contact-info p {
   transition:var(--transition);
 }
@@ -1501,20 +1493,7 @@ footer {
 }
 
 /* responsiveness */
-@media (max-width: 992px) {
-  .project-hero-wrapper {
-    flex-direction: column-reverse;
 
-    text-align: center;
-  }
-
-  /* category moves in center on mobile */
-  .project-category {
-    display: inline-block;
-
-    margin: 0 auto 20px;
-  }
-}
 
 /*------------------------------------- project overview -------------------------------------- */
 /* resuable card */
@@ -1540,19 +1519,6 @@ footer {
   line-height: 1.9;
 
   font-size: 1.05rem;
-}
-
-/* responsiveness */
-@media (max-width: 768px) {
-  .project-overview-content {
-    margin-top: 20px;
-  }
-
-  .project-overview-content p {
-    font-size: 1rem;
-
-    line-height: 1.8;
-  }
 }
 
 /* ==========================
@@ -1665,22 +1631,6 @@ footer {
   opacity: 1;
 
   visibility: visible;
-}
-
-/* ------------- responsive ---------------------- */
-
-/* tablet devices */
-@media (max-width: 992px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* phones */
-@media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ==========================
@@ -1842,38 +1792,6 @@ footer {
 }
 
 /* ==========================
-   Responsive
-========================== */
-
-@media (max-width: 768px) {
-  .lightbox img {
-    max-width: 92vw;
-
-    max-height: 70vh;
-  }
-
-  .lightbox-prev {
-    left: 15px;
-  }
-
-  .lightbox-next {
-    right: 15px;
-  }
-
-  .lightbox-close {
-    top: 15px;
-
-    right: 15px;
-  }
-
-  .lightbox-counter {
-    bottom: 20px;
-
-    font-size: 0.85rem;
-  }
-}
-
-/* ==========================
    Technologies
 ========================== */
 
@@ -1935,18 +1853,6 @@ footer {
 
 .default-tech {
   color: var(--primary-color);
-}
-
-
-/* responsiveness */
-@media (max-width: 768px) {
-  .technology-card {
-    padding: 25px 20px;
-  }
-
-  .technology-card i {
-    font-size: 2.5rem;
-  }
 }
 
 /* ==========================
@@ -2217,47 +2123,6 @@ footer {
 
 }
 
-/* ==========================
-   Responsive
-========================== */
-
-@media(max-width:768px){
-
-    .project-navigation-wrapper{
-
-        grid-template-columns:1fr;
-
-        gap:35px;
-
-    }
-
-    .previous-project,
-    .next-project{
-
-        justify-self:center;
-
-        align-items:center;
-
-        text-align:center;
-
-    }
-
-    .project-nav .tech-stack{
-
-        justify-content:center;
-
-    }
-
-    .project-nav small::after{
-
-        left:50%;
-
-        transform:translateX(-50%);
-
-    }
-
-}
-
 .project-nav .tech-badge{
 
     transition:var(--transition);
@@ -2331,32 +2196,6 @@ footer {
 .project-cta-buttons .btn{
 
     min-width:190px;
-
-}
-
-/* responsiveness */
-
-@media(max-width:768px){
-
-    .project-cta{
-
-        padding:70px 0;
-
-    }
-
-    .project-cta-buttons{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-    }
-
-    .project-cta-buttons .btn{
-
-        width:100%;
-
-    }
 
 }
 
@@ -2691,57 +2530,6 @@ gap:var(--space-md);
 
 }
 
-/* responsive */
-@media (max-width: 992px) {
-
-    .contact-layout {
-
-        grid-template-columns: 1fr;
-
-        gap: var(--space-xl);
-
-    }
-
-}
-@media (max-width: 768px) {
-
-    .contact-form-wrapper {
-
-        padding: var(--space-lg);
-
-    }
-
-    .contact-intro h2 {
-
-        max-width: 100%;
-
-    }
-
-    .contact-form button {
-
-        width: 100%;
-
-        justify-content: center;
-
-    }
-
-}
-@media (max-width: 576px) {
-
-    .contact-section {
-
-        padding: var(--space-xl) 0;
-
-    }
-
-    .contact-layout {
-
-        gap: var(--space-lg);
-
-    }
-
-}
-
 .contact-links a::after {
 
     content: "";
@@ -3012,72 +2800,6 @@ gap:var(--space-md);
 
 }
 
-/* reponsive */
-@media(max-width:992px){
-
-    .skill-hero-content{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-    }
-    .hero-left{
-
-    order:2;
-
-}
-
-.hero-right{
-
-    order:1;
-
-    margin-bottom:var(--space-md);
-    margin-top:var(--space-md);
-
-}
-
-    .hero-left p{
-
-        margin-inline:auto;
-
-    }
-
-    .info-grid{
-
-        justify-content:center;
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-@media (max-width:576px){
-
-    .hero-icon{
-
-        width:180px;
-
-        height:180px;
-
-        margin-inline:auto;
-
-    }
-
-    .hero-icon i{
-
-        font-size:5rem;
-
-    }
-
-    .info-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
 /* ==========================
    Skill Overview
 ========================== */
@@ -3173,17 +2895,6 @@ gap:var(--space-md);
 .overview-list li:last-child{
 
     border-bottom:none;
-
-}
-
-/* responsive */
-@media(max-width:768px){
-
-    .overview-list{
-
-        grid-template-columns:1fr;
-
-    }
 
 }
 
@@ -3290,19 +3001,6 @@ gap:var(--space-md);
 
 }
 
-/* responsive */
-@media (max-width:768px){
-
-    .technology-list{
-
-        grid-template-columns: 1fr;
-
-        gap: var(--space-md);
-
-    }
-
-}
-
 /* ==========================
    Capabilities
 ========================== */
@@ -3382,25 +3080,6 @@ gap:var(--space-md);
 .capability-item:hover .capability-number{
 
     opacity:1;
-
-}
-
-/* responsive */
-@media (max-width:768px){
-
-    .capability-item{
-
-        gap:var(--space-md);
-
-    }
-
-    .capability-number{
-
-        min-width:40px;
-
-        font-size:1.5rem;
-
-    }
 
 }
 
@@ -3891,20 +3570,6 @@ Projects Info
 
 }
 
-@media(max-width:576px){
-
-    #projects-count{
-
-        font-size:0.9rem;
-
-        line-height:1.8;
-
-        padding-inline:10px;
-
-    }
-
-}
-
 /*===================================
 Reset Button
 ===================================*/
@@ -3968,28 +3633,6 @@ Reset Button
 #reset-filters i{
 
     transition:transform .4s ease;
-
-}
-
-
-
-@media(max-width:576px){
-
-    .sort-wrapper{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-    }
-
-    #sort-projects,
-
-    #reset-filters{
-
-        width:100%;
-
-    }
 
 }
 
@@ -4193,143 +3836,6 @@ Project Cards Entrance
     padding-bottom: var(--space-lg);
 
 }
-
-/*===================== responsiveness ==========================*/
-
-/* tablets(<= 992px) */
-@media(max-width:992px){
-
-.hero-layout{
-
-grid-template-columns:1fr;
-
-gap:28px;
-
-}
-
-.hero-controls{
-
-align-items:flex-start;
-
-gap:14px;
-
-}
-
-.hero-controls .search-box{
-
-width:100%;
-
-max-width:520px;
-
-}
-
-.hero-controls .sort-wrapper{
-
-display:flex;
-
-gap:10px;
-
-flex-wrap:nowrap;
-
-}
-
-#sort-projects{
-
-padding:0 16px;
-
-width:100px;
-
-flex:none;
-
-}
-
-#reset-filters{
-
-padding:0 16px;
-
-white-space:nowrap;
-
-flex:none;
-
-height: 40px;
-
-}
-
-}
-
-/* mobiles (<=768px) */
-@media (max-width: 768px){
-
-
-  .hero-layout{
-
-gap:20px;
-
-}
-
-    .hero-controls{
-
-        gap: 14px;
-
-    }
-
-    .hero-controls .search-box{
-
-        width: 100%;
-
-        max-width: 100%;
-
-    }
-
-    .hero-controls .sort-wrapper{
-
-        width:100%;
-
-justify-content:flex-start;
-
-    }
-
-    #sort-projects{
-
-width:110px;
-
-}
-
-#reset-filters{
-
-padding:0 14px;
-
-}
-
-}
-
-/* small phones(<= 480px) */
-@media(max-width:430px){
-
-.hero-controls .sort-wrapper{
-
-flex-wrap:wrap;
-
-}
-
-#sort-projects{
-
-flex:1;
-
-min-width:130px;
-
-}
-
-#reset-filters{
-
-flex:1;
-
-}
-}
-
-
-
-
 
                      /*===================================
                                   Skills Page
@@ -4920,67 +4426,6 @@ min-width:110px;
     justify-content:flex-start;
 
 }
-
-
-
-
-/* ==========================================
-   Skills Page Resposiveness
-========================================== */
-
-/* temporary */
-@media (min-width:1400px){
-
-    :root{
-
-        --container-width:1280px;
-
-    }
-
-}
-
-
-
-
-
-
-
-@media (max-width:768px){
-
-    .sort-wrapper{
-
-        width: 100%;
-
-    }
-
-    .sort-wrapper select{
-
-        flex: 1;
-
-    }
-
-    #reset-skills{
-
-        flex: 1;
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------- universal classes -------------------------------- */

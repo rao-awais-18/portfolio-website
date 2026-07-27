@@ -302,9 +302,9 @@ footer{
 
 .hero{
 
-    min-height:75vh;
+    min-height:auto;
 
-    padding:32px 4%;
+    padding:5px 4%;
 
     gap:24px;
 
@@ -389,6 +389,44 @@ footer{
 
     font-size:19px;
 
+}
+
+/*====================================================
+                        SKILLS-PREVIEW-SECTION
+====================================================*/
+
+.skills-preview{
+    padding: 65px 0;
+}
+
+.section-title{
+    margin-bottom: 45px;
+}
+
+.section-title h2{
+    font-size: 36px;
+}
+
+.section-title p{
+    max-width: 600px;
+}
+
+.skills-grid{
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 22px;
+}
+
+.skill-card{
+    padding: 28px;
+}
+
+.skill-content > i{
+    font-size: 48px;
+}
+
+.section-button{
+    margin-top: 45px;
 }
 
 

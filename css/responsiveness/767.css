@@ -154,7 +154,7 @@ footer{
 
     min-height:auto;
 
-    padding:50px 4%;
+    padding:20px 4%;
 
     gap:42px;
 
@@ -245,6 +245,54 @@ footer{
 
     margin-bottom:16px;
 
+}
+
+/*====================================================
+                        SKILLS-PREVIEW-SECTION
+====================================================*/
+
+.skills-preview{
+    padding: 60px 0;
+}
+
+.section-title{
+    margin-bottom: 40px;
+}
+
+.section-title h2{
+    font-size: 32px;
+}
+
+.section-title p{
+    font-size: 15px;
+
+    max-width: 95%;
+}
+
+#skills-grid{
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 18px;
+}
+
+.skill-card{
+    padding: 24px;
+}
+
+.skill-content > i{
+    font-size: 42px;
+}
+
+.skill-card h3{
+    font-size: 20px;
+}
+
+.skill-card p{
+    font-size: 14px;
+}
+
+.section-button{
+    margin-top: 40px;
 }
 
 
