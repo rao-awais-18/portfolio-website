@@ -468,7 +468,7 @@ footer{
 =============================== */
 
 .why-me{
-    padding:60px 0;
+    padding:60px 0 0;
 }
 
 .why-wrapper{
@@ -497,6 +497,32 @@ footer{
     text-align:left;
 
     gap:18px;
+}
+
+/* ===============================
+   Homepage - CTA
+=============================== */
+
+.cta{
+
+    padding:60px 0;
+}
+
+.cta h2{
+
+    max-width:620px;
+}
+
+.cta p{
+
+    max-width:560px;
+
+    margin-bottom:32px;
+}
+
+.cta-buttons{
+
+    gap:16px;
 }
 
 

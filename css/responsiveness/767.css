@@ -351,7 +351,7 @@ footer{
 =============================== */
 
 .why-me{
-    padding:50px 0;
+    padding:50px 0 0;
 }
 
 .why-wrapper{
@@ -390,6 +390,47 @@ footer{
     font-size:14px;
 
     line-height:1.6;
+}
+
+/* ===============================
+   Homepage - CTA
+=============================== */
+
+.cta{
+
+    padding:50px 0;
+}
+
+.cta h2{
+
+    font-size:2rem;
+
+    line-height:1.3;
+}
+
+.cta p{
+
+    font-size:15px;
+
+    margin-bottom:28px;
+}
+
+.cta-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:14px;
+}
+
+.cta-buttons .btn-primary,
+
+.cta-buttons .btn-secondary{
+
+    width:260px;
+
+    justify-content:center;
 }
 
 
