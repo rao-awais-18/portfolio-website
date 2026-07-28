@@ -200,7 +200,7 @@ footer{
 =============================== */
 
 .projects-preview{
-    padding:40px 0;
+    padding:40px 0 0;
 }
 
 #projects-grid{
@@ -220,6 +220,51 @@ footer{
 .section-button{
     margin-top:45px;
 }
+
+
+/* ===============================
+   Homepage - Why Me
+=============================== */
+
+.why-me{
+    padding:70px 0 0;
+}
+
+.why-wrapper{
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:45px;
+
+    align-items:center;
+}
+
+.why-image img{
+
+    width:330px;
+
+    height:330px;
+}
+
+.why-item{
+
+    gap:18px;
+
+    padding-bottom:20px;
+
+    margin-bottom:20px;
+}
+
+.why-item h3{
+
+    font-size:20px;
+}
+
+.why-item p{
+
+    font-size:15px;
+}
+
 
 /*====================================================
                         ABOUT

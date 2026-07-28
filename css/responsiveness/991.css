@@ -435,7 +435,7 @@ footer{
 =============================== */
 
 .projects-preview{
-    padding:60px 0;
+    padding:60px 0 0;
 }
 
 #projects-grid{
@@ -461,6 +461,42 @@ footer{
 
 .section-button{
     margin-top:42px;
+}
+
+/* ===============================
+   Homepage - Why Me
+=============================== */
+
+.why-me{
+    padding:60px 0;
+}
+
+.why-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    text-align:center;
+}
+
+.why-image{
+
+    order:-1;
+}
+
+.why-image img{
+
+    width:300px;
+
+    height:300px;
+}
+
+.why-item{
+
+    text-align:left;
+
+    gap:18px;
 }
 
 
