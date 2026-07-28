@@ -245,7 +245,7 @@ footer{
 }
 
 /* BUTTONNS LAYOUT */
-/* OPTION 1 */
+/* OPTION 1 - wide buttons in column covering full width */
 .hero-buttons{
 
     flex-direction:column;
@@ -264,7 +264,7 @@ footer{
 
 }
 
-/* OPTION 2 */
+/* OPTION 2 - less width two buttons in single row */
 /* .hero-buttons{
 
     justify-content:center;
@@ -383,6 +383,59 @@ footer{
 
     justify-content:center;
 }
+
+
+/* ===============================
+   Homepage - Featured Projects
+=============================== */
+
+.projects-preview{
+    padding:50px 0;
+}
+
+#projects-grid{
+    grid-template-columns:1fr;
+
+    gap:18px;
+}
+
+.project-card img{
+    height:210px;
+}
+
+.project-info{
+    padding:20px;
+}
+
+.project-info h3{
+    font-size:21px;
+}
+
+.project-info p{
+    font-size:14px;
+}
+
+.project-links{
+
+    flex-direction:column;
+}
+
+.project-links a{
+
+    width:100%;
+}
+
+.section-button{
+
+    margin-top:35px;
+}
+
+/* .section-button .btn-primary{
+
+    width:100%;
+
+    justify-content:center;
+} */
 
 
 

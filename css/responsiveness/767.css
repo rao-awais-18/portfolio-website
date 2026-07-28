@@ -252,7 +252,7 @@ footer{
 ====================================================*/
 
 .skills-preview{
-    padding: 60px 0;
+    padding: 60px 0 0;
 }
 
 .section-title{
@@ -295,7 +295,56 @@ footer{
     margin-top: 40px;
 }
 
+/* ===============================
+   Homepage - Featured Projects
+=============================== */
 
+.projects-preview{
+    padding:50px 0;
+}
+
+#projects-grid{
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+}
+
+.project-card img{
+    height:180px;
+}
+
+.project-info{
+    padding:20px;
+}
+
+.project-info h3{
+    font-size:22px;
+}
+
+.project-info p{
+    font-size:14px;
+}
+
+.tech-stack{
+
+    gap:8px;
+}
+
+.tech-stack span{
+
+    font-size:12px;
+
+    padding:7px 12px;
+}
+
+.project-links{
+
+    flex-direction:column;
+}
+
+.section-button{
+    margin-top:40px;
+}
 
 /*====================================================
                         ABOUT

@@ -396,7 +396,7 @@ footer{
 ====================================================*/
 
 .skills-preview{
-    padding: 65px 0;
+    padding: 65px 0 0;
 }
 
 .section-title{
@@ -430,7 +430,38 @@ footer{
 }
 
 
+/* ===============================
+   Homepage - Featured Projects
+=============================== */
 
+.projects-preview{
+    padding:60px 0;
+}
+
+#projects-grid{
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+.project-card img{
+    height:190px;
+}
+
+.project-info{
+    padding:22px;
+}
+
+.project-links{
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.section-button{
+    margin-top:42px;
+}
 
 
 /*====================================================
