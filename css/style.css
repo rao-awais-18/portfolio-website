@@ -1659,6 +1659,144 @@ footer {
 
 }
 
+/* ===========================
+   EDUCATION
+=========================== */
+
+.education{
+
+    padding:100px 0;
+
+}
+
+.education-card{
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:center;
+
+    padding:35px;
+
+    margin-bottom:60px;
+
+    border-radius:var(--radius-lg);
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 28px rgba(56,189,248,.2);
+
+}
+
+.edu-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(56,189,248,.12);
+
+}
+
+.edu-icon i{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+}
+
+.edu-content span{
+
+    display:block;
+
+    margin:10px 0;
+
+    color:var(--primary);
+
+}
+
+.edu-content p{
+
+    color:var(--muted);
+
+}
+
+.learning-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.learning-card{
+
+    padding:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius-lg);
+
+    transition:var(--transition);
+
+}
+
+.learning-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(56,189,248,.2);
+
+}
+
+.learning-card i{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.learning-card h4{
+
+    margin-bottom:15px;
+
+}
+
+.learning-card p{
+
+    color:var(--muted);
+
+}
+
 
 /* ==========================
    Project Details Page Styling
