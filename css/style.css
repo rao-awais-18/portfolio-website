@@ -2840,6 +2840,126 @@ footer {
 
 }
 
+/*==================================
+            ABOUT CTA
+===================================*/
+
+.about-cta{
+
+    padding:140px 0;
+
+}
+
+.about-cta-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:80px 60px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius-lg);
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.about-cta-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(56,189,248,.06),
+
+        transparent 60%
+
+    );
+
+    pointer-events:none;
+
+}
+
+.about-cta-label{
+
+    display:inline-block;
+
+    letter-spacing:4px;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:22px;
+
+}
+
+.about-cta h2{
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    line-height:1.2;
+
+    margin-bottom:28px;
+
+}
+
+.about-cta p{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+.about-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.about-cta-buttons a{
+
+    min-width:220px;
+
+}
+
+.about-cta-content:hover{
+
+    border-color:rgba(56,189,248,.25);
+
+    box-shadow:0 0 50px rgba(56,189,248,.10);
+
+}
+
 
 /*====================================================
                         PROJECT DETAILS PAGE
