@@ -977,7 +977,47 @@ footer{
 
 }
 
+/*======================================
+            ABOUT CTA
+======================================*/
 
+.about-cta{
+
+    padding:90px 0;
+
+}
+
+.about-cta-content{
+
+    max-width:720px;
+
+    padding:60px 40px;
+
+}
+
+.about-p1{
+
+    margin:0 auto 35px;
+
+}
+
+.about-cta-buttons{
+
+    gap:16px;
+
+}
+
+.about-cta-buttons a{
+
+    min-width:190px;
+
+}
+
+.cta-note{
+
+    margin-top:28px;
+
+}
 
 /*====================================================
                         PROJECTS

@@ -907,6 +907,62 @@ footer{
 
 }
 
+/*======================================
+            ABOUT CTA
+======================================*/
+
+.about-cta{
+
+    padding:70px 0;
+
+}
+
+.about-cta-content{
+
+    padding:45px 30px;
+
+}
+
+.about-cta-label{
+
+    letter-spacing:3px;
+
+}
+
+.about-p1{
+
+    margin:0 auto 30px;
+
+}
+
+.about-cta-buttons{
+
+    gap:14px;
+
+}
+
+.about-cta-buttons a{
+
+    min-width:180px;
+
+}
+
+.about-cta h2::after{
+
+    width:70px;
+
+    margin:22px auto;
+
+}
+
+.cta-note{
+
+    margin-top:24px;
+
+    font-size:.88rem;
+
+}
+
 
 
 /*====================================================
