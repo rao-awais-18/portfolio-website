@@ -472,6 +472,68 @@ footer{
 
 }
 
+/*======================================
+        TECHNICAL EXPERTISE
+=======================================*/
+
+.expertise{
+
+    padding:90px 0;
+
+}
+
+.expertise-list{
+
+    gap:40px;
+
+}
+
+.expertise-item{
+
+    padding-bottom:35px;
+
+}
+
+.expertise-heading{
+
+    gap:20px;
+
+}
+
+.expertise-icon{
+
+    width:64px;
+
+    height:64px;
+
+    font-size:26px;
+
+}
+
+.expertise-item p{
+
+    margin-left:84px;
+
+    max-width:680px;
+
+}
+
+.expertise-tags{
+
+    margin-left:84px;
+
+    gap:10px;
+
+}
+
+.expertise-item::after{
+
+    left:84px;
+
+    width:calc(100% - 84px);
+
+}
+
 
 /*====================================================
                         PROJECTS

@@ -727,6 +727,66 @@ footer{
 
 }
 
+/*======================================
+        TECHNICAL EXPERTISE
+=======================================*/
+
+.expertise{
+
+    padding:70px 0;
+
+}
+
+.expertise-list::before{
+
+    display:none;
+
+}
+
+.expertise-item{
+
+    padding-bottom:28px;
+
+}
+
+.expertise-heading{
+
+    gap:16px;
+
+}
+
+.expertise-icon{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:22px;
+
+    box-shadow:none;
+
+}
+
+.expertise-item p{
+
+    margin-left:0;
+
+}
+
+.expertise-tags{
+
+    margin-left:0;
+
+}
+
+.expertise-item::after{
+
+    left:0;
+
+    width:100%;
+
+}
+
 
 
 /*====================================================
