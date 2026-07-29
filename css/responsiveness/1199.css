@@ -574,6 +574,58 @@ footer{
 
 }
 
+/*======================================
+        THE PERSON BEHIND THE CODE
+======================================*/
+
+.personality{
+
+    padding:120px 0 0;
+
+}
+
+.personality-header{
+
+    max-width:780px;
+
+    margin:0 auto 80px;
+
+}
+
+.personality-list{
+
+    gap:65px;
+
+}
+
+.personality-item{
+
+    grid-template-columns:115px 1fr;
+
+    gap:35px;
+
+}
+
+.personality-number{
+
+    font-size:5rem;
+
+}
+
+.personality-content h3{
+
+    font-size:2rem;
+
+}
+
+.personality-content p{
+
+    max-width:650px;
+
+}
+
+
+
 /*====================================================
                         PROJECTS
 ====================================================*/

@@ -917,6 +917,66 @@ footer{
 
 }
 
+/*======================================
+        THE PERSON BEHIND THE CODE
+======================================*/
+
+.personality{
+
+    padding:90px 0 0;
+
+}
+
+.personality-header{
+
+    max-width:700px;
+
+    margin:0 auto 65px;
+
+}
+
+.personality-list{
+
+    gap:55px;
+
+}
+
+.personality-item{
+
+    grid-template-columns:90px 1fr;
+
+    gap:28px;
+
+}
+
+.personality-number{
+
+    font-size:4rem;
+
+}
+
+.personality-content h3{
+
+    font-size:1.7rem;
+
+}
+
+.title-line{
+
+    margin-bottom:22px;
+
+}
+
+.personality-content p{
+
+    font-size:1rem;
+
+    line-height:1.85;
+
+    max-width:100%;
+
+}
+
 
 
 /*====================================================
