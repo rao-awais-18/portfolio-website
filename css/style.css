@@ -2538,6 +2538,154 @@ footer {
 
 }
 
+/*====================================
+        Building With Purpose
+====================================*/
+
+.philosophy{
+
+    padding:120px 0;
+
+}
+
+.philosophy-intro{
+
+    max-width:850px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+
+}
+
+.section-label{
+
+    display:inline-block;
+
+    letter-spacing:4px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.philosophy-intro h2{
+
+    font-size:clamp(2.4rem,5vw,4rem);
+
+    line-height:1.2;
+
+    margin-bottom:28px;
+
+}
+
+.philosophy-intro p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+.philosophy-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.philosophy-item{
+
+    display:grid;
+
+    grid-template-columns:120px 1fr;
+
+    gap:30px;
+
+    padding:45px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.philosophy-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.philosophy-number{
+
+    font-size:4.5rem;
+
+    font-weight:700;
+
+    color:rgba(56,189,248,.10);
+
+    transition:var(--transition);
+
+    line-height:1;
+
+}
+
+.philosophy-item h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:18px;
+
+    transition:var(--transition);
+
+}
+
+.philosophy-item p{
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    transition:var(--transition);
+
+}
+
+.philosophy-item:hover{
+
+    transform:translateX(10px);
+
+}
+
+.philosophy-item:hover .philosophy-number{
+
+    color:rgba(56,189,248,.35);
+
+}
+
+.philosophy-item:hover h3{
+
+    color:var(--primary);
+
+}
+
+.philosophy-item:hover p{
+
+    color:#dbe7f3;
+
+}
+
 
 /*====================================================
                         PROJECT DETAILS PAGE
