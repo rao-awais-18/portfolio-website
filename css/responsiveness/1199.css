@@ -534,6 +534,45 @@ footer{
 
 }
 
+/*======================================
+        BUILDING WITH PURPOSE
+======================================*/
+
+.philosophy{
+
+    padding:100px 0 0;
+
+}
+
+.philosophy-intro{
+
+    max-width:780px;
+
+    margin:0 auto 75px;
+
+}
+
+.philosophy-item{
+
+    grid-template-columns:100px 1fr;
+
+    gap:26px;
+
+    padding:38px 0;
+
+}
+
+.philosophy-number{
+
+    font-size:4rem;
+
+}
+
+.philosophy-item h3{
+
+    font-size:1.65rem;
+
+}
 
 /*====================================================
                         PROJECTS
