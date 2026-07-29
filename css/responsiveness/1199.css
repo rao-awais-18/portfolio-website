@@ -298,7 +298,7 @@ footer{
 
 .about-hero{
 
-    padding:40px 0 80px;
+    padding:40px 0 0;
 
 }
 
@@ -339,6 +339,38 @@ footer{
 .about-quick-info div{
 
     padding:20px;
+
+}
+
+/*======================================
+            JOURNEY
+=======================================*/
+
+@media (max-width:1200px){
+
+    .journey{
+
+        padding:90px 0 0;
+
+    }
+
+    .timeline{
+
+        max-width:780px;
+
+    }
+
+    .timeline-item{
+
+        margin-bottom:42px;
+
+    }
+
+    .timeline-content{
+
+        padding:26px;
+
+    }
 
 }
 

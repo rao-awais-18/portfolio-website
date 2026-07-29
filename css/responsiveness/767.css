@@ -445,7 +445,7 @@ footer{
 
     .about-hero{
 
-        padding:50px 0 70px;
+        padding:50px 0 0;
 
     }
 
@@ -506,6 +506,62 @@ footer{
         grid-template-columns:repeat(3,1fr);
 
         gap:16px;
+
+    }
+
+}
+
+/*======================================
+            JOURNEY
+=======================================*/
+
+@media (max-width:768px){
+
+    .journey{
+
+        padding:70px 0 0;
+
+    }
+
+    .timeline{
+
+        max-width:100%;
+
+    }
+
+    .timeline-item{
+
+        padding-left:55px;
+
+        margin-bottom:34px;
+
+    }
+
+    .timeline::before{
+
+        left:18px;
+
+    }
+
+    .timeline-dot{
+
+        width:20px;
+
+        height:20px;
+
+        left:8px;
+
+    }
+
+    .timeline-content{
+
+        padding:22px;
+
+    }
+
+    .timeline-content h3{
+
+        font-size:1.15rem;
 
     }
 
