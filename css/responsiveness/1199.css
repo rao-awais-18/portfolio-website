@@ -290,9 +290,57 @@ footer{
 
 
 /*====================================================
-                        ABOUT
+                        ABOUT PAGE
 ====================================================*/
+/*=============================
+        HERO SECTION
+==============================*/
 
+.about-hero{
+
+    padding:40px 0 80px;
+
+}
+
+.about-hero-wrapper{
+
+    gap:50px;
+
+}
+
+.about-hero-content h1{
+
+    font-size:2.8rem;
+
+}
+
+.about-image-circle{
+
+    width:340px;
+
+    height:340px;
+
+}
+
+.about-image-circle img{
+
+    width:322px;
+
+    height:322px;
+
+}
+
+.about-quick-info{
+
+    gap:18px;
+
+}
+
+.about-quick-info div{
+
+    padding:20px;
+
+}
 
 
 /*====================================================

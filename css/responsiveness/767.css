@@ -435,9 +435,81 @@ footer{
 
 
 /*====================================================
-                        ABOUT
+                        ABOUT PAGE
 ====================================================*/
+/*======================================
+            ABOUT HERO
+=======================================*/
 
+@media (max-width:768px){
+
+    .about-hero{
+
+        padding:50px 0 70px;
+
+    }
+
+    .about-hero-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .about-hero-content{
+
+        order:1;
+
+    }
+
+    .about-hero-image{
+
+        order:2;
+
+    }
+
+    .about-hero-content h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .about-hero-content p{
+
+        max-width:650px;
+
+        margin:0 auto 35px;
+
+    }
+
+    .about-image-circle{
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+    .about-image-circle img{
+
+        width:282px;
+
+        height:282px;
+
+    }
+
+    .about-quick-info{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:16px;
+
+    }
+
+}
 
 
 /*====================================================
