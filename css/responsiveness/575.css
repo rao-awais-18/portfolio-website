@@ -663,8 +663,6 @@ footer{
         EDUCATION SECTION
 =======================================*/
 
-@media (max-width:576px){
-
     .education-section{
 
         padding:60px 0 0;
@@ -728,6 +726,80 @@ footer{
         height:90px;
 
     }
+
+/*======================================
+        ACADEMIC TIMELINE
+=======================================*/
+
+.education-timeline{
+
+    padding:60px 0 0;
+
+}
+
+.timeline-item{
+
+    padding-left:44px;
+
+    margin-bottom:26px;
+
+}
+
+.timeline::before{
+
+    left:13px;
+
+}
+
+.timeline-dot{
+
+    width:16px;
+
+    height:16px;
+
+    left:5px;
+
+    border-width:3px;
+
+}
+
+.timeline-card{
+
+    padding:16px;
+
+}
+
+.timeline-card.small{
+
+    padding:16px;
+
+}
+
+.timeline-year{
+
+    font-size:.85rem;
+
+}
+
+.timeline-card h3{
+
+    font-size:1.05rem;
+
+    line-height:1.4;
+
+}
+
+.timeline-card h4{
+
+    font-size:.9rem;
+
+    line-height:1.6;
+
+}
+
+.highlight{
+
+    font-size:.9rem;
 
 }
 

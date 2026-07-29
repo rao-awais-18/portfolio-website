@@ -402,6 +402,42 @@ footer{
 
     }
 
+    /*======================================
+        ACADEMIC TIMELINE
+=======================================*/
+
+.education-timeline{
+
+    padding:90px 0 0;
+
+}
+
+.timeline{
+
+    max-width:820px;
+
+}
+
+.timeline-item{
+
+    padding-left:68px;
+
+    margin-bottom:40px;
+
+}
+
+.timeline-card{
+
+    padding:25px;
+
+}
+
+.timeline-card.small{
+
+    padding:20px;
+
+}
+
 
 /*====================================================
                         PROJECTS

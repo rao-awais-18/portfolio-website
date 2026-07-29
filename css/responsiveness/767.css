@@ -611,6 +611,70 @@ footer{
 
     }
 
+    /*======================================
+        ACADEMIC TIMELINE
+=======================================*/
+
+.education-timeline{
+
+    padding:70px 0 0;
+
+}
+
+.timeline{
+
+    max-width:100%;
+
+}
+
+.timeline-item{
+
+    padding-left:54px;
+
+    margin-bottom:32px;
+
+}
+
+.timeline::before{
+
+    left:16px;
+
+}
+
+.timeline-dot{
+
+    width:20px;
+
+    height:20px;
+
+    left:6px;
+
+}
+
+.timeline-card{
+
+    padding:20px;
+
+}
+
+.timeline-card.small{
+
+    padding:18px;
+
+}
+
+.timeline-card h3{
+
+    font-size:1.15rem;
+
+}
+
+.timeline-card h4{
+
+    font-size:.95rem;
+
+}
+
 
 
 /*====================================================
