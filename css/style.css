@@ -1659,6 +1659,14 @@ footer {
 
 }
 
+.timeline-item:last-child .timeline-dot{
+
+    background:transparent;
+
+    border:3px solid var(--primary);
+
+}
+
 /* ==========================
       EDUCATION SECTION
 ========================== */
