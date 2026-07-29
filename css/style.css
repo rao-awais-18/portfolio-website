@@ -2686,6 +2686,94 @@ footer {
 
 }
 
+/*=================================
+        Beyond Development
+==================================*/
+
+.beyond{
+
+    padding:120px 0;
+
+}
+
+.beyond-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:70px;
+
+}
+
+.beyond-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:40px;
+
+    max-width:760px;
+
+}
+
+.beyond-item.right{
+
+    margin-left:auto;
+
+}
+
+.beyond-item span{
+
+    font-size:5rem;
+
+    font-weight:700;
+
+    color:rgba(56,189,248,.08);
+
+    line-height:1;
+
+    transition:var(--transition);
+
+}
+
+.beyond-item h3{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+    transition:var(--transition);
+
+}
+
+.beyond-item p{
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+.beyond-item:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.beyond-item:hover span{
+
+    color:rgba(56,189,248,.30);
+
+}
+
+.beyond-item:hover h3{
+
+    color:var(--primary);
+
+}
+
 
 /*====================================================
                         PROJECT DETAILS PAGE
