@@ -438,6 +438,40 @@ footer{
 
 }
 
+/*======================================
+      ACADEMIC HIGHLIGHT
+=======================================*/
+
+.achievement-showcase{
+
+    padding:90px 0 0;
+
+}
+
+.highlight-card{
+
+    max-width:780px;
+
+}
+
+.highlight-image{
+
+    width:min(100%,650px);
+
+}
+
+.highlight-content h3{
+
+    font-size:1.8rem;
+
+}
+
+.highlight-meta{
+
+    gap:40px;
+
+}
+
 
 /*====================================================
                         PROJECTS

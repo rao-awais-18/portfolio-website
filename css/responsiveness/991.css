@@ -757,6 +757,46 @@ footer{
 
 }
 
+/*======================================
+      ACADEMIC HIGHLIGHT
+=======================================*/
+
+.achievement-showcase{
+
+    padding:80px 0 0;
+
+}
+
+.highlight-card{
+
+    max-width:700px;
+
+}
+
+.highlight-image{
+
+    width:min(100%,580px);
+
+}
+
+.highlight-content h3{
+
+    font-size:1.6rem;
+
+}
+
+.highlight-content p{
+
+    margin-bottom:30px;
+
+}
+
+.highlight-meta{
+
+    gap:35px;
+
+}
+
 
 
 /*====================================================
