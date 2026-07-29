@@ -605,8 +605,6 @@ footer{
             JOURNEY
 =======================================*/
 
-@media (max-width:576px){
-
     .journey{
 
         padding:60px 0 0;
@@ -658,6 +656,76 @@ footer{
         font-size:.95rem;
 
         line-height:1.7;
+
+    }
+
+/*======================================
+        EDUCATION SECTION
+=======================================*/
+
+@media (max-width:576px){
+
+    .education-section{
+
+        padding:60px 0 0;
+
+    }
+
+    .education-card{
+
+        padding:24px;
+
+        gap:24px;
+
+    }
+
+    .education-badge{
+
+        font-size:.8rem;
+
+    }
+
+    .education-content h3{
+
+        font-size:1.3rem;
+
+        line-height:1.4;
+
+    }
+
+    .education-content h4{
+
+        font-size:1rem;
+
+    }
+
+    .campus{
+
+        margin-bottom:28px;
+
+    }
+
+    .education-meta{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+
+        text-align:center;
+
+    }
+
+    .education-meta strong{
+
+        font-size:1rem;
+
+    }
+
+    .education-logo{
+
+        width:90px;
+
+        height:90px;
 
     }
 

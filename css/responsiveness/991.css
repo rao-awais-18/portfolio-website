@@ -607,8 +607,6 @@ footer{
             JOURNEY
 =======================================*/
 
-@media (max-width:992px){
-
     .journey{
 
         padding:80px 0 0;
@@ -651,7 +649,50 @@ footer{
 
     }
 
-}
+/*======================================
+            EDUCATION
+=======================================*/
+
+.education-section{
+
+        padding:80px 0 0;
+
+    }
+
+    .education-card{
+
+        gap:35px;
+
+        padding:35px;
+
+    }
+
+    .education-content h3{
+
+        font-size:1.6rem;
+
+    }
+
+    .education-content h4{
+
+        font-size:1.1rem;
+
+    }
+
+    .education-meta{
+
+        gap:20px;
+
+    }
+
+    .education-logo{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
 
 
 /*====================================================
