@@ -1,0 +1,189 @@
+/*====================================================
+                    1400px BREAKPOINT
+====================================================*/
+
+@media (min-width:1201px){
+
+/* ==========================================
+   GLOBAL DESKTOP SYSTEM
+========================================== */
+
+/* =============== GLOBAL CONTAINER ===============*/
+.container{
+
+    width:calc(100vw - clamp(70px,6vw,120px));
+
+    margin-inline:auto;
+
+}
+
+
+/*================= GLOBAL SECTION SPACING ===============*/
+
+
+section{
+
+    padding-inline:clamp(0px,0.6vw,14px);
+
+}
+
+/*================== GLOBAL TYPOGRAPHY ===================*/
+
+
+.section-title h2{
+
+    font-size:clamp(2.7rem,2vw,3.8rem);
+
+}
+
+.section-header h1{
+
+    font-size:clamp(3rem,2.4vw,4.2rem);
+
+}
+
+.section-title p,
+.section-p{
+
+    max-width:clamp(650px,45vw,980px);
+
+    line-height:1.9;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    padding:
+
+    clamp(14px,0.8vw,18px)
+
+    clamp(24px,1.4vw,34px);
+
+}
+
+.project-card,
+.skill-card{
+
+    border-radius:clamp(18px,1vw,28px);
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/*====================================================
+                        NAVBAR
+====================================================*/
+
+
+
+/*====================================================
+                        FOOTER
+====================================================*/
+
+
+
+/*====================================================
+                        HOME
+====================================================*/
+
+
+/*====================================================
+                        ABOUT
+====================================================*/
+
+
+
+/*====================================================
+                        PROJECTS PAGE
+====================================================*/
+/*==================================================
+    PROJECTS HERO
+==================================================*/
+
+.projects-hero .hero-layout{
+
+    display:grid;
+
+    grid-template-columns:
+
+    minmax(0,1fr)
+
+    max-content;
+
+    align-items:start;
+
+    column-gap:clamp(30px,2vw,80px);
+
+}
+
+.hero-content{
+
+    max-width:none;
+
+}
+
+.hero-controls{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    flex-wrap:nowrap;
+
+    gap:14px;
+
+}
+
+.hero-controls .search-box{
+
+    width:clamp(420px,28vw,650px);
+
+    flex-shrink:0;
+
+}
+
+.hero-controls .sort-wrapper{
+
+    gap:14px;
+
+}
+
+#sort-projects{
+
+    min-width:clamp(170px,10vw,210px);
+
+}
+
+.sort-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+}
+
+
+/*====================================================
+                        SKILLS
+====================================================*/
+
+
+
+/*====================================================
+                        CONTACT
+====================================================*/
+
+}
