@@ -5026,7 +5026,7 @@ transform: translateY(-5px) scale(1.05);
 
     display:flex;
 
-    justify-content:center;
+    justify-content:flex-start;
 
     flex-wrap:wrap;
 
@@ -5361,7 +5361,7 @@ Project Cards Entrance
 
     display: grid;
 
-    grid-template-columns: 1fr auto;
+grid-template-columns:1fr auto;
 
     align-items: start;
 
@@ -5369,34 +5369,49 @@ Project Cards Entrance
 
 }
 
+
+
+/*======================================
+        PROJECTS HERO
+======================================*/
+
 .hero-controls{
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:row;
 
-    align-items: flex-end;
+    align-items:center;
 
-    gap: 16px;
+    justify-content:flex-end;
+
+    gap:14px;
+
+    flex-wrap:wrap;
 
 }
 
-/* search width control */
 .hero-controls .search-box{
 
-    width: 400px;
+    width:420px;
+
+    margin:0;
 
 }
 
 .hero-controls .sort-wrapper{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 10px;
+    gap:12px;
+
+    flex-wrap:nowrap;
 
 }
+
+
 
 /* projects filter */
 .projects-filter{
@@ -5524,7 +5539,7 @@ Project Cards Entrance
 .hero-content{
 
     text-align:left;
-    max-width:650px;
+    max-width:none;
 
 }
 
@@ -6188,3 +6203,8 @@ min-width:110px;
     pointer-events:none;
 
 }
+
+.section-p{
+    width:min(100%,1000px);
+}
+

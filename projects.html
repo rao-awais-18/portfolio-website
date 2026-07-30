@@ -13,213 +13,136 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsiveness/1400.css">
-<link rel="stylesheet" href="css/responsiveness/1199.css">
-<link rel="stylesheet" href="css/responsiveness/991.css">
-<link rel="stylesheet" href="css/responsiveness/767.css">
-<link rel="stylesheet" href="css/responsiveness/575.css">
+    <link rel="stylesheet" href="css/responsiveness/1400.css" />
+    <link rel="stylesheet" href="css/responsiveness/1199.css" />
+    <link rel="stylesheet" href="css/responsiveness/991.css" />
+    <link rel="stylesheet" href="css/responsiveness/767.css" />
+    <link rel="stylesheet" href="css/responsiveness/575.css" />
   </head>
 
   <body>
     <div id="navbar-container"></div>
 
-<main>
-
-    <!-- ==========================
+    <main>
+      <!-- ==========================
          Projects Hero
     =========================== -->
 
-    <section class="projects-hero reveal">
-
+      <section class="projects-hero reveal">
         <div class="container">
+          <div class="hero-layout">
+            <!-- LEFT -->
 
-            <div class="hero-layout">
+            <div class="hero-content">
+              <div class="section-header">
+                <span class="section-tag">
+                  <h1>My Projects</h1>
+                </span>
 
-                <!-- LEFT -->
-
-                <div class="hero-content">
-
-                    <div class="section-header">
-
-                        <span class="section-tag">
-
-                            <h1>My Projects</h1>
-
-                        </span>
-
-                        <!-- <h2>
-
-                            Projects Portfolio
-
-                        </h2> -->
-
-                        <p>
-
-                            A collection of projects showcasing my skills, creativity, and problem-solving approach.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <!-- RIGHT -->
-
-                <div class="hero-controls">
-
-                    <!-- Search -->
-
-                    <div class="projects-search">
-
-                        <div class="search-box">
-
-                            <i class="fa-solid fa-magnifying-glass"></i>
-
-                            <input
-                                type="text"
-                                id="project-search"
-                                placeholder="Search projects..."
-                            >
-
-                            <button class="clear-search" type="button">
-
-                                <i class="fa-solid fa-xmark"></i>
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Sort + Reset -->
-
-                    <div class="sort-wrapper">
-
-                        <select id="sort-projects">
-
-                            <option value="default">
-
-                                Default
-
-                            </option>
-
-                            <option value="az">
-
-                                A-Z
-
-                            </option>
-
-                            <option value="za">
-
-                                Z-A
-
-                            </option>
-
-                        </select>
-
-                        <button id="reset-filters">
-
-                            <i class="fa-solid fa-rotate-left"></i>
-
-                            Reset
-
-                        </button>
-
-                    </div>
-
-                </div>
-
+                <p class="section-p">
+                  A collection of projects showcasing my skills, creativity, and
+                  problem-solving approach.
+                </p>
+              </div>
             </div>
 
+            <!-- RIGHT -->
+
+            <div class="hero-controls">
+              <!-- Search -->
+
+              <div class="projects-search">
+                <div class="search-box">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+
+                  <input
+                    type="text"
+                    id="project-search"
+                    placeholder="Search projects..."
+                  />
+
+                  <button class="clear-search" type="button">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sort + Reset -->
+
+              <div class="sort-wrapper">
+                <select id="sort-projects">
+                  <option value="default">Default</option>
+
+                  <option value="az">A-Z</option>
+
+                  <option value="za">Z-A</option>
+                </select>
+
+                <button id="reset-filters">
+                  <i class="fa-solid fa-rotate-left"></i>
+
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-    </section>
-
-
-    <!-- ==========================
+      <!-- ==========================
          Filters
     =========================== -->
 
-    <section class="projects-filter">
-
-        <div class="filters-heading">
-
-    Filter by
-
-</div>
-
+      <section class="projects-filter">
         <div class="container">
-
-            <div id="filter-buttons"></div>
-
+          <div class="filters-heading">Filter by</div>
         </div>
 
-    </section>
+        <div class="container">
+          <div id="filter-buttons"></div>
+        </div>
+      </section>
 
-
-    <!-- ==========================
+      <!-- ==========================
          Results
     =========================== -->
 
-    <section class="projects-info">
-
+      <section class="projects-info">
         <div class="container">
+          <p id="projects-count">Showing 0 Projects</p>
 
-            <p id="projects-count">
+          <p class="scroll-hint">
+            <i class="fa-solid fa-angles-down"></i>
 
-                Showing 0 Projects
-
-            </p>
-
-            <p class="scroll-hint">
-
-    <i class="fa-solid fa-angles-down"></i>
-
-    Scroll to explore
-
-</p>
-
+            Scroll to explore
+          </p>
         </div>
+      </section>
 
-    </section>
-
-
-    <!-- ==========================
+      <!-- ==========================
          Projects Grid
     =========================== -->
 
-    <section class="projects-section reveal">
-
+      <section class="projects-section reveal">
         <div class="container">
-
-            <div
-                id="projects-grid"
-                class="projects-grid">
-
-            </div>
-
+          <div id="projects-grid" class="projects-grid"></div>
         </div>
-
-    </section>
-
-</main>
-
+      </section>
+    </main>
 
     <!-- footer -->
     <footer id="footer-container"></footer>
 
     <script src="js/navbar.js"></script>
-    
+
     <script src="js/projects.js"></script>
 
     <script src="js/script.js"></script>
 
     <script src="js/projects-page.js"></script>
-    
+
     <script src="js/footer.js"></script>
-    
+
     <script src="js/scroll-reveal.js"></script>
-
   </body>
-
 </html>
