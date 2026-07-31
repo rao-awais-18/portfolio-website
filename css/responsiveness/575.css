@@ -1153,10 +1153,179 @@ footer{
 }
 
 /*====================================================
-                        PROJECTS
+                        PROJECTS PAGE
 ====================================================*/
 
+/*======================================
+        PROJECTS HERO
+======================================*/
 
+
+
+.projects-hero{
+
+    padding-top:20px;
+
+}
+
+.projects-hero .hero-layout{
+
+    display:flex;
+
+    flex-direction:column;
+align-items:stretch;
+    gap:18px;
+
+}
+
+.hero-content{
+
+    order:1;
+
+    width:100%;
+
+    max-width:100%;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.projects-hero .section-tag h1{
+
+    font-size:1.75rem;
+
+    line-height:1.2;
+
+    margin-bottom:10px;
+
+}
+
+.section-p{
+
+    font-size:.92rem;
+
+    line-height:1.65;
+
+    max-width:100%;
+
+    margin:0;
+
+}
+
+.hero-controls{
+
+    order:2;
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    gap:12px;
+
+    align-items:center;
+    margin-bottom: 20px;
+
+}
+
+.projects-search{
+
+    grid-column:1 / -1;
+
+    width:100%;
+
+}
+
+.hero-controls .search-box{
+
+    width:100%;
+
+    max-width:none;
+
+}
+
+.search-box input{
+
+    height:48px;
+
+    padding:14px 18px 14px 46px;
+
+    font-size:.95rem;
+
+}
+
+.hero-controls .sort-wrapper{
+
+    display:flex;
+
+    gap:10px;
+
+    width:100%;
+
+}
+
+#sort-projects{
+
+    flex:1;
+
+    min-width:0;
+
+    height:44px;
+
+    padding:0 14px;
+
+    font-size:.9rem;
+
+}
+
+#reset-filters{
+
+    height:44px;
+
+    padding:0 16px;
+
+    white-space:nowrap;
+
+    flex-shrink:0;
+
+}
+
+.projects-filter{
+
+    padding-top:12px;
+
+}
+
+.filters-heading{
+
+    margin-bottom:12px;
+
+}
+
+#projects-count{
+
+    margin-top:4px;
+
+    font-size:.88rem;
+
+}
+
+.scroll-hint{
+
+    display:none;
+
+}
+
+.projects-hero .section-header{
+
+    margin:0;
+
+    padding:0;
+
+}
 
 /*====================================================
                         SKILLS

@@ -657,10 +657,51 @@ footer{
 }
 
 /*====================================================
-                        PROJECTS
+                        PROJECTS PAGE
 ====================================================*/
+/*======================================
+        PROJECTS HERO
+======================================*/
 
+/*======================================
+        PROJECTS HERO
+======================================*/
 
+.projects-hero .hero-layout{
+
+    grid-template-columns:minmax(0,1fr) max-content;
+
+    column-gap:24px;
+
+}
+
+.hero-controls{
+
+    flex-wrap:nowrap;
+
+    gap:8px;
+
+}
+
+.hero-controls .search-box{
+
+    width:300px;
+
+}
+
+#sort-projects{
+
+    min-width:125px;
+
+    padding:10px 14px;
+
+}
+
+#reset-filters{
+
+    padding:10px 14px;
+
+}
 
 /*====================================================
                         SKILLS

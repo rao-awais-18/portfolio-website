@@ -966,9 +966,148 @@ footer{
 
 
 /*====================================================
-                        PROJECTS
+                        PROJECTS PAGE
 ====================================================*/
 
+/*======================================
+        PROJECTS HERO
+======================================*/
+
+.projects-hero .hero-layout{
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) 300px;
+
+    column-gap:24px;
+
+    row-gap:20px;
+
+    align-items:start;
+
+}
+
+.hero-content{
+
+    max-width:none;
+    align-items: flex-start;
+    margin-top: 0;
+    order: 1;
+
+}
+
+.hero-controls{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+    width:100%;
+    order: 2;
+
+}
+
+.hero-controls .search-box{
+
+    width:320px;
+
+    max-width:300px;
+
+}
+
+.hero-controls .sort-wrapper{
+
+    width:100%;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+}
+
+@media (max-width:670px){
+
+    .projects-hero .hero-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section-header{
+        margin-bottom: 0;
+    }
+
+    .projects-hero .section-header{
+
+    margin-bottom:0;
+
+}
+
+.projects-hero .section-p{
+
+    margin-bottom:16px;
+
+}
+
+.hero-content{
+
+    margin-bottom:0;
+
+    padding-bottom:0;
+
+}
+
+.hero-controls{
+
+    width:100%;
+
+    align-items:stretch;
+
+    gap:12px;
+
+    margin-bottom: 30px;
+
+}
+
+.hero-controls .search-box{
+
+    width:100%;
+
+    max-width:none;
+
+}
+
+.hero-controls .sort-wrapper{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
+#sort-projects{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+#reset-filters{
+
+    flex:1;
+
+}
+
+}
 
 
 /*====================================================

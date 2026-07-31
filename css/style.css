@@ -5435,6 +5435,16 @@ grid-template-columns:1fr auto;
 
 }
 
+.projects-hero .section-tag{
+
+    display:block;
+
+    width:100%;
+
+    margin-left:0;
+    padding-left:0;
+
+}
                      /*===================================
                                   Skills Page
                        ===================================*/

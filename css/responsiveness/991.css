@@ -1020,9 +1020,48 @@ footer{
 }
 
 /*====================================================
-                        PROJECTS
+                        PROJECTS PAGE
 ====================================================*/
 
+/*======================================
+        PROJECTS HERO
+======================================*/
+
+.projects-hero .hero-layout{
+
+    grid-template-columns:minmax(0,1fr) max-content;
+
+    column-gap:20px;
+
+}
+
+.hero-controls{
+
+    flex-wrap:nowrap;
+
+    gap:8px;
+
+}
+
+.hero-controls .search-box{
+
+    width:240px;
+
+}
+
+#sort-projects{
+
+    min-width:110px;
+
+    padding:9px 13px;
+
+}
+
+#reset-filters{
+
+    padding:9px 13px;
+
+}
 
 
 /*====================================================
