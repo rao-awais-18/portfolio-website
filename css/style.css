@@ -5420,6 +5420,12 @@ grid-template-columns:1fr auto;
 
 }
 
+.filter-btn{
+
+    white-space:nowrap;
+
+}
+
 .projects-info{
 
     margin-top: 18px;

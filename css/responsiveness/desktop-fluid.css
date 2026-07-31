@@ -175,6 +175,39 @@ img{
 
 }
 
+/*======================================
+        PROJECT FILTERS
+======================================*/
+
+.projects-filter{
+
+    margin-top:0;
+    padding-bottom:48px;
+
+}
+
+#filter-buttons{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.filter-btn{
+
+    padding:11px 20px;
+
+    font-size:.95rem;
+
+}
+
 
 /*====================================================
                         SKILLS

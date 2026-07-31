@@ -1327,6 +1327,30 @@ align-items:stretch;
 
 }
 
+/*======================================
+        PROJECTS FILTERS
+======================================*/
+
+.projects-filter{
+
+    padding-bottom:24px;
+
+}
+
+#filter-buttons{
+
+    gap:8px;
+
+}
+
+.filter-btn{
+
+    padding:8px 14px;
+
+    font-size:.84rem;
+
+}
+
 /*====================================================
                         SKILLS
 ====================================================*/

@@ -1109,6 +1109,32 @@ footer{
 
 }
 
+/*======================================
+        PROJECTS FILTERS
+======================================*/
+
+.projects-filter{
+
+    padding-bottom:30px;
+
+}
+
+#filter-buttons{
+
+    gap:10px;
+
+    justify-content:flex-start;
+
+}
+
+.filter-btn{
+
+    padding:8px 15px;
+
+    font-size:.88rem;
+
+}
+
 
 /*====================================================
                         SKILLS
