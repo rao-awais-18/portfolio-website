@@ -1188,7 +1188,7 @@ html {
 .why-item:last-child {
   border-bottom: none;
 
-  margin-bottom: 0;
+  margin-bottom: 10px;
 
   padding-bottom: 0;
 }
@@ -4957,12 +4957,7 @@ transform: translateY(-5px) scale(1.05);
    Projects Page
 ========================== */
 
-/*----------------------------------- search -------------------------------------- */
-/* .projects-search{
-
-    padding-bottom: var(--space-xl);
-
-} */
+/*--------------- search -------------- */
 
 .search-box{
 
@@ -5119,12 +5114,6 @@ transform: translateY(-5px) scale(1.05);
 Projects Info
 ===================================*/
 
-/* .projects-info{
-
-    padding-bottom:var(--space-lg);
-
-} */
-
 #projects-count{
 
     text-align:center;
@@ -5222,22 +5211,6 @@ Reset Button
 /*===================================
 Projects Sorting
 ===================================*/
-
-/* .sort-wrapper{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:14px;
-
-    flex-wrap:wrap;
-
-    padding-bottom:var(--space-xl);
-
-} */
 
 #sort-projects{
 
@@ -5357,7 +5330,7 @@ Project Cards Entrance
 }
 
 
-.projects-hero .hero-layout{
+.projects-hero .projects-hero-layout{
 
     display: grid;
 
@@ -5375,7 +5348,7 @@ grid-template-columns:1fr auto;
         PROJECTS HERO
 ======================================*/
 
-.hero-controls{
+.projects-hero-controls{
 
     display:flex;
 
@@ -5391,7 +5364,7 @@ grid-template-columns:1fr auto;
 
 }
 
-.hero-controls .search-box{
+.projects-hero-controls .search-box{
 
     width:420px;
 
@@ -5399,7 +5372,7 @@ grid-template-columns:1fr auto;
 
 }
 
-.hero-controls .sort-wrapper{
+.projects-hero-controls .sort-wrapper{
 
     display:flex;
 
@@ -5551,7 +5524,7 @@ grid-template-columns:1fr auto;
     justify-content:flex-end;
 
 }
-
+/* might need to be renamed */
 .hero-content{
 
     text-align:left;

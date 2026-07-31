@@ -973,7 +973,7 @@ footer{
         PROJECTS HERO
 ======================================*/
 
-.projects-hero .hero-layout{
+.projects-hero .projects-hero-layout{
 
     display:grid;
 
@@ -987,7 +987,7 @@ footer{
 
 }
 
-.hero-content{
+.projects-hero-content{
 
     max-width:none;
     align-items: flex-start;
@@ -996,7 +996,7 @@ footer{
 
 }
 
-.hero-controls{
+.projects-hero-controls{
 
     display:flex;
 
@@ -1011,7 +1011,7 @@ footer{
 
 }
 
-.hero-controls .search-box{
+.projects-hero-controls .search-box{
 
     width:320px;
 
@@ -1019,7 +1019,7 @@ footer{
 
 }
 
-.hero-controls .sort-wrapper{
+.projects-hero-controls .sort-wrapper{
 
     width:100%;
 
@@ -1031,7 +1031,7 @@ footer{
 
 @media (max-width:670px){
 
-    .projects-hero .hero-layout{
+    .projects-hero .projects-hero-layout{
 
         grid-template-columns:1fr;
 
@@ -1053,7 +1053,7 @@ footer{
 
 }
 
-.hero-content{
+.projects-hero-content{
 
     margin-bottom:0;
 
@@ -1061,7 +1061,7 @@ footer{
 
 }
 
-.hero-controls{
+.projects-hero-controls{
 
     width:100%;
 
@@ -1073,7 +1073,7 @@ footer{
 
 }
 
-.hero-controls .search-box{
+.projects-hero-controls .search-box{
 
     width:100%;
 
@@ -1081,7 +1081,7 @@ footer{
 
 }
 
-.hero-controls .sort-wrapper{
+.projects-hero-controls .sort-wrapper{
 
     width:100%;
 

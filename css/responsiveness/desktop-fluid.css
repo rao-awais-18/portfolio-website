@@ -107,7 +107,7 @@ img{
     PROJECTS HERO
 ==================================================*/
 
-.projects-hero .hero-layout{
+.projects-hero .projects-hero-layout{
 
     display:grid;
 
@@ -123,13 +123,13 @@ img{
 
 }
 
-.hero-content{
+.projects-hero-content{
 
     max-width:none;
 
 }
 
-.hero-controls{
+.projects-hero-controls{
 
     display:flex;
 
@@ -143,7 +143,7 @@ img{
 
 }
 
-.hero-controls .search-box{
+.projects-hero-controls .search-box{
 
     width:clamp(420px,28vw,650px);
 
@@ -151,7 +151,7 @@ img{
 
 }
 
-.hero-controls .sort-wrapper{
+.projects-hero-controls .sort-wrapper{
 
     gap:14px;
 

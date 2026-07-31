@@ -664,7 +664,7 @@ footer{
         PROJECTS HERO
 ======================================*/
 
-.projects-hero .hero-layout{
+.projects-hero .projects-hero-layout{
 
     grid-template-columns:minmax(0,1fr) max-content;
 
@@ -672,7 +672,7 @@ footer{
 
 }
 
-.hero-controls{
+.projects-hero-controls{
 
     flex-wrap:nowrap;
 
@@ -680,7 +680,7 @@ footer{
 
 }
 
-.hero-controls .search-box{
+.projects-hero-controls .search-box{
 
     width:300px;
 
