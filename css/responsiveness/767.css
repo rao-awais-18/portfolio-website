@@ -1274,6 +1274,64 @@ footer{
 }
 
 /*=======================================
+        SKILLS CONTROLS
+=========================================*/
+
+.skills-filter{
+
+    gap:12px;
+
+}
+
+.filters-heading{
+
+    font-size:.85rem;
+
+}
+
+#skills-filters{
+
+    gap:8px;
+
+}
+
+.filter-btn{
+
+    padding:8px 14px;
+
+    font-size:.84rem;
+
+}
+
+.filter-count{
+
+    min-width:18px;
+
+    height:18px;
+
+    font-size:.68rem;
+
+}
+
+.skills-info{
+
+    text-align:center;
+
+}
+
+#skills-count{
+
+    font-size:.9rem;
+
+}
+
+.scroll-hint{
+
+    font-size:.82rem;
+
+}
+
+/*=======================================
       SKILLS HERO (670 and below)
 =========================================*/
 
@@ -1365,6 +1423,26 @@ footer{
         gap:16px;
 
     }
+
+/*=======================================
+    SKILLS CONTROLS (670)
+=========================================*/
+
+#skills-filters{
+
+    justify-content:center;
+
+    gap:8px;
+
+}
+
+.filter-btn{
+
+    padding:8px 12px;
+
+    font-size:.82rem;
+
+}
 
 }
 

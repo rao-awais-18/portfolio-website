@@ -1228,6 +1228,49 @@ footer{
 
 }
 
+/*=======================================
+        SKILLS CONTROLS
+=========================================*/
+
+.skills-filter{
+
+    gap:14px;
+
+}
+
+#skills-filters{
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+.filter-btn{
+
+    padding:9px 16px;
+
+    font-size:.88rem;
+
+}
+
+.filter-count{
+
+    min-width:20px;
+
+    height:20px;
+
+    font-size:.72rem;
+
+}
+
+.skills-info{
+
+    gap:6px;
+
+}
+
+
 /*====================================================
                         CONTACT
 ====================================================*/

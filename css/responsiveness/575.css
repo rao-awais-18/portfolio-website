@@ -1419,6 +1419,76 @@ align-items:stretch;
 
 }
 
+/*=======================================
+        SKILLS CONTROLS
+=========================================*/
+
+.skills-controls{
+
+    margin-top:8px;
+
+    margin-bottom:22px;
+
+}
+
+.skills-filter{
+
+    gap:10px;
+
+}
+
+.filters-heading{
+
+    font-size:.82rem;
+
+}
+
+#skills-filters{
+
+    justify-content:center;
+
+    gap:8px;
+
+}
+
+.filter-btn{
+
+    padding:8px 12px;
+
+    font-size:.8rem;
+
+}
+
+.filter-count{
+
+    min-width:18px;
+
+    height:18px;
+
+    font-size:.65rem;
+
+}
+
+.skills-info{
+
+    text-align:center;
+
+    gap:4px;
+
+}
+
+#skills-count{
+
+    font-size:.88rem;
+
+}
+
+.scroll-hint{
+
+    font-size:.78rem;
+
+}
+
 
 /*====================================================
                         CONTACT
