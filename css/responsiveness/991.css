@@ -1106,10 +1106,127 @@ footer{
 
 
 /*====================================================
-                        SKILLS
+                        SKILLS PAGE
 ====================================================*/
+/*=======================================
+            SKILLS HERO
+=========================================*/
 
+.skills-hero-layout{
 
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) 320px;
+
+    column-gap:24px;
+
+    row-gap:24px;
+
+    align-items:start;
+
+}
+
+.skills-hero-content{
+
+    max-width:none;
+
+    width:100%;
+
+    text-align:left;
+
+}
+
+.skills-hero .section-tag h1{
+
+    font-size:2.35rem;
+
+    line-height:1.15;
+
+}
+
+.skills-hero .section-p{
+
+    max-width:100%;
+
+    font-size:.98rem;
+
+}
+
+.hero-toolbar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+    width:100%;
+
+}
+
+.skills-search{
+
+    width:100%;
+
+}
+
+.skills-search .search-box{
+
+    width:100%;
+
+    max-width:none;
+
+}
+
+.skills-sort{
+
+    width:100%;
+
+    padding-left:0;
+
+}
+
+.skills-sort .sort-wrapper{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+#sort-skills{
+
+    min-width:150px;
+
+}
+
+#reset-skills{
+
+    padding-inline:18px;
+
+}
+
+.hero-stats{
+
+    grid-column:1;
+
+    margin-top:0;
+
+    gap:20px;
+
+}
+
+.skills-hero{
+
+    margin-top:-25px;
+
+}
 
 /*====================================================
                         CONTACT

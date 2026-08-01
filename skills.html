@@ -28,9 +28,14 @@
       <!-- skill hero section -->
       <section class="skills-hero reveal">
         <div class="container skills-hero-layout">
+          <!-- LEFT -->
+
           <div class="skills-hero-content">
             <span class="section-tag">
-              <h1>Skills & Technologies</h1>
+              <h1>
+                Skills &
+                <span>Technologies</span>
+              </h1>
             </span>
 
             <p class="section-p">
@@ -40,54 +45,61 @@
             </p>
           </div>
 
-          <div class="hero-toolbar">
-            <section class="skills-search">
-              <div id="skills-search-bar"></div>
-            </section>
+          <!-- RIGHT -->
 
-            <section class="skills-sort">
-              <div class="sort-wrapper">
-                <select id="sort-skills">
-                  <option value="">Sort</option>
+          <div class="skills-hero-controls">
+            <div class="hero-toolbar">
+              <section class="skills-search">
+                <div id="skills-search-bar"></div>
+              </section>
 
-                  <option value="default">Default</option>
+              <section class="skills-sort">
+                <div class="sort-wrapper">
+                  <select id="sort-skills">
 
-                  <option value="az">A-Z</option>
+                    <option value="default">Default</option>
 
-                  <option value="za">Z-A</option>
-                </select>
+                    <option value="az">A-Z</option>
 
-                <button id="reset-skills">
-                  <i class="fa-solid fa-rotate-left"></i>
+                    <option value="za">Z-A</option>
+                  </select>
 
-                  Reset
-                </button>
-              </div>
-            </section>
+                  <button id="reset-skills">
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    Reset
+                  </button>
+                </div>
+              </section>
+            </div>
           </div>
 
-          <div class="hero-stats">
-            <span class="hero-stat-item">
-              <strong id="skills-count-number">0</strong>
+          <!-- BOTTOM -->
 
-              <span>Skills</span>
-            </span>
+          <div class="skills-hero-bottom">
+            <div class="hero-stats">
+              <span class="hero-stat-item">
+                <strong id="skills-count-number">0</strong>
 
-            <span class="stat-divider">•</span>
+                <span>Skills</span>
+              </span>
 
-            <span class="hero-stat-item">
-              <strong id="categories-count">0</strong>
+              <span class="stat-divider">•</span>
 
-              <span>Categories</span>
-            </span>
+              <span class="hero-stat-item">
+                <strong id="categories-count">0</strong>
 
-            <span class="stat-divider">•</span>
+                <span>Categories</span>
+              </span>
 
-            <span class="hero-stat-item">
-              <strong class="learning-symbol">∞</strong>
+              <span class="stat-divider">•</span>
 
-              <span>Learning</span>
-            </span>
+              <span class="hero-stat-item">
+                <strong class="learning-symbol">∞</strong>
+
+                <span>Learning</span>
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -96,11 +108,11 @@
         Skills Controls
 ================================ -->
 
-      <section class="skills-controls reveal">
+      <section class="skills-controls">
         <div class="container">
           <!-- Dynamic Filters -->
 
-          <section class="skills-filter reveal">
+          <section class="skills-filter">
             <div class="filters-heading">Filter by</div>
 
             <div id="skills-filters"></div>

@@ -226,10 +226,160 @@ img{
 
 
 /*====================================================
-                        SKILLS
+                        SKILLS PAGE
 ====================================================*/
+/*======================================
+        SKILLS HERO
+======================================*/
 
+.skills-hero-layout{
 
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) minmax(420px,48vw);
+
+    align-items:start;
+
+    column-gap:clamp(28px,2vw,42px);
+
+    row-gap:clamp(24px,2vw,36px);
+
+}
+
+.skills-hero-content{
+    
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-start;
+
+    max-width:none;
+
+}
+
+.skills-hero-content .section-p{
+
+    width:min(100%,clamp(560px,42vw,820px));
+
+}
+
+.hero-toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:clamp(10px,0.8vw,14px);
+
+    width:100%;
+
+}
+
+.skills-search{
+
+    flex:1 1 auto;
+
+    min-width:0;
+
+}
+
+#skills-search-bar{
+
+    width:100%;
+
+}
+
+.skills-search .search-box{
+
+    width:100%;
+
+    max-width:none;
+
+    margin:0;
+
+}
+
+.skills-sort{
+
+    flex:0 0 auto;
+
+}
+
+.skills-sort .sort-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.skills-search .search-box input{
+
+    padding-block:clamp(15px,.9vw,18px);
+
+}
+
+#sort-skills{
+
+    min-width:clamp(160px,9vw,185px);
+
+}
+
+#reset-skills{
+
+    padding-inline:clamp(18px,1.2vw,24px);
+
+}
+
+.hero-stats{
+
+    grid-column:1;
+
+    margin-top:0;
+
+    gap:clamp(22px,1.6vw,34px);
+
+}
+
+.skills-hero .section-tag h1{
+
+    font-size:clamp(2.7rem,1.8rem + 1vw,3.8rem);
+
+}
+
+.skills-hero .section-p{
+
+    font-size:clamp(1rem,.95rem+.15vw,1.08rem);
+
+}
+
+.skills-hero .section-tag{
+    padding-left: 0;
+}
+
+.skills-sort{
+
+    padding-left:0;
+    justify-content:flex-start;
+
+}
+
+.skills-search{
+
+    flex:1 1 auto;
+
+    min-width:0;
+
+    max-width:clamp(620px,38vw,760px);
+
+}
 
 /*====================================================
                         CONTACT

@@ -1154,8 +1154,221 @@ footer{
 
 
 /*====================================================
-                        SKILLS
+                        SKILLS PAGE
 ====================================================*/
+
+/*=======================================
+            SKILLS HERO
+=========================================*/
+
+.skills-hero-layout{
+
+    grid-template-columns:minmax(0,1fr) 280px;
+
+    column-gap:18px;
+
+    row-gap:18px;
+
+    align-items:start;
+
+}
+
+.skills-hero-content{
+
+    max-width:none;
+
+    width:100%;
+
+}
+
+.skills-hero .section-tag h1{
+
+    font-size:2rem;
+
+    line-height:1.12;
+
+}
+
+.skills-hero .section-p{
+
+    font-size:.94rem;
+
+    max-width:100%;
+
+}
+
+.hero-toolbar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+    width:100%;
+
+}
+
+.skills-search{
+
+    width:100%;
+
+}
+
+.skills-search .search-box{
+
+    width:100%;
+
+}
+
+.skills-sort{
+
+    width:100%;
+
+    padding-left:0;
+
+}
+
+.skills-sort .sort-wrapper{
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+}
+
+#sort-skills{
+
+    min-width:135px;
+
+}
+
+#reset-skills{
+
+    padding-inline:16px;
+
+}
+
+.hero-stats{
+
+    grid-column:1;
+
+    gap:16px;
+
+    margin-top:0;
+
+}
+
+.hero-stat-item{
+
+    font-size:.9rem;
+
+}
+
+.hero-stat-item strong{
+
+    font-size:1.05rem;
+
+}
+
+/*=======================================
+      SKILLS HERO (670 and below)
+=========================================*/
+
+@media (max-width:670px){
+
+    .skills-hero-layout{
+
+        grid-template-columns:1fr;
+
+        row-gap:20px;
+
+    }
+
+    .skills-hero-content{
+
+        max-width:none;
+
+        width:100%;
+
+        margin:0;
+
+    }
+
+    .skills-hero .section-p{
+
+        max-width:none;
+
+        width:100%;
+
+    }
+
+    .hero-toolbar{
+
+        align-items:flex-start;
+
+        width:100%;
+
+        gap:12px;
+
+        margin-bottom:0px;
+
+    }
+
+    .skills-search{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+    .skills-search .search-box{
+
+        width:100%;
+
+    }
+
+    .skills-sort{
+
+        width:100%;
+
+    }
+
+    .skills-sort .sort-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    width:100%;
+
+}
+
+#sort-skills,
+#reset-skills{
+
+    width:100%;
+
+    min-width:0;
+
+}
+
+    .hero-stats{
+
+        margin-top:0;
+
+        gap:16px;
+
+    }
+
+}
+
+
 
 
 
