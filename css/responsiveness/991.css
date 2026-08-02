@@ -1272,7 +1272,57 @@ footer{
 
 
 /*====================================================
-                        CONTACT
+                        CONTACT PAGE
 ====================================================*/
+
+.contact-layout{
+
+   grid-template-columns:minmax(280px,38%) minmax(0,1fr);
+
+    gap:28px;
+
+}
+
+.contact-form-wrapper{
+
+    padding:1.75rem;
+
+}
+
+.contact-intro h2{
+
+    font-size:1.8rem;
+
+    max-width:none;
+
+}
+
+.contact-intro p{
+
+    font-size:.95rem;
+
+}
+
+.contact-meta{
+
+    gap:18px;
+
+}
+
+.contact-links{
+
+    gap:12px;
+
+}
+
+.form-group textarea{
+
+    min-height:180px;
+
+}
+
+.contact-form button{
+    margin-top: 0;
+}
 
 }

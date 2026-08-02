@@ -382,7 +382,60 @@ img{
 }
 
 /*====================================================
-                        CONTACT
+                        CONTACT PAGE
 ====================================================*/
+
+.contact-layout{
+
+    grid-template-columns:
+        minmax(360px, 34%)
+        minmax(620px, 1fr);
+
+    gap:clamp(48px,4vw,90px);
+
+}
+
+.contact-form-wrapper{
+
+    padding:clamp(2rem,2vw,3rem);
+
+}
+
+.contact-intro h2{
+
+    font-size:clamp(2rem,1.2vw,2.6rem);
+
+}
+
+.contact-intro p{
+
+    font-size:clamp(1rem,.3vw,1.08rem);
+
+}
+
+.contact-meta{
+
+    gap:clamp(18px,1vw,28px);
+
+}
+
+.contact-form{
+
+    gap:clamp(14px,.8vw,20px);
+
+}
+
+.form-group input,
+.form-group textarea{
+
+    padding:clamp(.9rem,.5vw,1.1rem);
+
+}
+
+.form-group textarea{
+
+    min-height:220px;
+
+}
 
 }
