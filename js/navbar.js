@@ -1,8 +1,9 @@
 function createNavbar() {
   return `
 <nav class="navbar">
+ <div class="container navbar-container">
 <div class="menu-overlay"></div>
- <a href = "index.html" class="logo">Rao Awais</div> </a>
+ <a href = "index.html" class="logo">Rao Awais</a>
         <button class="menu-toggle" aria-label="Toggle Menu">
     <i class="fa-solid fa-bars"></i>
 </button>
@@ -34,7 +35,7 @@ function createNavbar() {
     </a>
 
 </div>
-
+</div>
       </nav>
     `;
 }

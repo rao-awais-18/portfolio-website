@@ -12,27 +12,29 @@
                         NAVBAR
 ====================================================*/
 .navbar{
+    padding:20px 0;
+}
 
-    padding:18px 5%;
-
+.navbar-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-
-    font-size:1.6rem;
-
+    font-size:26px;
 }
 
 .nav-right{
-
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
     gap:28px;
-
 }
 
 .nav-links{
-
     gap:22px;
-
 }
 
 .nav-links a{

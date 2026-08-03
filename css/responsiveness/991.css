@@ -10,7 +10,14 @@
 .navbar{
 
     position:relative;
+    padding:18px 0;
 
+}
+
+.navbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .menu-toggle{
@@ -20,6 +27,7 @@
     align-items:center;
 
     justify-content:center;
+    margin-left:auto;
 
     width:46px;
 

@@ -78,10 +78,24 @@ img{
 }
 
 /*====================================================
-                        NAVBAR
+                    NAVBAR
 ====================================================*/
 
+.navbar {
+  padding-block: clamp(18px, 1vw, 26px);
+}
 
+.logo {
+  font-size: clamp(1.55rem, 0.9vw + 1rem, 2rem);
+}
+
+.nav-right {
+  gap: clamp(28px, 2vw, 56px);
+}
+
+.nav-links {
+  gap: clamp(24px, 1.3vw, 42px);
+}
 
 /*====================================================
                         FOOTER

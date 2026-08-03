@@ -9,8 +9,14 @@
 ====================================================*/
 .navbar{
 
-    padding:14px 18px;
+    padding:16px 0;
 
+}
+
+.navbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
