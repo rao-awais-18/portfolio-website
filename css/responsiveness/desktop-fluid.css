@@ -90,9 +90,415 @@ img{
 
 
 /*====================================================
-                        HOME
+                        HOME PAGE
+====================================================*/
+/*====================================================
+                 HOME PAGE HERO SECTION
 ====================================================*/
 
+.hero{
+
+    margin-inline:auto;
+
+   padding-inline:72px;
+
+    gap:clamp(40px,3vw,80px);
+
+}
+
+    .hero-tag{
+
+        font-size:clamp(14px,.25vw + 12px,18px);
+
+        padding:
+        clamp(8px,.25vw + 6px,11px)
+        clamp(18px,.6vw + 14px,26px);
+
+        margin-bottom:clamp(20px,.8vw,30px);
+
+    }
+
+    .hero-content h1{
+
+        font-size:clamp(64px,3vw + 18px,82px);
+
+        line-height:1.15;
+
+        margin-bottom:clamp(15px,.8vw,24px);
+
+    }
+
+    .hero-content h2{
+
+        font-size:clamp(32px,1vw + 18px,40px);
+
+        margin-bottom:clamp(20px,1vw,30px);
+
+    }
+
+    .hero-content p{
+
+        max-width:clamp(620px,36vw,760px);
+
+        font-size:clamp(1rem,.35vw + .9rem,1.12rem);
+
+        line-height:1.9;
+
+        margin-bottom:clamp(32px,1.5vw,42px);
+
+    }
+
+    .hero-buttons{
+
+        gap:clamp(20px,1vw,28px);
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        font-size:clamp(16px,.25vw + 15px,18px);
+
+        padding:
+        clamp(14px,.3vw + 12px,17px)
+        clamp(32px,.8vw + 26px,42px);
+
+    }
+
+    .social-icons{
+
+        gap:clamp(20px,.8vw,28px);
+
+        margin-top:clamp(34px,1.2vw,46px);
+
+    }
+
+    .social-icons a{
+
+        width:clamp(50px,.8vw + 44px,58px);
+
+        height:clamp(50px,.8vw + 44px,58px);
+
+        font-size:clamp(22px,.4vw + 20px,26px);
+
+    }
+
+    .image-circle{
+
+    width:clamp(410px,22vw,500px);
+
+    height:clamp(410px,22vw,500px);
+
+}
+
+.image-circle img{
+
+        width:clamp(390px,21vw,480px);
+
+        height:clamp(390px,21vw,480px);
+
+    }
+
+/*=======================================
+      HOME - SKILLS PREVIEW (Fluid)
+=========================================*/
+
+.skills-preview{
+
+    padding-block:clamp(90px,7vw,140px);
+
+}
+
+.section-title{
+
+    margin-bottom:clamp(50px,4vw,70px);
+
+}
+
+.section-title h2{
+
+    font-size:clamp(2.4rem,2vw + 1.4rem,3.4rem);
+
+    line-height:1.15;
+
+    margin-bottom:18px;
+
+}
+
+.section-title p{
+
+    max-width:clamp(650px,48vw,900px);
+
+    font-size:clamp(1rem,.35vw + .95rem,1.18rem);
+
+    line-height:1.9;
+
+}
+
+.skills-grid{
+
+    gap:clamp(24px,1.5vw,36px);
+
+}
+
+.skill-card{
+
+    padding:clamp(30px,2vw,42px);
+
+}
+
+.skill-content>i{
+
+    font-size:clamp(52px,2vw + 24px,68px);
+
+    margin-bottom:22px;
+
+}
+
+.skill-card h3{
+
+    font-size:clamp(1.15rem,.5vw + 1rem,1.4rem);
+
+}
+
+.skill-card p{
+
+    font-size:clamp(.95rem,.25vw + .9rem,1.08rem);
+
+    line-height:1.75;
+
+}
+
+.section-button{
+
+    margin-top:clamp(40px,3vw,60px);
+
+}
+
+/*=======================================
+      HOME - PROJECTS PREVIEW (Fluid)
+=========================================*/
+
+.projects-preview{
+
+    padding-block:clamp(90px,7vw,140px);
+
+}
+
+.projects-grid{
+
+    gap:clamp(28px,1.8vw,40px);
+
+}
+
+.project-card img{
+
+    height:clamp(220px,15vw,300px);
+
+}
+
+.project-info{
+
+    padding:clamp(24px,2vw,36px);
+
+}
+
+.project-info h3{
+
+    font-size:clamp(1.2rem,.5vw + 1rem,1.5rem);
+
+    margin-bottom:16px;
+
+}
+
+.project-info p{
+
+    font-size:clamp(.95rem,.25vw + .9rem,1.08rem);
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+
+}
+
+.project-category{
+
+    font-size:clamp(.85rem,.15vw + .82rem,.95rem);
+
+    margin-bottom:14px;
+
+}
+
+.project-category::before{
+
+    width:clamp(24px,1.5vw,34px);
+
+}
+
+.tech-stack{
+
+    gap:clamp(10px,.8vw,14px);
+
+    margin-bottom:clamp(22px,1.5vw,30px);
+
+}
+
+.tech-stack span{
+
+    padding:clamp(8px,.6vw,10px) clamp(14px,.8vw,18px);
+
+    font-size:clamp(.78rem,.18vw + .75rem,.88rem);
+
+}
+
+.project-links{
+
+    gap:clamp(12px,.8vw,18px);
+
+}
+
+.project-links a{
+
+    padding:clamp(10px,.7vw,13px) clamp(18px,1vw,22px);
+
+    font-size:clamp(.92rem,.2vw + .88rem,1rem);
+
+}
+
+.project-status{
+
+    font-size:clamp(.72rem,.15vw + .68rem,.82rem);
+
+    padding:clamp(6px,.4vw,8px) clamp(12px,.6vw,14px);
+
+}
+
+.section-button{
+
+    margin-top:clamp(45px,3vw,70px);
+
+}
+
+/*=======================================
+        HOME - WHY ME (Fluid)
+=========================================*/
+
+.why-wrapper{
+
+    grid-template-columns:minmax(380px,.9fr) minmax(0,1.1fr);
+
+    gap:clamp(50px,4vw,90px);
+
+    align-items:center;
+
+}
+
+.why-image img{
+
+    width:clamp(380px,22vw,500px);
+
+    height:clamp(380px,22vw,500px);
+
+}
+
+.why-content{
+
+    max-width:900px;
+
+}
+
+.why-item{
+
+    gap:clamp(18px,1vw,24px);
+
+    padding-bottom:clamp(20px,1vw,28px);
+
+    margin-bottom:clamp(20px,1vw,28px);
+
+}
+
+.why-item i{
+
+    font-size:clamp(24px,.7vw + 18px,32px);
+
+}
+
+.why-item h3{
+
+    font-size:clamp(1.1rem,.35vw + 1rem,1.35rem);
+
+    margin-bottom:10px;
+
+}
+
+.why-item p{
+
+    font-size:clamp(.95rem,.22vw + .9rem,1.08rem);
+
+    line-height:1.85;
+
+}
+
+/*=======================================
+          HOME - CTA (Fluid)
+=========================================*/
+
+.cta{
+
+    padding-block:clamp(100px,8vw,160px);
+
+}
+
+.cta h2{
+
+    font-size:clamp(2.4rem,2vw + 1.4rem,4rem);
+
+    line-height:1.15;
+
+    /* max-width:18ch; */
+
+    margin-inline:auto;
+
+    margin-bottom:24px;
+
+}
+
+.cta p{
+
+    max-width:clamp(700px,50vw,950px);
+
+    font-size:clamp(1rem,.35vw + .95rem,1.18rem);
+
+    line-height:1.9;
+
+    margin:0 auto clamp(38px,2.5vw,55px);
+
+}
+
+.cta-buttons{
+
+    gap:clamp(18px,1.2vw,28px);
+
+}
+
+.cta-buttons .btn-primary,
+.cta-buttons .btn-secondary{
+
+    padding:clamp(14px,.8vw,17px) clamp(28px,1.5vw,36px);
+
+    font-size:clamp(.95rem,.2vw + .9rem,1.05rem);
+
+}
+
+.cta::before{
+
+    width:clamp(450px,30vw,700px);
+
+    height:clamp(450px,30vw,700px);
+
+    top:clamp(-160px,-8vw,-100px);
+
+}
 
 /*====================================================
                         ABOUT
