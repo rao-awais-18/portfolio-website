@@ -101,6 +101,66 @@ img{
                         FOOTER
 ====================================================*/
 
+footer{
+    padding-block:clamp(70px,5vw,90px) 30px;
+}
+
+.footer-grid{
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:clamp(40px,3vw,80px);
+
+    margin-bottom:clamp(40px,3vw,60px);
+
+}
+
+.footer-grid h3{
+
+    font-size:clamp(1.15rem,.5vw + 1rem,1.45rem);
+
+}
+
+.footer-about p{
+
+    max-width:clamp(340px,24vw,470px);
+
+}
+
+.footer-social{
+
+    gap:clamp(14px,1vw,22px);
+
+}
+
+.footer-social a{
+
+    width:clamp(42px,2.6vw,50px);
+
+    height:clamp(42px,2.6vw,50px);
+
+}
+
+.footer-bottom{
+
+    padding-top:clamp(24px,2vw,34px);
+
+}
+
+.footer-bottom p{
+
+    font-size:clamp(.92rem,.25vw + .85rem,1rem);
+
+}
+
+#backToTop{
+
+    width:clamp(46px,2.6vw,54px);
+
+    height:clamp(46px,2.6vw,54px);
+
+}
+
 
 
 /*====================================================
