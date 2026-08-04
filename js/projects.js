@@ -46,7 +46,32 @@ const projects = [
       "images/projects/project1/p1-img2.jpg",
     ],
 
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Font Awesome"],
+technologies: [
+  {
+    name: "HTML5",
+    role: "Structure",
+    icon: "fa-brands fa-html5",
+    className: "html5-tech"
+  },
+  {
+    name: "CSS3",
+    role: "Styling",
+    icon: "fa-brands fa-css3-alt",
+    className: "css3-tech"
+  },
+  {
+    name: "JavaScript",
+    role: "Logic",
+    icon: "fa-brands fa-js",
+    className: "javascript-tech"
+  },
+  {
+    name: "Local Storage",
+    role: "Browser API",
+    icon: "fa-solid fa-database",
+    className: "localstorage-tech"
+  }
+],
 
     features: [
       "Fully Responsive Layout",
@@ -126,7 +151,32 @@ const projects = [
       "images/projects/project2/p2i-img3.png",
     ],
 
-    technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
+technologies: [
+  {
+    name: "HTML5",
+    role: "Structure",
+    icon: "fa-brands fa-html5",
+    className: "html5-tech"
+  },
+  {
+    name: "CSS3",
+    role: "Styling",
+    icon: "fa-brands fa-css3-alt",
+    className: "css3-tech"
+  },
+  {
+    name: "JavaScript",
+    role: "Logic",
+    icon: "fa-brands fa-js",
+    className: "javascript-tech"
+  },
+  {
+    name: "Local Storage",
+    role: "Browser API",
+    icon: "fa-solid fa-database",
+    className: "localstorage-tech"
+  }
+],
 
     features: [
       "Secure Login",
@@ -187,7 +237,32 @@ const projects = [
       "images/projects/project3/p3-img1.png",
     ],
 
-    technologies: ["HTML5", "CSS3", "JavaScript", "Local Storage"],
+    technologies: [
+  {
+    name: "HTML5",
+    role: "Structure",
+    icon: "fa-brands fa-html5",
+    className: "html5-tech"
+  },
+  {
+    name: "CSS3",
+    role: "Styling",
+    icon: "fa-brands fa-css3-alt",
+    className: "css3-tech"
+  },
+  {
+    name: "JavaScript",
+    role: "Logic",
+    icon: "fa-brands fa-js",
+    className: "javascript-tech"
+  },
+  {
+    name: "Local Storage",
+    role: "Browser API",
+    icon: "fa-solid fa-database",
+    className: "localstorage-tech"
+  }
+],
 
     features: [
       "CRUD Operations",

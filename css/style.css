@@ -3228,42 +3228,96 @@ footer {
   white-space: nowrap;
 }
 
-/* ==========================
-   Technologies
-========================== */
+/*==============================
+        Technologies
+==============================*/
 
-.technologies-grid {
-  display: grid;
+.technologies-grid{
 
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    display:grid;
 
-  gap: 25px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
-  margin-top: 40px;
+    gap:22px;
+
+    margin-top:45px;
+
 }
 
-.technology-card {
-  text-align: center;
+.pdp-technology-item{
 
-  padding: 35px 25px;
+    display:flex;
 
-  transition: var(--transition);
+    align-items:center;
+
+    gap:22px;
+
+    padding:24px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
 }
 
-.technology-card i {
-  font-size: 3rem;
+.pdp-technology-item:hover{
 
-  /* color: var(--primary-color); */
+    transform:translateX(8px);
 
-  margin-bottom: 20px;
 }
 
-.technology-card h3 {
-  margin: 0;
+.pdp-technology-icon{
 
-  font-size: 1.1rem;
+    width:64px;
 
-  color: var(--muted);
+    height:64px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    flex-shrink:0;
+
+    transition:var(--transition);
+
+}
+
+.pdp-technology-item:hover .pdp-technology-icon{
+
+    background:rgba(56,189,248,.08);
+
+    border-color:rgba(56,189,248,.25);
+
+}
+
+.pdp-technology-icon i{
+
+    font-size:2.3rem;
+
+}
+
+.pdp-technology-info h3{
+
+    margin-bottom:6px;
+
+    font-size:1.15rem;
+
+}
+
+.technology-type{
+
+    color:var(--muted);
+
+    font-size:.9rem;
+
 }
 
 /* brand colors of tech icons */

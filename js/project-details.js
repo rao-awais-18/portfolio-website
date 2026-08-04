@@ -352,47 +352,47 @@ lightbox.addEventListener("click", function (event) {
 //-------------------- render Technologies --------------------
 
 // tech-icon mapping helper function
-function getTechnologyData(technology) {
-  switch (technology) {
-    case "HTML5":
-      return {
-        icon: "fa-brands fa-html5",
-        className: "html5-tech",
-      };
+// function getTechnologyData(technology) {
+//   switch (technology) {
+//     case "HTML5":
+//       return {
+//         icon: "fa-brands fa-html5",
+//         className: "html5-tech",
+//       };
 
-    case "CSS3":
-      return {
-        icon: "fa-brands fa-css3-alt",
-        className: "css3-tech",
-      };
+//     case "CSS3":
+//       return {
+//         icon: "fa-brands fa-css3-alt",
+//         className: "css3-tech",
+//       };
 
-    case "JavaScript":
-      return {
-        icon: "fa-brands fa-js",
-        className: "javascript-tech",
-      };
+//     case "JavaScript":
+//       return {
+//         icon: "fa-brands fa-js",
+//         className: "javascript-tech",
+//       };
 
-    case "Bootstrap":
-      return {
-        icon: "fa-brands fa-bootstrap",
-        className: "bootstrap-tech",
-      };
+//     case "Bootstrap":
+//       return {
+//         icon: "fa-brands fa-bootstrap",
+//         className: "bootstrap-tech",
+//       };
 
-    case "Font Awesome":
-      return {
-        icon: "fa-solid fa-font-awesome",
-        className: "fontawesome-tech",
-      };
+//     case "Font Awesome":
+//       return {
+//         icon: "fa-solid fa-font-awesome",
+//         className: "fontawesome-tech",
+//       };
 
-    // agr aur technologies hain to unke liye bhi case add kar sakte hain, icon aur className ke saath(icon-name from font awesome website)
-    // data model mein tech name add karo, switch mein aik aur case add karo, aur css mein issi classname k sath usska color do.
-    default:
-      return {
-        icon: "fa-solid fa-code",
-        className: "default-tech",
-      };
-  }
-}
+//     // agr aur technologies hain to unke liye bhi case add kar sakte hain, icon aur className ke saath(icon-name from font awesome website)
+//     // data model mein tech name add karo, switch mein aik aur case add karo, aur css mein issi classname k sath usska color do.
+//     default:
+//       return {
+//         icon: "fa-solid fa-code",
+//         className: "default-tech",
+//       };
+//   }
+// }
 
 function renderTechnologies() {
   const technologiesContainer = document.getElementById("project-technologies");
@@ -404,16 +404,20 @@ function renderTechnologies() {
   let cards = "";
 
   currentProject.technologies.forEach(function (technology) {
-    const tech = getTechnologyData(technology);
+    // const tech = getTechnologyData(technology.name);
 
     cards += `
 
-<div class="technology-card glass-card">
+<div class="pdp-technology-item">
 
-    <i class="${tech.icon} ${tech.className}"></i>
+<div class="pdp-technology-icon">
+    <i class="${technology.icon} ${technology.className}"></i>
+</div>
 
-    <h3>${technology}</h3>
-
+<div class="pdp-technology-info">
+    <h3>${technology.name}</h3>
+    <span class="technology-type">${technology.role}</span>
+</div>
 </div>
 
 `;
@@ -421,19 +425,28 @@ function renderTechnologies() {
 
   technologiesContainer.innerHTML = `
 
-    <div class="section-heading">
+<div class="project-details-page-section-header">
 
-        <h2>Technologies Used</h2>
+    <span class="project-details-page-section-label">
+        TECH STACK
+    </span>
 
-    </div>
+    <h2 class="project-details-page-section-title">
+        Technologies Used
+    </h2>
+     <p class="project-details-page-section-description">
+        Every technology in this project was selected to solve a specific problem efficiently.
+    </p>
 
-    <div class="technologies-grid">
+</div>
 
-        ${cards}
+<div class="technologies-grid">
 
-    </div>
+    ${cards}
 
-  `;
+</div>
+
+`;
 }
 renderTechnologies();
 
