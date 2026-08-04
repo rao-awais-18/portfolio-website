@@ -74,13 +74,42 @@ technologies: [
 ],
 
     features: [
-      "Fully Responsive Layout",
-      "Dynamic Project Rendering",
-      "Dynamic Skills Rendering",
-      "Animated Hero Section",
-      "Glassmorphism UI",
-      "Project Detail Page",
-    ],
+  {
+    title: "CRUD Operations",
+    description: "Create, edit, update and delete tasks with a smooth workflow.",
+    icon: "fa-solid fa-pen-to-square",
+  },
+
+  {
+    title: "Task Categories",
+    description: "Organize tasks into different categories for better management.",
+    icon: "fa-solid fa-folder-tree",
+  },
+
+  {
+    title: "Priority Levels",
+    description: "Assign priorities to focus on the most important tasks first.",
+    icon: "fa-solid fa-flag",
+  },
+
+  {
+    title: "Local Storage",
+    description: "Automatically saves tasks in the browser without a database.",
+    icon: "fa-solid fa-database",
+  },
+
+  {
+    title: "Search Tasks",
+    description: "Quickly find tasks using instant search functionality.",
+    icon: "fa-solid fa-magnifying-glass",
+  },
+
+  {
+    title: "Responsive UI",
+    description: "Works smoothly across desktop, tablet and mobile devices.",
+    icon: "fa-solid fa-mobile-screen-button",
+  },
+],
 
     github: "https://github.com/rao-awais-18/personal-portfolio", // temporary placeholder, replace with your own repo link
 
@@ -125,6 +154,11 @@ technologies: [
 
     platform: "Web",
   },
+
+
+
+
+
 
   {
     id: 2,
@@ -179,13 +213,42 @@ technologies: [
 ],
 
     features: [
-      "Secure Login",
-      "Admin Dashboard",
-      "Donation Management",
-      "Member Management",
-      "Reports",
-      "Responsive Design",
-    ],
+  {
+    title: "CRUD Operations",
+    description: "Create, edit, update and delete tasks with a smooth workflow.",
+    icon: "fa-solid fa-pen-to-square",
+  },
+
+  {
+    title: "Task Categories",
+    description: "Organize tasks into different categories for better management.",
+    icon: "fa-solid fa-folder-tree",
+  },
+
+  {
+    title: "Priority Levels",
+    description: "Assign priorities to focus on the most important tasks first.",
+    icon: "fa-solid fa-flag",
+  },
+
+  {
+    title: "Local Storage",
+    description: "Automatically saves tasks in the browser without a database.",
+    icon: "fa-solid fa-database",
+  },
+
+  {
+    title: "Search Tasks",
+    description: "Quickly find tasks using instant search functionality.",
+    icon: "fa-solid fa-magnifying-glass",
+  },
+
+  {
+    title: "Responsive UI",
+    description: "Works smoothly across desktop, tablet and mobile devices.",
+    icon: "fa-solid fa-mobile-screen-button",
+  },
+],
 
     github: "#",
 
@@ -211,6 +274,10 @@ technologies: [
 
     platform: "Web",
   },
+
+
+
+
 
   {
     id: 3,
@@ -265,13 +332,42 @@ technologies: [
 ],
 
     features: [
-      "CRUD Operations",
-      "Task Categories",
-      "Priority Levels",
-      "Local Storage",
-      "Search Tasks",
-      "Responsive UI",
-    ],
+  {
+    title: "CRUD Operations",
+    description: "Create, edit, update and delete tasks with a smooth workflow.",
+    icon: "fa-solid fa-pen-to-square",
+  },
+
+  {
+    title: "Task Categories",
+    description: "Organize tasks into different categories for better management.",
+    icon: "fa-solid fa-folder-tree",
+  },
+
+  {
+    title: "Priority Levels",
+    description: "Assign priorities to focus on the most important tasks first.",
+    icon: "fa-solid fa-flag",
+  },
+
+  {
+    title: "Local Storage",
+    description: "Automatically saves tasks in the browser without a database.",
+    icon: "fa-solid fa-database",
+  },
+
+  {
+    title: "Search Tasks",
+    description: "Quickly find tasks using instant search functionality.",
+    icon: "fa-solid fa-magnifying-glass",
+  },
+
+  {
+    title: "Responsive UI",
+    description: "Works smoothly across desktop, tablet and mobile devices.",
+    icon: "fa-solid fa-mobile-screen-button",
+  },
+],
 
     github: "#",
 

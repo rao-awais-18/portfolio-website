@@ -351,49 +351,6 @@ lightbox.addEventListener("click", function (event) {
 
 //-------------------- render Technologies --------------------
 
-// tech-icon mapping helper function
-// function getTechnologyData(technology) {
-//   switch (technology) {
-//     case "HTML5":
-//       return {
-//         icon: "fa-brands fa-html5",
-//         className: "html5-tech",
-//       };
-
-//     case "CSS3":
-//       return {
-//         icon: "fa-brands fa-css3-alt",
-//         className: "css3-tech",
-//       };
-
-//     case "JavaScript":
-//       return {
-//         icon: "fa-brands fa-js",
-//         className: "javascript-tech",
-//       };
-
-//     case "Bootstrap":
-//       return {
-//         icon: "fa-brands fa-bootstrap",
-//         className: "bootstrap-tech",
-//       };
-
-//     case "Font Awesome":
-//       return {
-//         icon: "fa-solid fa-font-awesome",
-//         className: "fontawesome-tech",
-//       };
-
-//     // agr aur technologies hain to unke liye bhi case add kar sakte hain, icon aur className ke saath(icon-name from font awesome website)
-//     // data model mein tech name add karo, switch mein aik aur case add karo, aur css mein issi classname k sath usska color do.
-//     default:
-//       return {
-//         icon: "fa-solid fa-code",
-//         className: "default-tech",
-//       };
-//   }
-// }
-
 function renderTechnologies() {
   const technologiesContainer = document.getElementById("project-technologies");
 
@@ -404,7 +361,6 @@ function renderTechnologies() {
   let cards = "";
 
   currentProject.technologies.forEach(function (technology) {
-    // const tech = getTechnologyData(technology.name);
 
     cards += `
 
@@ -454,71 +410,60 @@ renderTechnologies();
 function renderFeatures() {
   const featuresContainer = document.getElementById("project-features");
 
-  if (!featuresContainer) {
-    return;
-  }
+  if (!featuresContainer) return;
 
-  let cards = "";
+  let featuresHTML = "";
 
   currentProject.features.forEach(function (feature) {
-    cards += `
+    featuresHTML += `
 
-            <div class="feature-card glass-card">
+      <article class="pdp-feature-item">
 
-                <i class="${getFeatureIcon(feature)}"></i>
+        <div class="pdp-feature-icon">
+          <i class="${feature.icon}"></i>
+        </div>
 
-                <h3>${feature}</h3>
+        <div class="pdp-feature-content">
 
-            </div>
+          <h3>${feature.title}</h3>
 
-        `;
+          <p>${feature.description}</p>
+
+        </div>
+
+      </article>
+
+    `;
   });
 
   featuresContainer.innerHTML = `
 
-        <div class="section-heading">
+    <div class="project-details-page-section-header">
 
-            <h2>Key Features</h2>
+      <span class="project-details-page-section-label">
+        FEATURES
+      </span>
 
-        </div>
+      <h2>
+        What Makes This Project Stand Out
+      </h2>
 
-        <div class="features-grid">
+      <p>
+        A closer look at the functionality, architecture and user experience implemented throughout this project.
+      </p>
 
-            ${cards}
+    </div>
 
-        </div>
+    <div class="pdp-features-list">
 
-    `;
+      ${featuresHTML}
+
+    </div>
+
+  `;
 }
+
 renderFeatures();
-
-// helper function for features section
-function getFeatureIcon(feature) {
-  switch (feature) {
-    case "Fully Responsive Layout":
-      return "fa-solid fa-mobile-screen-button";
-
-    case "Dynamic Project Rendering":
-      return "fa-solid fa-layer-group";
-
-    case "Dynamic Skills Rendering":
-      return "fa-solid fa-code";
-
-    case "Animated Hero Section":
-      return "fa-solid fa-wand-magic-sparkles";
-
-    case "Glassmorphism UI":
-      return "fa-solid fa-cubes";
-
-    case "Project Detail Page":
-      return "fa-solid fa-file-lines";
-
-    // agr aur features hain to unke liye bhi case add kar sakte hain, case mein feature name aur return mein uss ky lie suited icon
-    //  aur data model mein feature name add karo,
-    default:
-      return "fa-solid fa-circle-check";
-  }
-}
 
 // -------------------- render Project Information --------------------
 function renderProjectInformation() {

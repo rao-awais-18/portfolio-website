@@ -3320,7 +3320,9 @@ footer {
 
 }
 
-/* brand colors of tech icons */
+/* ==================================
+   BRAND COLORS OF TECH-ICONS
+================================== */
 .html5-tech {
   color: #e34f26;
 }
@@ -3345,40 +3347,104 @@ footer {
   color: var(--primary-color);
 }
 
-/* ==========================
-   Features
-========================== */
+/*=====================================
+        PDP FEATURES
+======================================*/
 
-.features-grid {
-  display: grid;
+.pdp-features-list{
 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top:60px;
 
-  gap: 25px;
-
-  margin-top: 40px;
 }
 
-.feature-card {
-  text-align: center;
+.pdp-feature-item{
 
-  padding: 30px 25px;
+    display:grid;
+
+    grid-template-columns:70px 1fr;
+
+    gap:28px;
+
+    padding:35px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
 }
 
-.feature-card i {
-  font-size: 2.3rem;
+.pdp-feature-item:last-child{
 
-  color: var(--primary-color);
+    border-bottom:none;
 
-  margin-bottom: 18px;
 }
 
-.feature-card h3 {
-  margin: 0;
+.pdp-feature-icon{
 
-  font-size: 1.05rem;
+    width:58px;
 
-  color: var(--muted);
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:16px;
+
+    background:rgba(56,189,248,.08);
+
+    border:1px solid rgba(56,189,248,.18);
+
+    color:var(--primary);
+
+    font-size:1.35rem;
+
+    transition:var(--transition);
+
+}
+
+.pdp-feature-content h3{
+
+    font-size:1.35rem;
+
+    margin-bottom:12px;
+
+    transition:var(--transition);
+
+}
+
+.pdp-feature-content p{
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+    max-width:720px;
+
+}
+
+.pdp-feature-item:hover{
+
+    transform:translateX(10px);
+
+}
+
+.pdp-feature-item:hover .pdp-feature-icon{
+
+    background:rgba(56,189,248,.15);
+
+    border-color:rgba(56,189,248,.35);
+
+    transform:scale(1.08);
+
+}
+
+.pdp-feature-item:hover h3{
+
+    color:var(--primary);
+
 }
 
 /* ==========================
