@@ -2728,6 +2728,74 @@ footer {
                         PROJECT DETAILS PAGE
 ====================================================*/
 
+/*====================================
+     Project Details Section System
+====================================*/
+
+.project-details-page-section-header{
+
+    margin-bottom:45px;
+
+}
+
+.project-details-page-section-label{
+
+    display:inline-block;
+
+    letter-spacing:4px;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.project-details-page-section-header h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.project-details-page-section-header p{
+
+    max-width:650px;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+.project-details-page-section-header::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:3px;
+
+    margin-top:24px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        to right,
+        var(--primary),
+        transparent
+    );
+
+}
+
 /*----------------------------------------- project hero ---------------------------------------- */
 .project-hero-wrapper {
   display: flex;
@@ -2809,44 +2877,14 @@ footer {
   padding: 30px;
 }
 
-/* .project-overview-content {
-  margin-top: 30px;
-}
-
-.project-overview-content p {
-  color: var(--muted);
-
-  line-height: 1.9;
-
-  font-size: 1.05rem;
-} */
-
 /*====================================
             PROJECT OVERVIEW
 ====================================*/
-
-.project-overview {
-  padding: 110px 0;
-}
 
 .overview-wrapper {
   max-width: 900px;
 
   margin-inline: 0;
-}
-
-.overview-label {
-  display: inline-block;
-
-  letter-spacing: 4px;
-
-  font-size: 0.82rem;
-
-  font-weight: 700;
-
-  color: var(--primary);
-
-  margin-bottom: 18px;
 }
 
 .overview-wrapper h2 {
@@ -2924,7 +2962,6 @@ footer {
 /* ==========================
    Project Gallery
 ========================== */
-
 .gallery-grid {
   display: grid;
 

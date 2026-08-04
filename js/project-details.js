@@ -137,14 +137,14 @@ function renderOverview() {
 
   overview.innerHTML = `
 
-        <div class="overview-wrapper">
+  <div class="overview-wrapper">
 
-        <span class="overview-label">
+        <span class="project-details-page-section-label">
             PROJECT OVERVIEW
         </span>
 
        <h2>
-    ${overviewHeading}
+      ${overviewHeading}
        </h2>
 
         <div class="overview-divider"></div>
@@ -161,7 +161,7 @@ function renderOverview() {
 
         </blockquote>
 
-    </div>
+  </div>
 
     `;
 }
@@ -206,15 +206,23 @@ function renderGallery() {
 
   gallery.innerHTML = `
 
-        <div class="section-heading">
+        <div class="project-details-page-section-header">
 
-            <h2>
+    <span class="project-details-page-section-label">
+        VISUAL SHOWCASE
+    </span>
 
-                Project Gallery
+    <h2>
+        Project Gallery
+    </h2>
 
-            </h2>
+    <p>
+        Explore the interface, design decisions and key screens that bring this project to life.
+    </p>
 
-        </div>
+    
+
+</div>
 
         <div class="gallery-grid">
 
