@@ -10,6 +10,8 @@ const currentProject = projects.find(function (project) {
   return project.id === projectId;
 });
 
+const { detailedDescription, overviewHeading } = currentProject;
+
 // ================================
 // Render Functions
 // ================================
@@ -135,25 +137,31 @@ function renderOverview() {
 
   overview.innerHTML = `
 
-        <div class="section-heading">
+        <div class="overview-wrapper">
 
-            <h2>
+        <span class="overview-label">
+            PROJECT OVERVIEW
+        </span>
 
-                Project Overview
+       <h2>
+    ${overviewHeading}
+       </h2>
 
-            </h2>
+        <div class="overview-divider"></div>
 
-        </div>
+        <blockquote class="overview-description">
 
-        <div class="project-overview-content glass-card">
+            <span class="quote-start">“</span>
 
             <p>
-
                 ${detailedDescription}
-
             </p>
 
-        </div>
+            <span class="quote-end">”</span>
+
+        </blockquote>
+
+    </div>
 
     `;
 }
@@ -765,29 +773,22 @@ function renderProjectNavigation() {
 }
 renderProjectNavigation();
 
-
-
 // -------------------- Render Project CTA --------------------
 
 function renderProjectCTA() {
+  const ctaContainer = document.getElementById("project-cta");
 
-    const ctaContainer = document.getElementById("project-cta");
+  if (!ctaContainer) {
+    return;
+  }
 
-    if (!ctaContainer) {
-
-        return;
-
-    }
-
-    const {
-
+  const {
     title,
 
-    resources
+    resources,
+  } = currentProject;
 
-} = currentProject;
-
-    let buttonsHTML = `
+  let buttonsHTML = `
 
     <a href="contact.html"
 
@@ -801,11 +802,9 @@ function renderProjectCTA() {
 
 `;
 
-if (resources?.length) {
-
+  if (resources?.length) {
     resources.forEach(function (resource) {
-
-        buttonsHTML += `
+      buttonsHTML += `
 
             <a href="${resource.url}"
 
@@ -822,13 +821,10 @@ if (resources?.length) {
             </a>
 
         `;
-
     });
+  }
 
-}
-
-
-    ctaContainer.innerHTML = `
+  ctaContainer.innerHTML = `
 
         <div class="project-cta-content">
 
@@ -855,7 +851,6 @@ if (resources?.length) {
         </div>
 
     `;
-
 }
 
 renderProjectCTA();

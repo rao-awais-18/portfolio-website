@@ -33,6 +33,8 @@ const projects = [
     shortDescription:
       "Modern responsive portfolio website with dynamic project and skill management.",
 
+    overviewHeading: "Designing My Digital Identity",
+
     detailedDescription:
       "A professional portfolio website built with HTML, CSS and JavaScript. The project follows reusable components, dynamic rendering, responsive layouts and clean architecture.",
 
@@ -61,28 +63,22 @@ const projects = [
 
     // resources can be used to add additional links like case studies, Figma designs, etc. You can add as many resources as you want. Each resource should have a title, url and icon (Font Awesome icon class)
     resources: [
-
-    {
-
+      {
         title: "Case Study",
 
         url: "#",
 
-        icon: "fa-solid fa-file-lines"
+        icon: "fa-solid fa-file-lines",
+      },
 
-    },
-
-    {
-
+      {
         title: "Figma Design",
 
         url: "#",
 
-        icon: "fa-brands fa-figma"
-
-    }
-
-],
+        icon: "fa-brands fa-figma",
+      },
+    ],
 
     badges: ["Featured", "In Progress"],
 
@@ -116,6 +112,8 @@ const projects = [
 
     shortDescription:
       "Complete NGO management system with member registration and donation tracking.",
+
+    overviewHeading: "Digitalizing NGOs Management",
 
     detailedDescription:
       "A complete management system for NGOs including member management, donations, reports, authentication and dashboard.",
@@ -175,6 +173,8 @@ const projects = [
 
     shortDescription:
       "Task management application with local storage and productivity features.",
+
+    overviewHeading: "Designing Your Online Task Management",
 
     detailedDescription:
       "A JavaScript-based task manager allowing users to organize daily work using categories, priorities, deadlines and local storage.",
