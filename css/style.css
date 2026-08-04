@@ -2807,6 +2807,16 @@ footer {
   gap: 60px;
 }
 
+.project-title{
+
+font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
 .project-hero-content {
   flex: 1;
 }
@@ -3447,87 +3457,184 @@ footer {
 
 }
 
-/* ==========================
-   Project Information
-========================== */
+/*==================================
+    Project Information
+==================================*/
 
-.project-information-grid {
-  display: grid;
+.pdp-information-list{
 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width:900px;
 
-  gap: 25px;
+    margin:60px auto 0;
 
-  margin-top: 40px;
 }
 
-.info-item {
-  display: flex;
+.pdp-info-row{
 
-  flex-direction: column;
+    display:flex;
 
-  justify-content: center;
+    align-items:center;
 
-  align-items: center;
+    gap:26px;
 
-  text-align: center;
+    padding:30px 0;
 
-  padding: 30px 25px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+    position:relative;
+
 }
 
-.info-item i {
-  font-size: 2rem;
+.pdp-info-row:last-child{
 
-  margin-bottom: 18px;
+    border-bottom:none;
+
 }
 
-.info-label {
-  font-size: 1rem;
+.pdp-info-row::before{
 
-  font-weight: 600;
+    content:"";
 
-  margin-bottom: 8px;
+    position:absolute;
+
+    left:-22px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:3px;
+
+    height:0;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    transition:var(--transition);
+
 }
 
-.info-value {
-  color: var(--muted);
+.pdp-info-row:hover::before{
+
+    height:60%;
+
 }
 
-/* icon colors for project information */
-.info-year {
-  color: #3b82f6;
+.pdp-info-icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(56,189,248,.08);
+
+    border:1px solid rgba(56,189,248,.15);
+
+    color:var(--primary);
+
+    font-size:1.45rem;
+
+    flex-shrink:0;
+
+    transition:var(--transition);
+
 }
 
-.info-duration {
-  color: #f59e0b;
+.pdp-info-text{
+
+    flex:1;
+
 }
 
-.info-status {
-  color: #10b981;
+.pdp-info-label{
+
+    display:block;
+
+    font-size:.78rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:var(--muted);
+
+    margin-bottom:8px;
+
 }
 
-.info-role {
-  color: #8b5cf6;
+.pdp-info-value{
+
+    font-size:1.55rem;
+
+    font-weight:650;
+
+    line-height:1.25;
+
+    transition:var(--transition);
+
 }
 
-.info-client {
-  color: #ec4899;
+.pdp-info-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:rgba(56,189,248,.25);
+
+    box-shadow:0 0 0 6px rgba(56,189,248,.05);
+
+    flex-shrink:0;
+
+    transition:var(--transition);
+
 }
 
-.info-platform {
-  color: #06b6d4;
+.pdp-info-row:hover .pdp-info-dot{
+
+    background:var(--primary);
+
+    box-shadow:
+        0 0 0 6px rgba(56,189,248,.08),
+        0 0 18px rgba(56,189,248,.55);
+
+    transform:scale(1.25);
+
 }
 
-.info-version {
-  color: #f97316;
+.pdp-info-row:hover .pdp-info-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    box-shadow:0 0 28px rgba(56,189,248,.18);
+
 }
 
-.info-update {
-  color: #14b8a6;
+.pdp-info-row:hover .pdp-info-value{
+
+    color:var(--primary);
+
 }
 
-.info-default {
-  color: var(--primary-color);
+.pdp-info-row:hover .pdp-info-arrow{
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
 }
 
 /* ==========================
@@ -3660,7 +3767,7 @@ footer {
 }
 
 .project-cta-content {
-  max-width: 850px;
+  /* max-width: 850px; */
 
   margin: auto;
 

@@ -63,7 +63,7 @@ function renderProjectHero() {
 
            
 
-            <h1>
+            <h1 class = "project-title">
 
                 ${title}
 
@@ -467,194 +467,86 @@ renderFeatures();
 
 // -------------------- render Project Information --------------------
 function renderProjectInformation() {
-  const informationContainer = document.getElementById("project-information");
 
-  if (!informationContainer) {
-    return;
-  }
+    const informationContainer=document.getElementById("project-information");
 
-  const {
-    year,
+    if(!informationContainer) return;
 
-    duration,
+    let rows="";
 
-    status,
+    currentProject.projectInformation.forEach(function(info){
 
-    role,
+        rows += `
 
-    client,
+<article class="pdp-info-row">
 
-    version,
+    <div class="pdp-info-icon">
 
-    lastUpdated,
+        <i class="${info.icon}"></i>
 
-    platform,
-  } = currentProject;
+    </div>
 
-  const projectInformation = [
-    {
-      key: "year",
-      label: "Year",
-      value: year,
-    },
+    <div class="pdp-info-text">
 
-    {
-      key: "duration",
-      label: "Duration",
-      value: duration,
-    },
+        <span class="pdp-info-label">
 
-    {
-      key: "status",
-      label: "Status",
-      value: status,
-    },
+            ${info.label}
 
-    {
-      key: "role",
-      label: "Role",
-      value: role,
-    },
+        </span>
 
-    {
-      key: "client",
-      label: "Client",
-      value: client,
-    },
+        <h3 class="pdp-info-value">
 
-    {
-      key: "platform",
-      label: "Platform",
-      value: platform,
-    },
+            ${info.value}
 
-    {
-      key: "version",
-      label: "Version",
-      value: version,
-    },
+        </h3>
 
-    {
-      key: "lastUpdated",
-      label: "Last Updated",
-      value: lastUpdated,
-    },
-  ];
+    </div>
 
-  let informationHTML = "";
+    <div class="pdp-info-dot"></div>
 
-  projectInformation.forEach(function (item) {
-    const info = getInfoData(item.key);
-    informationHTML += `
-
-<div class="info-item glass-card">
-
-    <i class="${info.icon} ${info.className}"></i>
-
-    <span class="info-label">
-
-        ${item.label}
-
-    </span>
-
-    <span class="info-value">
-
-        ${item.value}
-
-    </span>
-
-</div>
+</article>
 
 `;
-  });
 
-  informationContainer.innerHTML = `
+    });
 
-        <div class="section-heading">
+    informationContainer.innerHTML=`
+
+        <div class="project-details-page-section-header">
+
+            <span class="project-details-page-section-label">
+
+                PROJECT INFORMATION
+
+            </span>
 
             <h2>
 
-                Project Information
+                Everything About This Project
 
             </h2>
 
+            <p>
+
+                Essential details including timeline, development role, project status and technical information.
+
+            </p>
+
         </div>
 
-        <div class="project-information-grid">
+        <div class="pdp-information-list">
 
-            ${informationHTML}
+            ${rows}
 
         </div>
 
     `;
+
 }
+
 renderProjectInformation();
 
-// helper function for info icons
-function getInfoData(key) {
-  switch (key) {
-    case "year":
-      return {
-        icon: "fa-regular fa-calendar",
-        className: "info-year",
-      };
 
-    case "duration":
-      return {
-        icon: "fa-regular fa-clock",
-        className: "info-duration",
-      };
-
-    case "status":
-      return {
-        icon: "fa-solid fa-circle-check",
-        className: "info-status",
-      };
-
-    case "role":
-      return {
-        icon: "fa-solid fa-user",
-        className: "info-role",
-      };
-
-    case "client":
-      return {
-        icon: "fa-solid fa-building",
-        className: "info-client",
-      };
-
-    case "platform":
-      return {
-        icon: "fa-solid fa-desktop",
-        className: "info-platform",
-      };
-
-    case "version":
-      return {
-        icon: "fa-solid fa-code-branch",
-        className: "info-version",
-      };
-
-    case "lastUpdated":
-      return {
-        icon: "fa-solid fa-rotate",
-        className: "info-update",
-      };
-
-    // no need change any thing for other projects, sab kch automatically render hoga
-    // agar kuch aur info field add karni ho to:
-    // 1.  data model mein wo info field add karo,
-    // 2.  projectInformation array mein uss filed ka object banao key k SVGPathElement
-    // 3.  iss switch case mein uss key k liye aik aur case add karo, icon aur className ke sath(icon-name from font awesome website)
-    // 4.  css mein issi classname k sath usska color do.
-
-    default:
-      return {
-        icon: "fa-solid fa-circle-info",
-        className: "info-default",
-      };
-  }
-}
 
 function renderProjectNavigation() {
   const navigation = document.getElementById("project-navigation");

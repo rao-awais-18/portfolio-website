@@ -138,21 +138,58 @@ technologies: [
 
     showOnHome: true,
 
-    year: 2026,
 
-    duration: "3 Weeks",
+// PROJECT INFORMATION ARRAY(OBJECT BASED)
+    projectInformation: [
+  {
+    label: "Year",
+    value: "2025",
+    icon: "fa-regular fa-calendar",
+  },
 
-    status: "In Progress",
+  {
+    label: "Duration",
+    value: "3 Weeks",
+    icon: "fa-regular fa-clock",
+  },
 
-    role: "Frontend Developer",
+  {
+    label: "Status",
+    value: "In Progress",
+    icon: "fa-solid fa-circle-check",
+  },
 
-    client: "Personal Project", // company, owner name
+  {
+    label: "Role",
+    value: "Frontend Developer",
+    icon: "fa-solid fa-user",
+  },
 
-    version: "1.0",
+  {
+    label: "Client",
+    value: "Personal Project",
+    icon: "fa-solid fa-building",
+  },
 
-    lastUpdated: "July 2026",
+  {
+    label: "Platform",
+    value: "Web",
+    icon: "fa-solid fa-desktop",
+  },
 
-    platform: "Web",
+  {
+    label: "Version",
+    value: "1.0",
+    icon: "fa-solid fa-code-branch",
+  },
+
+  {
+    label: "Last Updated",
+    value: "July 2026",
+    icon: "fa-solid fa-rotate",
+  },
+],
+
   },
 
 
@@ -258,21 +295,56 @@ technologies: [
 
     showOnHome: true,
 
-    year: 2026,
+    projectInformation: [
+  {
+    label: "Year",
+    value: "2025",
+    icon: "fa-regular fa-calendar",
+  },
 
-    duration: "3 Weeks",
+  {
+    label: "Duration",
+    value: "3 Weeks",
+    icon: "fa-regular fa-clock",
+  },
 
-    status: "In Progress",
+  {
+    label: "Status",
+    value: "In Progress",
+    icon: "fa-solid fa-circle-check",
+  },
 
-    role: "Frontend Developer",
+  {
+    label: "Role",
+    value: "Frontend Developer",
+    icon: "fa-solid fa-user",
+  },
 
-    client: "Personal Project", // company, owner name
+  {
+    label: "Client",
+    value: "Personal Project",
+    icon: "fa-solid fa-building",
+  },
 
-    version: "1.0",
+  {
+    label: "Platform",
+    value: "Web",
+    icon: "fa-solid fa-desktop",
+  },
 
-    lastUpdated: "July 2026",
+  {
+    label: "Version",
+    value: "1.0",
+    icon: "fa-solid fa-code-branch",
+  },
 
-    platform: "Web",
+  {
+    label: "Last Updated",
+    value: "July 2026",
+    icon: "fa-solid fa-rotate",
+  },
+],
+
   },
 
 
@@ -377,22 +449,57 @@ technologies: [
 
     showOnHome: true,
 
-    year: 2025,
-
-    duration: "3 Weeks",
-
-    status: "In Progress",
-
-    role: "Frontend Developer",
-
-    client: "Personal Project", // company, owner name
-
-    version: "1.0",
-
-    lastUpdated: "July 2026",
-
-    platform: "Web",
+    projectInformation: [
+  {
+    label: "Year",
+    value: "2025",
+    icon: "fa-regular fa-calendar",
   },
+
+  {
+    label: "Duration",
+    value: "3 Weeks",
+    icon: "fa-regular fa-clock",
+  },
+
+  {
+    label: "Status",
+    value: "In Progress",
+    icon: "fa-solid fa-circle-check",
+  },
+
+  {
+    label: "Role",
+    value: "Frontend Developer",
+    icon: "fa-solid fa-user",
+  },
+
+  {
+    label: "Client",
+    value: "Personal Project",
+    icon: "fa-solid fa-building",
+  },
+
+  {
+    label: "Platform",
+    value: "Web",
+    icon: "fa-solid fa-desktop",
+  },
+
+  {
+    label: "Version",
+    value: "1.0",
+    icon: "fa-solid fa-code-branch",
+  },
+
+  {
+    label: "Last Updated",
+    value: "July 2026",
+    icon: "fa-solid fa-rotate",
+  },
+],
+
+},
 
   // more objects here!
 ];
