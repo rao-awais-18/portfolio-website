@@ -1010,4 +1010,70 @@ footer{
 
 }
 
+
+/*====================================================
+                SKILL-DETAILS PAGE
+====================================================*/
+/*====================================================
+             HERO
+====================================================*/
+
+.skill-hero-content{
+
+    grid-template-columns:1fr 320px;
+
+    gap:50px;
+
+}
+
+.hero-icon{
+
+    width:260px;
+
+    height:260px;
+
+}
+
+.hero-icon i{
+
+    font-size:7rem;
+
+}
+
+/*====================================================
+                SKILL OVERVIEW
+====================================================*/
+/* NO CHANGE NEEDED */
+
+/* ==========================
+   Skill Technologies
+========================== */
+
+.technology-stack{
+    gap:16px;
+}
+
+.technology-chip{
+    padding:13px 20px;
+}
+
+.technology-chip span{
+    font-size:.95rem;
+}
+
+/* ==========================
+   Skill Capabilities
+========================== */
+
+.capability-item{
+    gap:28px;
+}
+
+
+
+
+
+
+
+
 }

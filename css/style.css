@@ -4669,7 +4669,8 @@ font-size:clamp(2rem,4vw,3rem);
 
 }
 
-/* skill-overview-header */
+/* COMMON-SECTION-HEADER*/
+
 .skill-dp-header{
 
     max-width:900px;
@@ -4810,47 +4811,6 @@ font-size:clamp(2rem,4vw,3rem);
 
 }
 
-.technology-list li:last-child {
-  border-bottom: none;
-}
-
-
-
-.technology-list span {
-  background-image: linear-gradient(var(--primary), var(--primary));
-
-  background-repeat: no-repeat;
-
-  background-position: left bottom;
-
-  background-size: 0% 2px;
-
-  transition: var(--transition);
-}
-
-.technology-list li:hover span {
-  background-size: 100% 2px;
-
-  color: var(--primary);
-}
-
-.section-header {
-  margin-bottom: var(--space-xl);
-}
-
-.section-header p {
-  margin-top: var(--space-md);
-  color: var(--muted);
-}
-
-.technology-list li:hover {
-  padding-left: 6px;
-}
-
-.technology-list li:hover i {
-  transform: translateX(5px);
-}
-
 /* ==========================
    Capabilities
 ========================== */
@@ -4985,20 +4945,12 @@ font-size:clamp(2rem,4vw,3rem);
   font-size: 1.05rem;
 }
 
-.learning-journey {
-  margin-bottom: var(--space-md);
-}
-
-.learning-reflection i {
-  transition: var(--transition);
-}
-
 /* ==========================
    Skill Navigation
 ========================== */
 
 .skill-navigation {
-  padding: 0 0 var(--space-xxl);
+  padding: var(--space-xxl);
 }
 
 .navigation-buttons {

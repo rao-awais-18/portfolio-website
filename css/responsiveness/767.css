@@ -1717,4 +1717,135 @@ footer{
 
 
 
+/*====================================================
+                SKILL-DETAILS PAGE
+====================================================*/
+/*====================================
+             HERO
+=====================================*/
+
+.info-grid{
+
+    gap:16px;
+
+}
+
+.info-card{
+
+    padding:22px;
+
+}
+
+.info-card h3{
+
+    font-size:2rem;
+
+}
+
+.hero-icon{
+
+    width:210px;
+
+    height:210px;
+
+}
+
+.hero-icon i{
+
+    font-size:5rem;
+
+}
+
+/*====================================================
+                SKILL OVERVIEW
+====================================================*/
+
+.skill-overview {
+  padding-top: var(--space-xl);
+}
+
+.skill-dp-header{
+    margin-bottom:38px;
+}
+
+.overview-list li{
+    gap:14px;
+    padding:16px 0;
+}
+
+.overview-list span{
+    font-size:.95rem;
+    line-height:1.75;
+}
+
+/* ==========================
+   Skill Technologies
+========================== */
+
+.skill-technologies{
+    padding-top: var(--space-xl);
+}
+
+.technology-stack{
+    gap:12px;
+}
+
+.technology-chip{
+    padding:11px 16px;
+}
+
+.technology-chip span{
+    font-size:.92rem;
+}
+
+
+/* ==========================
+   Skill Capabilities
+========================== */
+
+.capability-item{
+    gap:18px;
+    padding:24px 0;
+}
+
+.capability-number{
+    min-width:42px;
+    font-size:1.55rem;
+}
+
+.capability-content h3{
+    font-size:1.1rem;
+}
+
+.capability-content p{
+    font-size:.95rem;
+    line-height:1.75;
+}
+
+
+/* ==========================
+   Learning Journey
+========================== */
+
+.learning-reflection{
+
+    padding:26px;
+
+}
+
+.learning-reflection p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+.learning-reflection i{
+
+    font-size:1.35rem;
+
+}
+
+
 }
