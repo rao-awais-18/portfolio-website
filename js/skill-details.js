@@ -167,9 +167,9 @@ function renderOverview() {
 
     skillOverview.innerHTML = `
 
-<div class="skill-overview-header">
+<div class="skill-dp-header">
 
-    <span class="skill-overview-title">
+    <span class="skill-dp-section-title">
 
         Overview
 
@@ -181,7 +181,7 @@ function renderOverview() {
 
     </h2>
 
-    <p class="overview-description">
+    <p class="skill-dp-section-description">
 
         ${selectedSkill.Longdescription}
 
@@ -227,9 +227,9 @@ function renderTechnologies() {
 
     skillTechnologies.innerHTML = `
 
-        <div class="skill-overview-header">
+        <div class="skill-dp-header">
 
-            <span class="skill-overview-title">
+            <span class="skill-dp-section-title">
 
                 Technologies
 
@@ -241,7 +241,7 @@ function renderTechnologies() {
 
             </h2>
 
-            <p class="overview-description">
+            <p class="skill-dp-section-description">
 
                 These are the core technologies, concepts, and best practices I use while working with ${selectedSkill.name}.
 
@@ -303,9 +303,9 @@ function renderCapabilities() {
 
     skillCapabilities.innerHTML = `
 
-        <div class="skill-overview-header">
+        <div class="skill-dp-header">
 
-            <span class="skill-overview-title">
+            <span class="skill-dp-section-title">
 
                 Capabilities
 
@@ -317,7 +317,7 @@ function renderCapabilities() {
 
             </h2>
 
-            <p class="overview-description">
+            <p class="skill-dp-section-description">
 
                 Key development capabilities gained through hands-on experience with ${selectedSkill.name}.
 
@@ -343,21 +343,21 @@ function renderLearning() {
 
     skillLearning.innerHTML = `
 
-        <div class="section-header">
+        <div class="skill-dp-header">
 
-            <span class="section-tag">
-
-                <h2>Learning Journey</h2>
-
-            </span>
-
-            <h3>
+            <span class="skill-dp-section-title">
 
                 Reflection
 
-            </h3>
+            </span>
 
-            <p>
+            <h2>
+
+               Learning Journey 
+
+            </h2>
+
+            <p class="skill-dp-section-description">
 
                 Every technology teaches something beyond syntax. Here's what I learned while working with ${selectedSkill.name}.
 

@@ -4551,12 +4551,6 @@ font-size:clamp(2rem,4vw,3rem);
   padding: var(--space-sm);
 }
 
-/* .overview-description {
-  color: var(--muted);
-  line-height: 1.7;
-  padding-top: var(--space-sm);
-} */
-
 .overview-content {
   max-width: 900px;
 
@@ -4676,7 +4670,7 @@ font-size:clamp(2rem,4vw,3rem);
 }
 
 /* skill-overview-header */
-.skill-overview-header{
+.skill-dp-header{
 
     max-width:900px;
 
@@ -4684,7 +4678,7 @@ font-size:clamp(2rem,4vw,3rem);
 
 }
 
-.skill-overview-title{
+.skill-dp-section-title{
 
     display:inline-block;
 
@@ -4702,7 +4696,7 @@ font-size:clamp(2rem,4vw,3rem);
 
 }
 
-.skill-overview-header h2{
+.skill-dp-header h2{
 
     font-size:clamp(2rem,4vw,3rem);
 
@@ -4712,7 +4706,7 @@ font-size:clamp(2rem,4vw,3rem);
 
 }
 
-.overview-description{
+.skill-dp-section-description{
 
     max-width:760px;
 
@@ -4913,7 +4907,7 @@ font-size:clamp(2rem,4vw,3rem);
 }
 
 .capability-content p {
-  color: var(--text-muted);
+  color: var(--muted);
 
   line-height: 1.8;
 }
@@ -4929,6 +4923,12 @@ font-size:clamp(2rem,4vw,3rem);
 /* ==========================
    Learning Journey
 ========================== */
+
+.learning-journey{
+
+  padding-top: var(--space-xxl);
+
+}
 
 .skill-learning {
   padding: var(--space-xxl) 0;
