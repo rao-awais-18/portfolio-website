@@ -1532,8 +1532,87 @@ footer{
 
 }
 
+/*==================================
+        PROJECT OVERVIEW
+==================================*/
 
+.project-overview{
 
+    padding:25px 0;
+
+}
+
+.project-overview-description{
+
+    padding:30px 24px;
+
+}
+
+.project-overview-description p{
+
+    font-size:.98rem;
+
+    line-height:1.85;
+
+}
+
+.project-overview-description::before{
+
+    font-size:3.5rem;
+
+    left:20px;
+
+}
+
+.project-overview-divider{
+
+    margin-bottom:24px;
+
+}
+
+/*==================================
+        PROJECT GALLERY
+==================================*/
+/* NO CHANGE REQUIRED */
+
+/*==================================
+        TECHNOLOGIES
+==================================*/
+.project-technologies{
+
+    padding:25px 0;
+
+}
+
+.pdp-technology-item{
+
+    gap:16px;
+
+    padding:20px 0;
+
+}
+
+.pdp-technology-icon{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:1.3rem;
+
+}
+
+.pdp-technology-info h3{
+
+    font-size:1rem;
+
+}
+
+.pdp-technology-role{
+
+    font-size:.82rem;
+
+}
 
 
 }
