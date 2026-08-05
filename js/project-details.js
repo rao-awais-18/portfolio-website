@@ -547,7 +547,7 @@ function renderProjectInformation() {
 renderProjectInformation();
 
 
-
+// -------------------- Render Navigation --------------------
 function renderProjectNavigation() {
   const navigation = document.getElementById("project-navigation");
 

@@ -1614,5 +1614,107 @@ footer{
 
 }
 
+/*==================================
+        FEATURES
+==================================*/
+.project-features{
+
+    padding:25px 0;
+
+}
+
+.pdp-feature-item{
+
+    gap:16px;
+
+    padding:20px 0;
+
+}
+
+.pdp-feature-icon{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:1.2rem;
+
+}
+
+.pdp-feature-content h3{
+
+    font-size:1rem;
+
+}
+
+.pdp-feature-content p{
+
+    font-size:.93rem;
+
+    line-height:1.75;
+
+}
+
+/*==================================
+        IINFORMATION
+==================================*/
+.project-information{
+
+    padding:25px 0;
+
+}
+
+.pdp-info-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.pdp-info-item{
+
+    padding:20px;
+
+}
+
+.pdp-info-icon{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:1.2rem;
+
+}
+
+.pdp-info-value{
+
+    font-size:.95rem;
+
+}
+
+/*==================================
+        PROJECT CTA
+==================================*/
+.project-cta{
+
+    padding:80px 0;
+
+}
+
+.project-cta-content{
+
+    padding:55px 28px;
+
+}
+
+.project-cta-buttons{
+
+    gap:15px;
+
+}
+
+
 
 }

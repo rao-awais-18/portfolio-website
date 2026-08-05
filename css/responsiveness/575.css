@@ -1736,6 +1736,193 @@ align-items:stretch;
 
 }
 
+/*==================================
+        FEATURES
+==================================*/
+.project-features{
+
+    padding:20px 0;
+
+}
+
+.pdp-feature-item{
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:18px 0;
+
+}
+
+.pdp-feature-icon{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:1.05rem;
+
+    flex-shrink:0;
+
+}
+
+.pdp-feature-content h3{
+
+    font-size:.95rem;
+
+}
+
+.pdp-feature-content p{
+
+    font-size:.9rem;
+
+    line-height:1.7;
+
+}
+
+/*==================================
+        IINFORMATION
+==================================*/
+.project-information{
+
+    padding:20px 0;
+
+}
+
+.pdp-info-item{
+
+    padding:18px;
+
+    gap:14px;
+
+}
+
+.pdp-info-icon{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:1.05rem;
+
+}
+
+.pdp-info-label{
+
+    font-size:.76rem;
+
+}
+
+.pdp-info-value{
+
+    font-size:.9rem;
+
+    line-height:1.6;
+
+}
+
+
+/*==================================
+        NAVIGATIAON
+==================================*/
+
+
+.project-navigation{
+
+    padding:20px 0;
+
+}
+
+.project-navigation-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:26px;
+
+    margin-top:30px;
+
+    padding-top:24px;
+
+}
+
+.project-nav{
+
+    width:100%;
+
+}
+
+.previous-project{
+
+    align-items:center;
+
+    text-align:left;
+
+}
+
+.next-project{
+
+    justify-self:start;
+
+    align-items:center;
+
+    text-align:left;
+
+}
+
+.next-project .tech-stack{
+
+    justify-content:flex-start;
+
+}
+
+.project-nav small{
+
+    font-size:.82rem;
+
+    margin-bottom:10px;
+
+}
+
+.project-nav .tech-badge{
+
+    max-width:100%;
+
+    white-space:normal;
+
+    word-break:break-word;
+
+}
+
+/*==================================
+        PROJECT CTA
+==================================*/
+.project-cta{
+
+    padding:70px 0;
+
+}
+
+.project-cta-content{
+
+    padding:45px 22px;
+
+}
+
+.project-cta-buttons{
+
+    flex-direction:column;
+
+}
+
+.project-cta-buttons .btn{
+
+    width:100%;
+
+    max-width:320px;
+
+}
+
 
 
 }

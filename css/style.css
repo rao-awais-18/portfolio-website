@@ -2873,7 +2873,6 @@ font-size:clamp(2rem,4vw,3rem);
   gap: 18px;
 }
 
-/*------------------------------------- project overview -------------------------------------- */
 /* resuable card */
 .glass-card {
   background: var(--card-bg);
@@ -3767,28 +3766,107 @@ font-size:clamp(2rem,4vw,3rem);
   padding: 100px 0;
 }
 
-.project-cta-content {
-  /* max-width: 850px; */
+.project-cta-content{
 
-  margin: auto;
+    position:relative;
 
-  text-align: center;
+    overflow:hidden;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:70px clamp(28px,4vw,70px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius-lg);
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+    isolation:isolate;
+
 }
 
-.project-cta-content h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+.project-cta-content::before{
 
-  margin-bottom: 20px;
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(56,189,248,.16),
+        transparent 55%),
+
+        radial-gradient(circle at bottom right,
+        rgba(255,255,255,.04),
+        transparent 60%);
+
+    pointer-events:none;
+
+    z-index:-1;
+
 }
 
-.project-cta-content p {
-  max-width: 650px;
+.project-cta-content::after{
 
-  margin: 0 auto 40px;
+    content:"";
 
-  color: var(--text-muted);
+    position:absolute;
 
-  line-height: 1.8;
+    left:50%;
+
+    top:-140px;
+
+    width:340px;
+
+    height:340px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:rgba(56,189,248,.08);
+
+    filter:blur(90px);
+
+    z-index:-2;
+
+}
+
+.project-cta-content h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+
+}
+
+.project-cta-content p{
+
+    max-width:700px;
+
+    margin:0 auto 42px;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+.project-cta-content:hover{
+
+    border-color:rgba(56,189,248,.25);
+
+    box-shadow:0 0 45px rgba(56,189,248,.10);
+
 }
 
 .project-cta-buttons {
