@@ -1500,6 +1500,40 @@ footer{
 
 }
 
+/*====================================================
+                PROJECT-DETAILS PAGE
+====================================================*/
+
+/*==================================
+        PROJECT HERO
+==================================*/
+
+.project-hero{
+
+    padding:60px 0;
+
+}
+
+.project-title{
+
+    margin-bottom:16px;
+
+}
+
+.project-hero-content p{
+
+    margin:18px 0 28px;
+
+}
+
+.hero-buttons{
+
+    gap:14px;
+
+}
+
+
+
 
 
 }

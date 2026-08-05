@@ -1448,4 +1448,62 @@ footer{
 
 }
 
+/*====================================================
+                PROJECT-DETAILS PAGE
+====================================================*/
+
+/*==================================
+        PROJECT HERO
+==================================*/
+
+.project-hero{
+
+    padding-top: 0;
+
+}
+
+.project-hero-content h1 {
+  margin-top: 0;
+}
+
+.project-hero-wrapper{
+
+    gap:clamp(60px,7vw,140px);
+
+    align-items:center;
+
+}
+
+.project-hero-content{
+
+    flex:1;
+
+    max-width:none;
+
+}
+
+
+.project-hero-image{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.project-hero-image img{
+
+    width:min(100%,720px);
+
+    max-width:none;
+
+}
+
+
+/*====================================================
+                SKILL-DETAILS PAGE
+====================================================*/
+
+
+
 }

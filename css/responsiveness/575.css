@@ -1562,4 +1562,45 @@ align-items:stretch;
 
 }
 
+/*====================================================
+                PROJECT-DETAILS PAGE
+====================================================*/
+
+/*==================================
+        PROJECT HERO
+==================================*/
+
+.project-hero{
+
+    padding:50px 0;
+
+}
+
+.project-hero-wrapper{
+
+    gap:0px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+
+}
+
+.project-hero-image img{
+
+    border-radius:20px;
+
+}
+
+
+
+
 }

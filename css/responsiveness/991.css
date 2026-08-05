@@ -1333,4 +1333,78 @@ footer{
     margin-top: 0;
 }
 
+
+/*====================================================
+                PROJECT-DETAILS PAGE
+====================================================*/
+
+/*==================================
+        PROJECT HERO
+==================================*/
+
+.project-hero{
+
+    padding:70px 0;
+
+}
+
+.project-hero-wrapper{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+    gap:0px;
+
+}
+
+.project-hero-content{
+
+    max-width:720px;
+    padding-top: 0;
+
+}
+
+.project-category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:0 auto 12px;
+
+}
+
+.project-hero-image{
+
+    justify-content:center;
+
+}
+
+.project-hero-image img{
+
+    max-width:650px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.project-badges{
+
+    justify-content:center;
+
+}
+
+
+
+
+
 }
