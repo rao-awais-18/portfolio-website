@@ -47,6 +47,7 @@ const skillHero = document.getElementById("skill-hero");
 // ==========================
 
 function renderHero() {
+    document.title = `${selectedSkill.name} | Skills | Rao Awais`;
 
     const totalTechnologies = selectedSkill.technologies.length;
 

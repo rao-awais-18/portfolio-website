@@ -155,7 +155,7 @@ function createTechnologyBadges(technologies) {
 
   technologies.slice(0, maxVisible).forEach((tech) => {
     techHTML += `
-            <span>${tech}</span>
+            <span>${tech.name}</span>
         `;
   });
 

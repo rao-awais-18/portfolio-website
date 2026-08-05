@@ -174,7 +174,8 @@ footer{
 
     margin-inline:auto;
 
-   padding-inline:72px;
+   padding-inline:72px ;
+   /* padding-left: 28px; */
 
     gap:clamp(40px,3vw,80px);
 
@@ -356,6 +357,7 @@ footer{
 .projects-preview{
 
     padding-block:clamp(90px,7vw,140px);
+    padding-top: var(--space-lg);
 
 }
 

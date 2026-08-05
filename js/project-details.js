@@ -17,6 +17,7 @@ const { detailedDescription, overviewHeading } = currentProject;
 // ================================
 
 function renderProjectHero() {
+  document.title = `${currentProject.title} | Projects | Rao Awais`;
   const hero = document.getElementById("project-hero");
 
   if (!hero) {
