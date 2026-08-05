@@ -60,24 +60,27 @@ function renderHero() {
 
             <div class="hero-left">
 
-                <span class="section-tag">
+<div class="skill-details-page-section-header">
 
-                    <h2>${selectedSkill.category}</h2>
+    <span class="skill-details-page-section-label">
 
-                </span>
+        ${selectedSkill.category}
 
-                <h1>
+    </span>
 
-                    ${selectedSkill.name}
+    <h1 class="skill-hero-title">
 
-                </h1>
+        ${selectedSkill.name}
 
-                <p>
+    </h1>
 
-                    ${selectedSkill.description}
+    <p>
 
-                </p>
+        ${selectedSkill.description}
 
+    </p>
+
+</div>
                 <div class="info-grid">
 
                     <div class="info-card">
@@ -164,27 +167,27 @@ function renderOverview() {
 
     skillOverview.innerHTML = `
 
-        <div class="section-header">
+<div class="skill-overview-header">
 
-            <span class="section-tag">
+    <span class="skill-overview-title">
 
-                <h2>Overview</h2>
+        Overview
 
-            </span>
+    </span>
 
-            <h3>
+    <h2>
 
-                Why ${selectedSkill.name}?
+        Why ${selectedSkill.name} Matters
 
-            </h3>
+    </h2>
 
-            <p class="overview-description">
+    <p class="overview-description">
 
-                ${selectedSkill.Longdescription}
+        ${selectedSkill.Longdescription}
 
-            </p>
+    </p>
 
-        </div>
+</div>
 
         <div class="overview-content">
 
@@ -210,37 +213,35 @@ function renderTechnologies() {
 
     selectedSkill.technologies.forEach(function (technology) {
 
-        technologiesHTML += `
+       technologiesHTML += `
 
-            <li>
+<div class="technology-chip">
 
-                <i class="fa-solid fa-code"></i>
+    <span>${technology}</span>
 
-                <span>${technology}</span>
+</div>
 
-            </li>
-
-        `;
+`;
 
     });
 
     skillTechnologies.innerHTML = `
 
-        <div class="section-header">
+        <div class="skill-overview-header">
 
-            <span class="section-tag">
+            <span class="skill-overview-title">
 
-                <h2>Technologies</h2>
+                Technologies
 
             </span>
 
-            <h3>
+            <h2>
 
                 Technologies & Concepts
 
-            </h3>
+            </h2>
 
-            <p>
+            <p class="overview-description">
 
                 These are the core technologies, concepts, and best practices I use while working with ${selectedSkill.name}.
 
@@ -248,7 +249,7 @@ function renderTechnologies() {
 
         </div>
 
-        <ul class="technology-list">
+        <ul class="technology-stack">
 
             ${technologiesHTML}
 
@@ -302,21 +303,21 @@ function renderCapabilities() {
 
     skillCapabilities.innerHTML = `
 
-        <div class="section-header">
+        <div class="skill-overview-header">
 
-            <span class="section-tag">
+            <span class="skill-overview-title">
 
-                <h2>Capabilities</h2>
+                Capabilities
 
             </span>
 
-            <h3>
+            <h2>
 
                 Core Capabilities I Have
 
-            </h3>
+            </h2>
 
-            <p>
+            <p class="overview-description">
 
                 Key development capabilities gained through hands-on experience with ${selectedSkill.name}.
 

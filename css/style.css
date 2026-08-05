@@ -4318,8 +4318,71 @@ font-size:clamp(2rem,4vw,3rem);
 }
 
 /* ==========================
-   Skill Details Page Styling
+   Skill Details Page
 ========================== */
+
+/*====================================
+    SKILL DETAILS GLOBAL SECTIONS
+====================================*/
+
+.skill-details-page-section-header{
+    max-width:900px;
+
+    margin-bottom:60px;
+}
+
+.skill-details-page-section-label{
+    display:inline-block;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.skill-details-page-section-header h2{
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+}
+
+.skill-details-page-section-header p{
+    max-width:760px;
+
+    color:var(--muted);
+
+    line-height:1.9;
+}
+
+.skill-details-page-section-header::after{
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:3px;
+
+    margin-top:28px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        to right,
+        var(--primary),
+        transparent
+    );
+}
+
 
 /* ==========================
    Skill Hero
@@ -4333,6 +4396,13 @@ font-size:clamp(2rem,4vw,3rem);
   gap: clamp(2rem, 6vw, 6rem);
 
   align-items: center;
+}
+
+.skill-hero-title{
+
+    font-size:clamp(2.4rem,5vw,4rem);
+
+    line-height:1.15;
 }
 
 .hero-left p {
@@ -4481,11 +4551,11 @@ font-size:clamp(2rem,4vw,3rem);
   padding: var(--space-sm);
 }
 
-.overview-description {
+/* .overview-description {
   color: var(--muted);
   line-height: 1.7;
   padding-top: var(--space-sm);
-}
+} */
 
 .overview-content {
   max-width: 900px;
@@ -4493,101 +4563,264 @@ font-size:clamp(2rem,4vw,3rem);
   margin: auto;
 }
 
-.overview-list {
-  list-style: none;
+.overview-list{
 
-  padding: 0;
+    list-style:none;
 
-  margin-top: var(--space-xl);
+    padding:0;
+
+    margin:0;
+
 }
 
-.overview-list li {
-  display: flex;
+.overview-list li{
 
-  align-items: center;
+    display:flex;
 
-  gap: var(--space-md);
+    align-items:center;
 
-  padding: var(--space-md) 0;
+    gap:18px;
 
-  border-bottom: 1px solid var(--border);
+    padding:18px 0;
 
-  transition: var(--transition);
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    transition:var(--transition);
+
+    position:relative;
+
 }
 
-.overview-list i {
-  color: var(--primary);
+.overview-list li:last-child{
 
-  font-size: 0.9rem;
+    border-bottom:none;
 
-  transition: var(--transition);
 }
 
-.overview-list li:hover i {
-  transform: translateX(4px);
+.overview-list i{
+
+    font-size:.8rem;
+
+    color:var(--primary);
+
+    width:18px;
+
+    transition:var(--transition);
+
 }
 
-.overview-list span {
-  line-height: 1.8;
+.overview-list span{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    transition:var(--transition);
+
 }
 
-.overview-list li {
-  transition: var(--transition);
+.overview-list li::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    opacity:0;
+
+    transform:scale(.5);
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:0 0 12px rgba(56,189,248,.45);
+
+    transition:var(--transition);
+
 }
 
-.overview-list li:hover {
-  padding-left: 6px;
+.overview-list li:hover{
 
-  border-color: var(--primary);
+    padding-left:8px;
+
+    border-color:rgba(56,189,248,.25);
+
 }
 
-.overview-list li:last-child {
-  border-bottom: none;
+.overview-list li:hover i{
+
+    transform:scale(1.25);
+
+    text-shadow:0 0 12px rgba(56,189,248,.45);
+
 }
+
+.overview-list li:hover span{
+
+    color:#fff;
+
+}
+
+.overview-list li:hover::after{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* skill-overview-header */
+.skill-overview-header{
+
+    max-width:900px;
+
+    margin-bottom:55px;
+
+}
+
+.skill-overview-title{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.skill-overview-header h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    line-height:1.2;
+
+    margin-bottom:22px;
+
+}
+
+.overview-description{
+
+    max-width:760px;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+
 
 /* ==========================
    Technologies
 ========================== */
 
-.technology-list {
-  list-style: none;
 
-  padding: 0;
-
-  margin: var(--space-xl) 0 0;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
-  gap: var(--space-lg) var(--space-xxl);
+.skill-technologies {
+  padding-top: var(--space-xxl);
 }
 
-.technology-list li {
-  display: flex;
 
-  align-items: center;
+.technology-stack{
 
-  gap: var(--space-md);
+    display:flex;
 
-  padding: var(--space-sm) 0;
+    flex-wrap:wrap;
 
-  border-bottom: 1px solid var(--border);
+    gap:18px;
 
-  transition: var(--transition);
+}
+
+.technology-chip{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.technology-chip::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    margin-right:12px;
+
+    transition:var(--transition);
+
+}
+
+.technology-chip span{
+
+    color:var(--muted);
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.technology-chip:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(56,189,248,.25);
+
+    box-shadow:0 0 18px rgba(56,189,248,.08);
+
+}
+
+.technology-chip:hover span{
+
+    color:#fff;
+
+}
+
+.technology-chip:hover::before{
+
+    box-shadow:0 0 12px rgba(56,189,248,.5);
+
+    transform:scale(1.25);
+
 }
 
 .technology-list li:last-child {
   border-bottom: none;
 }
 
-.technology-list i {
-  color: var(--primary);
 
-  font-size: 0.9rem;
-
-  transition: var(--transition);
-}
 
 .technology-list span {
   background-image: linear-gradient(var(--primary), var(--primary));
@@ -4627,6 +4860,11 @@ font-size:clamp(2rem,4vw,3rem);
 /* ==========================
    Capabilities
 ========================== */
+
+
+.skill-capabilities {
+  padding-top: var(--space-xxl);
+}
 
 .capability-list {
   display: flex;
