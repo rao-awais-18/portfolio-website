@@ -64,7 +64,7 @@ function renderProjectHero() {
 
            
 
-            <h1 class = "project-title">
+            <h1 class = "project-title gradient-text">
 
                 ${title}
 
@@ -144,7 +144,7 @@ function renderOverview() {
             PROJECT OVERVIEW
         </span>
 
-       <h2>
+       <h2 class="gradient-text">
       ${overviewHeading}
        </h2>
 
@@ -213,7 +213,7 @@ function renderGallery() {
         VISUAL SHOWCASE
     </span>
 
-    <h2>
+    <h2 class="gradient-text">
         Project Gallery
     </h2>
 
@@ -362,7 +362,6 @@ function renderTechnologies() {
   let cards = "";
 
   currentProject.technologies.forEach(function (technology) {
-
     cards += `
 
 <div class="pdp-technology-item">
@@ -388,7 +387,7 @@ function renderTechnologies() {
         TECH STACK
     </span>
 
-    <h2 class="project-details-page-section-title">
+    <h2 class="project-details-page-section-title gradient-text">
         Technologies Used
     </h2>
      <p class="project-details-page-section-description">
@@ -445,7 +444,7 @@ function renderFeatures() {
         FEATURES
       </span>
 
-      <h2>
+      <h2 class="gradient-text">
         What Makes This Project Stand Out
       </h2>
 
@@ -468,16 +467,14 @@ renderFeatures();
 
 // -------------------- render Project Information --------------------
 function renderProjectInformation() {
+  const informationContainer = document.getElementById("project-information");
 
-    const informationContainer=document.getElementById("project-information");
+  if (!informationContainer) return;
 
-    if(!informationContainer) return;
+  let rows = "";
 
-    let rows="";
-
-    currentProject.projectInformation.forEach(function(info){
-
-        rows += `
+  currentProject.projectInformation.forEach(function (info) {
+    rows += `
 
 <article class="pdp-info-row">
 
@@ -508,10 +505,9 @@ function renderProjectInformation() {
 </article>
 
 `;
+  });
 
-    });
-
-    informationContainer.innerHTML=`
+  informationContainer.innerHTML = `
 
         <div class="project-details-page-section-header">
 
@@ -521,7 +517,7 @@ function renderProjectInformation() {
 
             </span>
 
-            <h2>
+            <h2 class="gradient-text">
 
                 Everything About This Project
 
@@ -542,11 +538,9 @@ function renderProjectInformation() {
         </div>
 
     `;
-
 }
 
 renderProjectInformation();
-
 
 // -------------------- Render Navigation --------------------
 function renderProjectNavigation() {
@@ -687,7 +681,7 @@ function renderProjectCTA() {
 
         <div class="project-cta-content">
 
-            <h2>
+            <h2 class="gradient-text">
 
     Let's Build Something Great Together
 
@@ -713,5 +707,3 @@ function renderProjectCTA() {
 }
 
 renderProjectCTA();
-
-//console.log(currentProject);

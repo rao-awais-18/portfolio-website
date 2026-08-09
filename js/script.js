@@ -78,7 +78,7 @@ function createSkillCard(skill) {
 
                 <i class="${skill.icon}"></i>
 
-                <h3>${skill.name}</h3>
+                <h3 class="gradient-text">${skill.name}</h3>
 
                 <p>${skill.description}</p>
 
@@ -203,7 +203,7 @@ function createProjectCard(project) {
 
             <div class="project-info">
 
-                <h3>
+                <h3 class="gradient-text">
 
                     ${project.title}
 

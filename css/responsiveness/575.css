@@ -84,7 +84,7 @@
                         FOOTER
 ====================================================*/
 
-footer{
+.footer{
 
     padding:48px 0 20px;
 
@@ -191,7 +191,7 @@ footer{
 
     min-height:auto;
 
-    padding:40px 20px 60px;
+    padding:0px 20px 60px;
 
     gap:40px;
 
@@ -336,7 +336,7 @@ footer{
 }
 
 /*====================================================
-                        SKILLS-PREVIEW-SECTION
+            SKILLS-PREVIEW-SECTION
 ====================================================*/
 
 .skills-preview{
@@ -388,6 +388,12 @@ footer{
     width:95%;
 
     justify-content:center;
+}
+
+@media(max-width:350px){
+    .skill-overlay span{
+        display: none;
+    }
 }
 
 
@@ -549,7 +555,7 @@ footer{
 
     .about-hero{
 
-        padding:40px 0 0;
+        padding:0px 0 0;
 
     }
 
@@ -1170,7 +1176,7 @@ footer{
 
 .projects-hero{
 
-    padding-top:20px;
+    padding-top:0px;
 
 }
 
@@ -1572,7 +1578,7 @@ align-items:stretch;
 
 .project-hero{
 
-    padding:50px 0;
+    padding:10px 0 20px;
 
 }
 
@@ -2065,5 +2071,64 @@ align-items:stretch;
 }
 
 
+
+}
+
+/* =================================
+   Ultra Small Screens
+================================= */
+
+/* @media (max-width: 345px) {
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-content > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-content h1,
+  .hero-content p,
+  .hero-content .hero-buttons {
+    max-width: 100%;
+  }
+
+} */
+
+@media (max-width: 345px) {
+
+  .hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+/* ================================================
+            about page cta fix
+==================================================*/
+@media (max-width: 360px) {
+
+  .about-cta h2 {
+    font-size: 2rem;
+    line-height: 1.15;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
 
 }

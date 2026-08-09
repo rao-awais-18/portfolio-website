@@ -72,7 +72,7 @@ const skills = [
 
     ],
 
-    showOnHome: true
+    showOnHome: false
 },
 
 // object # 02
@@ -189,7 +189,7 @@ Longdescription: "JavaScript is a versatile programming language that enables de
 
     ],
 
-    showOnHome: false
+    showOnHome: true
 },
 
 // object # 04
@@ -311,9 +311,9 @@ Longdescription: "Bootstrap is a popular front-end framework that simplifies the
 
 // object # 06
 {
-    id: "github",
+    id: "java",
 
-    name: "Git & GitHub",
+    name: "Java Programming",
 
     icon: "fa-brands fa-github",
 
@@ -365,6 +365,82 @@ Longdescription: "Git and GitHub are essential tools for version control and col
 
     ],
 
-    showOnHome: true
+    showOnHome: false
 },
+
+  {
+    id: "html",
+
+    name: "HTML5",
+
+    icon: "fa-brands fa-html5",
+
+    category: "Frontend Development",
+
+    description: "The foundation of every modern website.",
+
+    Longdescription: "HTML5 is the latest version of the HyperText Markup Language, providing a robust foundation for building modern, semantic, and accessible websites.",
+
+    overview: [
+    "Semantic HTML Structure",
+    "SEO Friendly Markup",
+    "Accessibility Best Practices",
+    "Responsive Web Foundation"
+],
+
+    technologies: [
+
+        "Semantic HTML",
+
+        "Forms",
+
+        "Tables",
+
+        "Accessibility",
+
+        "SEO Basics"
+
+    ],
+
+    capabilities: [
+
+    {
+
+        title: "Semantic HTML",
+
+        description: "Write meaningful and well-structured HTML documents."
+
+    },
+
+    {
+
+        title: "Forms",
+
+        description: "Create accessible and user-friendly form interfaces."
+
+    },
+
+    {
+
+        title: "SEO Friendly",
+
+        description: "Structure pages for better search engine visibility."
+
+    }
+
+],
+
+    learning:
+        "HTML was my first step into web development. It taught me how every webpage is structured and laid the foundation for everything I learned afterward. Understanding semantic markup, accessibility, and clean document structure changed the way I approach frontend development.",
+
+    projects: [
+
+        "portfolio"
+
+    ],
+
+    showOnHome: false
+},
+
+
 ];

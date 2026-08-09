@@ -11,9 +11,7 @@ const skillId = urlParams.get("id");
 // ==========================
 
 const selectedSkill = skills.find(function (skill) {
-
-    return skill.id === skillId;
-
+  return skill.id === skillId;
 });
 
 // ==========================
@@ -21,8 +19,7 @@ const selectedSkill = skills.find(function (skill) {
 // ==========================
 
 if (!selectedSkill) {
-
-    document.body.innerHTML = `
+  document.body.innerHTML = `
 
         <h1>
 
@@ -32,8 +29,7 @@ if (!selectedSkill) {
 
     `;
 
-    throw new Error("Invalid Skill ID");
-
+  throw new Error("Invalid Skill ID");
 }
 
 // ==========================
@@ -47,15 +43,15 @@ const skillHero = document.getElementById("skill-hero");
 // ==========================
 
 function renderHero() {
-    document.title = `${selectedSkill.name} | Skills | Rao Awais`;
+  document.title = `${selectedSkill.name} | Skills | Rao Awais`;
 
-    const totalTechnologies = selectedSkill.technologies.length;
+  const totalTechnologies = selectedSkill.technologies.length;
 
-    const totalCapabilities = selectedSkill.capabilities.length;
+  const totalCapabilities = selectedSkill.capabilities.length;
 
-    const totalProjects = selectedSkill.projects.length;
+  const totalProjects = selectedSkill.projects.length;
 
-    skillHero.innerHTML = `
+  skillHero.innerHTML = `
 
         <div class="skill-hero-content">
 
@@ -69,7 +65,7 @@ function renderHero() {
 
     </span>
 
-    <h1 class="skill-hero-title">
+    <h1 class="skill-hero-title gradient-text">
 
         ${selectedSkill.name}
 
@@ -125,7 +121,6 @@ function renderHero() {
         </div>
 
     `;
-
 }
 
 // ==========================
@@ -147,12 +142,10 @@ const skillNavigation = document.getElementById("skill-navigation");
 // ==========================
 
 function renderOverview() {
+  let overviewItems = "";
 
-    let overviewItems = "";
-
-    selectedSkill.overview.forEach(function(item){
-
-        overviewItems += `
+  selectedSkill.overview.forEach(function (item) {
+    overviewItems += `
 
             <li>
 
@@ -163,10 +156,9 @@ function renderOverview() {
             </li>
 
         `;
+  });
 
-    });
-
-    skillOverview.innerHTML = `
+  skillOverview.innerHTML = `
 
 <div class="skill-dp-header">
 
@@ -176,7 +168,7 @@ function renderOverview() {
 
     </span>
 
-    <h2>
+    <h2 class="gradient-text">
 
         Why ${selectedSkill.name} Matters
 
@@ -201,7 +193,6 @@ function renderOverview() {
         </div>
 
     `;
-
 }
 
 // ==========================
@@ -209,12 +200,10 @@ function renderOverview() {
 // ==========================
 
 function renderTechnologies() {
+  let technologiesHTML = "";
 
-    let technologiesHTML = "";
-
-    selectedSkill.technologies.forEach(function (technology) {
-
-       technologiesHTML += `
+  selectedSkill.technologies.forEach(function (technology) {
+    technologiesHTML += `
 
 <div class="technology-chip">
 
@@ -223,10 +212,9 @@ function renderTechnologies() {
 </div>
 
 `;
+  });
 
-    });
-
-    skillTechnologies.innerHTML = `
+  skillTechnologies.innerHTML = `
 
         <div class="skill-dp-header">
 
@@ -236,7 +224,7 @@ function renderTechnologies() {
 
             </span>
 
-            <h2>
+            <h2 class="gradient-text">
 
                 Technologies & Concepts
 
@@ -257,7 +245,6 @@ function renderTechnologies() {
         </ul>
 
     `;
-
 }
 
 // ==========================
@@ -265,18 +252,16 @@ function renderTechnologies() {
 // ==========================
 
 function renderCapabilities() {
+  let capabilitiesHTML = "";
 
-    let capabilitiesHTML = "";
-
-    selectedSkill.capabilities.forEach(function(capability,index){
-
-        capabilitiesHTML += `
+  selectedSkill.capabilities.forEach(function (capability, index) {
+    capabilitiesHTML += `
 
             <div class="capability-item">
 
                 <div class="capability-number">
 
-                    ${(index+1).toString().padStart(2,"0")}
+                    ${(index + 1).toString().padStart(2, "0")}
 
                 </div>
 
@@ -299,10 +284,9 @@ function renderCapabilities() {
             </div>
 
         `;
+  });
 
-    });
-
-    skillCapabilities.innerHTML = `
+  skillCapabilities.innerHTML = `
 
         <div class="skill-dp-header">
 
@@ -312,7 +296,7 @@ function renderCapabilities() {
 
             </span>
 
-            <h2>
+            <h2 class="gradient-text">
 
                 Core Capabilities I Have
 
@@ -333,7 +317,6 @@ function renderCapabilities() {
         </div>
 
     `;
-
 }
 
 // ==========================
@@ -341,8 +324,7 @@ function renderCapabilities() {
 // ==========================
 
 function renderLearning() {
-
-    skillLearning.innerHTML = `
+  skillLearning.innerHTML = `
 
         <div class="skill-dp-header">
 
@@ -352,7 +334,7 @@ function renderLearning() {
 
             </span>
 
-            <h2>
+            <h2 class="gradient-text">
 
                Learning Journey 
 
@@ -379,7 +361,6 @@ function renderLearning() {
         </div>
 
     `;
-
 }
 
 // ==========================
@@ -387,82 +368,64 @@ function renderLearning() {
 // ==========================
 
 function renderNavigation() {
+  const currentIndex = skills.findIndex(function (skill) {
+    return skill.id === selectedSkill.id;
+  });
 
-    const currentIndex = skills.findIndex(function(skill){
+  const previousSkill = skills[currentIndex - 1];
 
-        return skill.id === selectedSkill.id;
+  const nextSkill = skills[currentIndex + 1];
 
-    });
-
-    const previousSkill = skills[currentIndex - 1];
-
-    const nextSkill = skills[currentIndex + 1];
-
-    skillNavigation.innerHTML = `
+  skillNavigation.innerHTML = `
 
         <div class="navigation-buttons">
 
             ${
-                previousSkill
-                ?
-
-                `<a
+              previousSkill
+                ? `<a
                     href="skill-details.html?id=${previousSkill.id}"
                     class="nav-btn"
                     title="Previous Skill"
                 >
 
-                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-left gradient-text"></i>
 
                 </a>`
-
-                :
-
-                ""
-
+                : ""
             }
 
             ${
-                nextSkill
-                ?
-
-                `<a
+              nextSkill
+                ? `<a
                     href="skill-details.html?id=${nextSkill.id}"
                     class="nav-btn"
                     title="Next Skill"
                 >
 
-                    <i class="fa-solid fa-chevron-right"></i>
+                    <i class="fa-solid fa-chevron-right gradient-text"></i>
 
                 </a>`
-
-                :
-
-                ""
-
+                : ""
             }
 
         </div>
 
     `;
-
 }
 
 // function calls
 function renderPage() {
+  renderHero();
 
-    renderHero();
+  renderOverview();
 
-    renderOverview();
+  renderTechnologies();
 
-    renderTechnologies();
+  renderCapabilities();
 
-    renderCapabilities();
+  renderLearning();
 
-    renderLearning();
-
-    renderNavigation();
-
+  renderNavigation();
 }
 
 renderPage();
