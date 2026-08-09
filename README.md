@@ -105,13 +105,13 @@ Portfolio/
 
 ## Desktop Experience
 
-<img src="images/github/desktop.jpeg" width="100%">
+<img src="images/github/desktop.png" width="100%">
 
 ---
 
 ## Tablet Experience
 
-<img src="images/github/tablet.png" width="100%">
+<img src="images/github/tablet-portrait.png" width="100%">
 
 ---
 
@@ -123,7 +123,7 @@ Portfolio/
 
 ## Project Details
 
-<img src="images/github/project-details.png" width="100%">
+<img src="images/github/project-details-page-view.png" width="100%">
 
 ---
 
