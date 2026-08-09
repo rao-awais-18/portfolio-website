@@ -4,14 +4,20 @@ function createNavbar() {
  <div class="container navbar-container">
 <div class="menu-overlay"></div>
  <a href = "index.html" class="logo">Rao Awais</a>
-        <button class="menu-toggle" aria-label="Toggle Menu">
-    <i class="fa-solid fa-bars"></i>
-</button>
+        
+        <button class="menu-toggle"
+           aria-label="Open navigation menu"
+           aria-expanded="false"
+           aria-controls="mobile-navigation">
+           <i class="fa-solid fa-bars"></i>
+        </button>
 
 <div class="nav-right">
 
-<button class="menu-close" aria-label="Close Menu">
-    <i class="fa-solid fa-xmark"></i>
+<button class="menu-close" 
+aria-label="Close Navigation Menu"
+aria-expanded="true">
+<i class="fa-solid fa-xmark" aria-hidden="true"></i>
 </button>
 
     <ul class="nav-links">
@@ -28,7 +34,7 @@ function createNavbar() {
 
     </ul>
 
-    <a href="resume/resume.pdf" class="cv-btn" download>
+    <a href="assets/resume/resume.pdf" class="cv-btn" download>
 
         Download CV
 
@@ -89,67 +95,48 @@ renderNavbar();
 
 setActiveNavLink();
 
+function enableMobileMenu() {
+  const toggle = document.querySelector(".menu-toggle");
 
+  const nav = document.querySelector(".nav-right");
 
-function enableMobileMenu(){
+  const overlay = document.querySelector(".menu-overlay");
 
-    const toggle=document.querySelector(".menu-toggle");
+  const closeBtn = document.querySelector(".menu-close");
 
-    const nav=document.querySelector(".nav-right");
+  closeBtn.addEventListener("click", closeMenu);
 
-    const overlay=document.querySelector(".menu-overlay");
+  if (!toggle || !nav || !overlay) return;
 
-    const closeBtn=document.querySelector(".menu-close");
+  function closeMenu() {
+    nav.classList.remove("active");
 
-    closeBtn.addEventListener("click",closeMenu);
+    overlay.classList.remove("active");
 
-    if(!toggle||!nav||!overlay) return;
+    document.body.classList.remove("menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
 
-    function closeMenu(){
+  toggle.addEventListener("click", function () {
+    const open = nav.classList.toggle("active");
 
-        nav.classList.remove("active");
+    overlay.classList.toggle("active", open);
 
-        overlay.classList.remove("active");
+    document.body.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", open);
+  });
 
-        document.body.classList.remove("menu-open");
+  overlay.addEventListener("click", closeMenu);
 
-        // const icon=toggle.querySelector("i");
+  document.querySelectorAll(".nav-links a,.cv-btn").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
 
-       
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeMenu();
     }
-
-    toggle.addEventListener("click",function(){
-
-        const open=nav.classList.toggle("active");
-
-        overlay.classList.toggle("active",open);
-
-        document.body.classList.toggle("menu-open",open);
-
-        // const icon=toggle.querySelector("i");
-
-        
-
-    });
-
-    overlay.addEventListener("click",closeMenu);
-
-    document.querySelectorAll(".nav-links a,.cv-btn").forEach(function(link){
-
-        link.addEventListener("click",closeMenu);
-
-    });
-
-    document.addEventListener("keydown",function(e){
-
-        if(e.key==="Escape"){
-
-            closeMenu();
-
-        }
-
-    });
-
+  });
 }
 
 enableMobileMenu();

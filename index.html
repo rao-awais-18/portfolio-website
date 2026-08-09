@@ -27,7 +27,7 @@
       <!-- hero section -->
       <section class="hero" id="home">
         <!-- Left Side -->
-        <div class="hero-bg">
+        <div class="hero-bg" aria-hidden="true">
           <div class="glow glow-1"></div>
 
           <div class="glow glow-2"></div>
@@ -38,9 +38,9 @@
           <h1>Hi, I'm <br /><span>Rao Awais</span></h1>
 
           <h2>
-            <span id="typing-text"></span>
+            <span id="typing-text" aria-live="polite"></span>
 
-            <span class="cursor">|</span>
+            <span class="cursor" aria-hidden="true">|</span>
           </h2>
           <p>
             I develop modern websites and mobile applications with clean code,
@@ -57,7 +57,9 @@
             <a
               href="https://github.com/rao-awais-18"
               title="Visit My GitHub"
+              aria-label="Visit my GitHub profile"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i class="fa-brands fa-github"></i>
             </a>
@@ -65,7 +67,9 @@
             <a
               href="https://www.linkedin.com/in/ali-awais-cs"
               title="Visit My LinkedIn"
+              aria-label="Visit my LinkedIn profile"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <i class="fa-brands fa-linkedin"></i>
             </a>
@@ -73,7 +77,7 @@
             <a
               href="mailto:raoawais.dev@gmail.com"
               title="Write an Email"
-              target="_blank"
+              aria-label="Send me an email"
             >
               <i class="fa-solid fa-envelope"></i>
             </a>
@@ -84,7 +88,10 @@
 
         <div class="hero-image">
           <div class="image-circle">
-            <img src="images/profile/rao-awais-dev.jpeg" alt="Rao Awais" />
+            <img
+              src="images/profile/rao-awais-dev.jpeg"
+              alt="Rao Awais, Full Stack Developer"
+            />
           </div>
         </div>
       </section>
@@ -110,7 +117,7 @@
         <a href="skills.html" class="btn-primary">
           View All Skills
 
-          <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
     </section>
@@ -135,7 +142,7 @@
         <a href="projects.html" class="btn-primary">
           View All Projects
 
-          <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
     </section>
@@ -154,7 +161,10 @@
 
         <div class="why-wrapper">
           <div class="why-image">
-            <img src="images/profile/profile-pic2.jpeg" alt="Developer" />
+            <img
+              src="images/profile/profile-pic2.jpeg"
+              alt="Rao Awais, Full Stack Developer"
+            />
           </div>
 
           <div class="why-content">
@@ -260,20 +270,20 @@
 
         <div class="cta-buttons">
           <a href="contact.html" class="btn-primary">
-            <i class="fa-solid fa-paper-plane"></i>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
 
             Hire Me
           </a>
 
           <a href="resume/resume.pdf" class="btn-secondary" download>
-            <i class="fa-solid fa-file-arrow-down"></i>
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
 
             Download Resume
           </a>
         </div>
       </div>
     </section>
-    
+
     <!-- footer -->
     <footer id="footer-container"></footer>
 

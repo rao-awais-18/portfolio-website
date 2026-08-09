@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Contact | Rao Awais</title>
+    <title>Contact | Rao Awais</title>
 
     <link
       rel="stylesheet"
@@ -40,7 +40,6 @@
       <section class="contact-section">
         <div class="container">
           <div class="contact-layout">
-
             <!-- Left Side -->
             <div class="contact-info">
               <div class="contact-intro reveal">
@@ -57,6 +56,8 @@
                   it happen.
                 </p>
               </div>
+
+              <!-- INFO -->
 
               <div class="contact-meta reveal">
                 <div class="contact-item">
@@ -77,59 +78,61 @@
                   <p>Open for Freelance Projects</p>
                 </div>
 
+                <!-- LINKS -->
+
                 <div class="contact-links">
+                  <h3 class="contact-links-title">Me - Around the Web</h3>
 
-    <h3 class="contact-links-title">Me - Around the Web</h3>
+                  <a
+                    href="https://github.com/rao-awais-18"
+                    class="contact-link-item"
+                    title="Visit My GitHub"
+                    aria-label="Visit my GitHub profile"
+                  >
+                    <span class="contact-link-dot"></span>
 
-    <a href="#" class="contact-link-item">
+                    <span class="contact-link-content">
+                      <span class="contact-link-name">GitHub</span>
 
-        <span class="contact-link-dot"></span>
+                      <span class="contact-link-desc">
+                        Open Source Projects
+                      </span>
+                    </span>
+                  </a>
 
-        <span class="contact-link-content">
+                  <a
+                    href="https://www.linkedin.com/in/ali-awais-cs"
+                    class="contact-link-item"
+                    title="Visit My LinkedIn"
+                    aria-label="Visit my LinkedIn profile"
+                  >
+                    <span class="contact-link-dot"></span>
 
-            <span class="contact-link-name">GitHub</span>
+                    <span class="contact-link-content">
+                      <span class="contact-link-name">LinkedIn</span>
 
-            <span class="contact-link-desc">
-                Open Source Projects
-            </span>
+                      <span class="contact-link-desc">
+                        Professional Network
+                      </span>
+                    </span>
+                  </a>
 
-        </span>
+                  <a
+                    href="assets/resume/resume.pdf"
+                    class="contact-link-item"
+                    title="Get my Resume"
+                    aria-label="Download my Resume"
+                    download
+                  >
+                    <span class="contact-link-dot"></span>
 
-    </a>
+                    <span class="contact-link-content">
+                      <span class="contact-link-name">Resume</span>
 
-    <a href="#" class="contact-link-item">
-
-        <span class="contact-link-dot"></span>
-
-        <span class="contact-link-content">
-
-            <span class="contact-link-name">LinkedIn</span>
-
-            <span class="contact-link-desc">
-                Professional Network
-            </span>
-
-        </span>
-
-    </a>
-
-    <a href="#" class="contact-link-item">
-
-        <span class="contact-link-dot"></span>
-
-        <span class="contact-link-content">
-
-            <span class="contact-link-name">Resume</span>
-
-            <span class="contact-link-desc">
-                Download CV
-            </span>
-
-        </span>
-
-    </a>
-
-</div>
+                      <span class="contact-link-desc"> Download CV </span>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -147,7 +150,7 @@
                 <div class="form-group">
                   <label for="name"> Full Name </label>
 
-                  <input id="name" type="text" placeholder="Rao awais" />
+                  <input id="name" type="text" placeholder="Rao awais" aria-label="enter your name"/>
                 </div>
 
                 <div class="form-group">
@@ -157,6 +160,7 @@
                     id="email"
                     type="email"
                     placeholder="contactme@gmail.com"
+                    aria-label="enter your email"
                   />
                 </div>
 
@@ -167,6 +171,7 @@
                     id="subject"
                     type="text"
                     placeholder="Let's work together"
+                    aria-label="enter the subject of email"
                   />
                 </div>
 
@@ -177,12 +182,13 @@
                     id="message"
                     rows="7"
                     placeholder="Write your message..."
+                    aria-label="describe yor detailed message here"
                   ></textarea>
                 </div>
 
                 <div class="form-status"></div>
                 <button type="submit" class="btn btn-primary">
-                  <i class="fa-solid fa-paper-plane"></i>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
 
                   Send Message
                 </button>

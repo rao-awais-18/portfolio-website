@@ -191,7 +191,7 @@ function renderGallery() {
 
                 <img src="${image}" alt="${title} Screenshot" data-index="${index}">
 
-<div class="gallery-overlay">
+<div class="gallery-overlay" aria-label="view image">
 
         <i class="fa-solid fa-eye"></i>
 

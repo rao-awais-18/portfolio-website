@@ -161,6 +161,7 @@ footer{
     min-height:auto;
 
     padding:20px 4%;
+    padding-top: 0;
 
     gap:42px;
 
@@ -447,11 +448,10 @@ footer{
             ABOUT HERO
 =======================================*/
 
-@media (max-width:768px){
-
     .about-hero{
 
         padding:50px 0 0;
+        padding-top: 0;
 
     }
 
@@ -514,8 +514,6 @@ footer{
         gap:16px;
 
     }
-
-}
 
 /*======================================
             JOURNEY
@@ -1511,6 +1509,7 @@ footer{
 .project-hero{
 
     padding:60px 0;
+    padding-top: 10px;
 
 }
 
